@@ -8,6 +8,9 @@
     {
       "ven_id": "VEN0001",
       "name": "Orange County Convention Center",
+      "city": "Orlando",
+      "state": "FL",
+      "country": "USA",
       "airports": [
         {
           "code": "MCO"
@@ -17,6 +20,9 @@
     {
       "ven_id": "VEN0002",
       "name": "Reno-Sparks Convention Center",
+      "city": "Reno",
+      "state": "NV",
+      "country": "USA",
       "airports": [
         {
           "code": "RNO"
@@ -26,6 +32,9 @@
     {
       "ven_id": "VEN0003",
       "name": "Pennsylvania Convention Center",
+      "city": "Philadelphia",
+      "state": "PA",
+      "country": "USA",
       "airports": [
         {
           "code": "PHL"
@@ -38,6 +47,9 @@
     {
       "ven_id": "VEN0004",
       "name": "Renaissance Schaumburg Convention Center",
+      "city": "Schaumburg",
+      "state": "IL",
+      "country": "USA",
       "airports": [
         {
           "code": "ORD"
@@ -50,6 +62,9 @@
     {
       "ven_id": "VEN0005",
       "name": "Georgia World Congress Center",
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA",
       "airports": [
         {
           "code": "ATL"
@@ -59,6 +74,9 @@
     {
       "ven_id": "VEN0006",
       "name": "Boston Convention & Exhibition Center",
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA",
       "airports": [
         {
           "code": "BOS"
@@ -68,6 +86,9 @@
     {
       "ven_id": "VEN0007",
       "name": "Charlotte Convention Center",
+      "city": "Charlotte",
+      "state": "NC",
+      "country": "USA",
       "airports": [
         {
           "code": "CLT"
@@ -77,6 +98,9 @@
     {
       "ven_id": "VEN0008",
       "name": "Music City Center",
+      "city": "Nashville",
+      "state": "TN",
+      "country": "USA",
       "airports": [
         {
           "code": "BNA"
@@ -86,6 +110,9 @@
     {
       "ven_id": "VEN0009",
       "name": "Toronto Congress Centre",
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada",
       "airports": [
         {
           "code": "YYZ"
@@ -98,6 +125,9 @@
     {
       "ven_id": "VEN0010",
       "name": "McCormick Place",
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA",
       "airports": [
         {
           "code": "ORD"
@@ -110,6 +140,9 @@
     {
       "ven_id": "VEN0011",
       "name": "Minneapolis Convention Center",
+      "city": "Minneapolis",
+      "state": "MN",
+      "country": "USA",
       "airports": [
         {
           "code": "MSP"
@@ -119,6 +152,9 @@
     {
       "ven_id": "VEN0012",
       "name": "Las Vegas Convention Center",
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "USA",
       "airports": [
         {
           "code": "LAS"
@@ -128,6 +164,9 @@
     {
       "ven_id": "VEN0013",
       "name": "Donald E. Stephens Convention Center",
+      "city": "Rosemont",
+      "state": "IL",
+      "country": "USA",
       "airports": [
         {
           "code": "ORD"
@@ -140,6 +179,9 @@
     {
       "ven_id": "VEN0014",
       "name": "Hyatt Regency Milwaukee",
+      "city": "Milwaukee",
+      "state": "WI",
+      "country": "USA",
       "airports": [
         {
           "code": "MKE"
@@ -149,6 +191,9 @@
     {
       "ven_id": "VEN0015",
       "name": "Expo Santa Fe",
+      "city": "Mexico City",
+      "state": "CDMX",
+      "country": "Mexico",
       "airports": [
         {
           "code": "MEX"
@@ -158,6 +203,9 @@
     {
       "ven_id": "VEN0016",
       "name": "Expo Guadalajara",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "country": "Mexico",
       "airports": [
         {
           "code": "GDL"
@@ -167,6 +215,9 @@
     {
       "ven_id": "VEN0017",
       "name": "Moscone Center",
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA",
       "airports": [
         {
           "code": "SFO"
@@ -179,6 +230,9 @@
     {
       "ven_id": "VEN0018",
       "name": "Anaheim Convention Center",
+      "city": "Anaheim",
+      "state": "CA",
+      "country": "USA",
       "airports": [
         {
           "code": "SNA"
@@ -191,6 +245,9 @@
     {
       "ven_id": "VEN0019",
       "name": "Hannover Fairground",
+      "city": "Hannover",
+      "state": "",
+      "country": "Germany",
       "airports": [
         {
           "code": "HAJ"
@@ -200,6 +257,9 @@
     {
       "ven_id": "VEN0020",
       "name": "Huntington Convention Center of Cleveland",
+      "city": "Cleveland",
+      "state": "OH",
+      "country": "USA",
       "airports": [
         {
           "code": "CLE"
@@ -209,6 +269,9 @@
     {
       "ven_id": "VEN0021",
       "name": "Hilton Cleveland Downtown",
+      "city": "Cleveland",
+      "state": "OH",
+      "country": "USA",
       "airports": [
         {
           "code": "CLE"
@@ -218,6 +281,9 @@
     {
       "ven_id": "VEN0022",
       "name": "The Cutlers' Hall",
+      "city": "Sheffield",
+      "state": "",
+      "country": "United Kingdom",
       "airports": [
         {
           "code": "MAN"
@@ -227,6 +293,9 @@
     {
       "ven_id": "VEN0023",
       "name": "Hyatt Regency Greenville",
+      "city": "Greenville",
+      "state": "SC",
+      "country": "USA",
       "airports": [
         {
           "code": "GSP"
@@ -236,6 +305,9 @@
     {
       "ven_id": "VEN0024",
       "name": "Hyatt Regency Indianapolis",
+      "city": "Indianapolis",
+      "state": "IN",
+      "country": "USA",
       "airports": [
         {
           "code": "IND"
@@ -245,6 +317,9 @@
     {
       "ven_id": "VEN0025",
       "name": "Marriott Austin Downtown",
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA",
       "airports": [
         {
           "code": "AUS"
@@ -254,6 +329,9 @@
     {
       "ven_id": "VEN0026",
       "name": "Long Beach Convention Center",
+      "city": "Long Beach",
+      "state": "CA",
+      "country": "USA",
       "airports": [
         {
           "code": "LGB"
@@ -266,6 +344,9 @@
     {
       "ven_id": "VEN0027",
       "name": "DeVos Place Convention Center",
+      "city": "Grand Rapids",
+      "state": "MI",
+      "country": "USA",
       "airports": [
         {
           "code": "GRR"
@@ -275,6 +356,9 @@
     {
       "ven_id": "VEN0028",
       "name": "Indiana Convention Center",
+      "city": "Indianapolis",
+      "state": "IN",
+      "country": "USA",
       "airports": [
         {
           "code": "IND"
@@ -284,6 +368,9 @@
     {
       "ven_id": "VEN0029",
       "name": "Huntington Place",
+      "city": "Detroit",
+      "state": "MI",
+      "country": "USA",
       "airports": [
         {
           "code": "DTW"
@@ -293,6 +380,9 @@
     {
       "ven_id": "VEN0030",
       "name": "Eastern States Exposition",
+      "city": "West Springfield",
+      "state": "MA",
+      "country": "USA",
       "airports": [
         {
           "code": "BDL"
@@ -302,6 +392,9 @@
     {
       "ven_id": "VEN0031",
       "name": "Greenville Convention Center",
+      "city": "Greenville",
+      "state": "SC",
+      "country": "USA",
       "airports": [
         {
           "code": "GSP"
@@ -311,6 +404,9 @@
     {
       "ven_id": "VEN0032",
       "name": "Kay Bailey Hutchison Convention Center",
+      "city": "Dallas",
+      "state": "TX",
+      "country": "USA",
       "airports": [
         {
           "code": "DAL"
@@ -323,6 +419,9 @@
     {
       "ven_id": "VEN0033",
       "name": "Messe D\u00fcsseldorf",
+      "city": "D\u00fcsseldorf",
+      "state": "",
+      "country": "Germany",
       "airports": [
         {
           "code": "DUS"
@@ -335,6 +434,9 @@
     {
       "ven_id": "VEN0034",
       "name": "George R. Brown Convention Center",
+      "city": "Houston",
+      "state": "TX",
+      "country": "USA",
       "airports": [
         {
           "code": "IAH"
@@ -347,6 +449,9 @@
     {
       "ven_id": "VEN0035",
       "name": "Gaylord National Resort & Convention Center",
+      "city": "National Harbor",
+      "state": "MD",
+      "country": "USA",
       "airports": [
         {
           "code": "DCA"
@@ -359,6 +464,9 @@
     {
       "ven_id": "VEN0036",
       "name": "Encore Boston Harbor",
+      "city": "Everett",
+      "state": "MA",
+      "country": "USA",
       "airports": [
         {
           "code": "BOS"
@@ -368,6 +476,9 @@
     {
       "ven_id": "VEN0037",
       "name": "Tampa Convention Center",
+      "city": "Tampa",
+      "state": "FL",
+      "country": "USA",
       "airports": [
         {
           "code": "TPA"
@@ -377,6 +488,9 @@
     {
       "ven_id": "VEN0038",
       "name": "Hilton Americas-Houston",
+      "city": "Houston",
+      "state": "TX",
+      "country": "USA",
       "airports": [
         {
           "code": "HOU"
