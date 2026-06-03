@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "version": "3.0",
+    "last_updated": "2026-06-03",
+    "total": 1
+  },
+  "ads": [
+    {
+      "ad_id": "ADV0001",
+      "advertiser": "THOM",
+      "width": "half",
+      "after_months": [
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "image_url": "",
+      "link_url": "Thehomeofmfg.com",
+      "headline": "Your Source For Events in MFG",
+      "cta_text": "Learn More",
+      "label": "Advertisement",
+      "start_date": "2026-05-01",
+      "end_date": "2026-09-30",
+      "status": "active"
+    }
+  ]
+}

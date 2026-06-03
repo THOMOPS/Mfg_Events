@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "version": "3.0",
+    "last_updated": "2026-06-03",
+    "total": 38
+  },
+  "venues": [
+    {
+      "ven_id": "VEN0001",
+      "name": "Orange County Convention Center",
+      "airports": [
+        {
+          "code": "MCO"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0002",
+      "name": "Reno-Sparks Convention Center",
+      "airports": [
+        {
+          "code": "RNO"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0003",
+      "name": "Pennsylvania Convention Center",
+      "airports": [
+        {
+          "code": "PHL"
+        },
+        {
+          "code": "PNE"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0004",
+      "name": "Renaissance Schaumburg Convention Center",
+      "airports": [
+        {
+          "code": "ORD"
+        },
+        {
+          "code": "MDW"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0005",
+      "name": "Georgia World Congress Center",
+      "airports": [
+        {
+          "code": "ATL"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0006",
+      "name": "Boston Convention & Exhibition Center",
+      "airports": [
+        {
+          "code": "BOS"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0007",
+      "name": "Charlotte Convention Center",
+      "airports": [
+        {
+          "code": "CLT"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0008",
+      "name": "Music City Center",
+      "airports": [
+        {
+          "code": "BNA"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0009",
+      "name": "Toronto Congress Centre",
+      "airports": [
+        {
+          "code": "YYZ"
+        },
+        {
+          "code": "YTZ"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0010",
+      "name": "McCormick Place",
+      "airports": [
+        {
+          "code": "ORD"
+        },
+        {
+          "code": "MDW"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0011",
+      "name": "Minneapolis Convention Center",
+      "airports": [
+        {
+          "code": "MSP"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0012",
+      "name": "Las Vegas Convention Center",
+      "airports": [
+        {
+          "code": "LAS"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0013",
+      "name": "Donald E. Stephens Convention Center",
+      "airports": [
+        {
+          "code": "ORD"
+        },
+        {
+          "code": "MDW"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0014",
+      "name": "Hyatt Regency Milwaukee",
+      "airports": [
+        {
+          "code": "MKE"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0015",
+      "name": "Expo Santa Fe",
+      "airports": [
+        {
+          "code": "MEX"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0016",
+      "name": "Expo Guadalajara",
+      "airports": [
+        {
+          "code": "GDL"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0017",
+      "name": "Moscone Center",
+      "airports": [
+        {
+          "code": "SFO"
+        },
+        {
+          "code": "OAK"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0018",
+      "name": "Anaheim Convention Center",
+      "airports": [
+        {
+          "code": "SNA"
+        },
+        {
+          "code": "LAX"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0019",
+      "name": "Hannover Fairground",
+      "airports": [
+        {
+          "code": "HAJ"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0020",
+      "name": "Huntington Convention Center of Cleveland",
+      "airports": [
+        {
+          "code": "CLE"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0021",
+      "name": "Hilton Cleveland Downtown",
+      "airports": [
+        {
+          "code": "CLE"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0022",
+      "name": "The Cutlers' Hall",
+      "airports": [
+        {
+          "code": "MAN"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0023",
+      "name": "Hyatt Regency Greenville",
+      "airports": [
+        {
+          "code": "GSP"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0024",
+      "name": "Hyatt Regency Indianapolis",
+      "airports": [
+        {
+          "code": "IND"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0025",
+      "name": "Marriott Austin Downtown",
+      "airports": [
+        {
+          "code": "AUS"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0026",
+      "name": "Long Beach Convention Center",
+      "airports": [
+        {
+          "code": "LGB"
+        },
+        {
+          "code": "LAX"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0027",
+      "name": "DeVos Place Convention Center",
+      "airports": [
+        {
+          "code": "GRR"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0028",
+      "name": "Indiana Convention Center",
+      "airports": [
+        {
+          "code": "IND"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0029",
+      "name": "Huntington Place",
+      "airports": [
+        {
+          "code": "DTW"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0030",
+      "name": "Eastern States Exposition",
+      "airports": [
+        {
+          "code": "BDL"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0031",
+      "name": "Greenville Convention Center",
+      "airports": [
+        {
+          "code": "GSP"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0032",
+      "name": "Kay Bailey Hutchison Convention Center",
+      "airports": [
+        {
+          "code": "DAL"
+        },
+        {
+          "code": "DFW"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0033",
+      "name": "Messe D\u00fcsseldorf",
+      "airports": [
+        {
+          "code": "DUS"
+        },
+        {
+          "code": "CGN"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0034",
+      "name": "George R. Brown Convention Center",
+      "airports": [
+        {
+          "code": "IAH"
+        },
+        {
+          "code": "HOU"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0035",
+      "name": "Gaylord National Resort & Convention Center",
+      "airports": [
+        {
+          "code": "DCA"
+        },
+        {
+          "code": "BWI"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0036",
+      "name": "Encore Boston Harbor",
+      "airports": [
+        {
+          "code": "BOS"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0037",
+      "name": "Tampa Convention Center",
+      "airports": [
+        {
+          "code": "TPA"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0038",
+      "name": "Hilton Americas-Houston",
+      "airports": [
+        {
+          "code": "HOU"
+        },
+        {
+          "code": "IAH"
+        }
+      ]
+    }
+  ]
+}
