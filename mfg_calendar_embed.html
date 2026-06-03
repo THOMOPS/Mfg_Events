@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Manufacturing Events</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9fafb; color: #111827; padding: 20px; }
+
+  /* ── Controls ── */
+  .cal-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+  .ctrl { padding: 7px 12px; border: 1.5px solid #d1d5db; border-radius: 8px; font-size: .8rem; background: #fff; outline: none; cursor: pointer; transition: border-color .15s; }
+  .ctrl:focus, .ctrl:hover { border-color: #2563eb; }
+  input.ctrl { min-width: 200px; }
+  .count { font-size: .78rem; color: #6b7280; margin-bottom: 14px; }
+
+  /* ── Month headers ── */
+  .month-header { font-size: 1.15rem; font-weight: 800; letter-spacing: -.01em; color: #111827; padding: 22px 0 10px; border-bottom: 2px solid #e5e7eb; margin-bottom: 16px; }
+
+  /* ── Cards ── */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); gap: 14px; margin-bottom: 6px; }
+  .card { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 9px; position: relative; overflow: hidden; transition: box-shadow .15s, border-color .15s, transform .12s; cursor: pointer; }
+  .card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); border-color: #93c5fd; transform: translateY(-2px); }
+  .card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; border-radius: 12px 0 0 12px; background: var(--cc, #2563eb); }
+  .card.sponsored { grid-column: 1 / -1; padding-left: 72px; border-color: rgba(30,58,138,.35); box-shadow: 0 2px 12px rgba(30,58,138,.12); }
+  .card.sponsored::before { width: 56px; background: #1e3a8a; }
+  .card.sponsored:hover { border-color: #1e3a8a; box-shadow: 0 6px 20px rgba(30,58,138,.22); }
+  .sponsored-banner { position: absolute; left: 0; top: 0; bottom: 0; width: 56px; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .sponsored-banner span { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .55rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+  .date-row { display: flex; align-items: center; gap: 10px; }
+  .date-box { background: #eff6ff; border-radius: 8px; padding: 5px 9px; text-align: center; min-width: 44px; flex-shrink: 0; }
+  .date-mo { font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #2563eb; line-height: 1; }
+  .date-dy { font-size: 1.3rem; font-weight: 800; color: #1e3a8a; line-height: 1.1; }
+  .date-range { font-size: .72rem; color: #6b7280; line-height: 1.4; }
+  .c-name { font-size: .9rem; font-weight: 700; color: #111827; line-height: 1.3; }
+  .c-loc  { font-size: .75rem; color: #4b5563; }
+  .c-desc { font-size: .75rem; color: #6b7280; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .c-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; border-top: 1px solid #f3f4f6; }
+  .type-badge { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--cc, #2563eb); padding: 2px 7px; border-radius: 999px; }
+  .c-more-btn { font-size: .72rem; font-weight: 600; color: #2563eb; background: none; border: none; cursor: pointer; padding: 0; }
+  .c-more-btn:hover { text-decoration: underline; }
+  .loc-country { display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .04em; background: #e5e7eb; color: #374151; padding: 1px 5px; border-radius: 4px; vertical-align: middle; margin-right: 3px; }
+
+  /* ── Status badges ── */
+  .status-badge { display: inline-block; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; }
+  .sb-date-tbd { background: #fef9c3; color: #854d0e; }
+
+  /* ── Empty / loading / error ── */
+  .empty   { text-align: center; padding: 60px 20px; color: #9ca3af; font-size: .875rem; }
+  .loading { text-align: center; padding: 60px 20px; color: #6b7280; font-size: .875rem; }
+  .error-banner { background: #fee2e2; border: 1px solid #fca5a5; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; font-size: .82rem; color: #991b1b; }
+
+  /* ── Ad slots ── */
+  .ad-zone { margin: 8px 0 4px; display: flex; flex-direction: column; gap: 8px; }
+  .ad-row-half { display: flex; gap: 12px; }
+  .ad-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; text-decoration: none; display: block; transition: border-color .15s; }
+  .ad-card:hover { border-color: #2563eb; }
+  .ad-card-full { width: 100%; }
+  .ad-card-half { flex: 0 0 calc(50% - 6px); min-width: 0; }
+  .ad-card-label { font-size: .58rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #6b7280; background: #f3f4f6; padding: 3px 10px; }
+  .ad-card-body { display: flex; align-items: center; gap: 14px; padding: 12px 16px; }
+  .ad-card-img { width: 80px; height: 56px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background: #e5e7eb; }
+  .ad-card-text { flex: 1; min-width: 0; }
+  .ad-card-headline { font-size: .82rem; font-weight: 700; color: #111827; margin-bottom: 4px; }
+  .ad-card-cta { display: inline-block; margin-top: 6px; font-size: .7rem; font-weight: 600; color: #2563eb; background: #eff6ff; padding: 2px 10px; border-radius: 4px; }
+
+  /* ── Detail modal ── */
+  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 200; align-items: center; justify-content: center; padding: 16px; }
+  .modal-backdrop.open { display: flex; }
+  .modal { background: #fff; border-radius: 14px; width: min(700px, 96vw); max-height: 90vh; overflow-y: auto; }
+  .det-header { display: flex; }
+  .det-banner { width: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .det-banner span { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .55rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+  .det-header-content { flex: 1; padding: 18px 18px 14px; border-bottom: 1px solid #f3f4f6; }
+  .det-badges { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; flex-wrap: wrap; }
+  .det-cat-badge { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; background: #f3f4f6; color: #374151; padding: 2px 7px; border-radius: 999px; }
+  .det-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .det-title { font-size: 1rem; font-weight: 700; color: #111827; line-height: 1.3; }
+  .det-close { background: none; border: none; font-size: 1.4rem; color: #9ca3af; cursor: pointer; line-height: 1; padding: 0 2px; flex-shrink: 0; }
+  .det-close:hover { color: #374151; }
+  .det-body { display: grid; grid-template-columns: 1fr 1fr; }
+  .det-col { padding: 18px; }
+  .det-col:first-child { border-right: 1px solid #f3f4f6; }
+  .det-section { margin-bottom: 16px; }
+  .det-section:last-child { margin-bottom: 0; }
+  .det-label { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #9ca3af; margin-bottom: 4px; }
+  .det-airport { font-size: .65rem; font-weight: 700; background: #eff6ff; color: #1e40af; padding: 2px 7px; border-radius: 999px; letter-spacing: .03em; }
+  .det-tag { font-size: .68rem; background: #f3f4f6; color: #374151; padding: 2px 8px; border-radius: 999px; font-weight: 500; }
+  .det-cta { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; background: #1e3a8a; color: #fff; border-radius: 8px; font-size: .8rem; font-weight: 600; text-decoration: none; margin-top: 14px; }
+  .det-cta:hover { opacity: .88; }
+
+  @media (max-width: 520px) {
+    .det-body { grid-template-columns: 1fr; }
+    .det-col:first-child { border-right: none; border-bottom: 1px solid #f3f4f6; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cal-controls">
+  <input  class="ctrl" type="search" id="calQ"       placeholder="Search events..." oninput="renderCalendar()">
+  <select class="ctrl" id="calType"    onchange="renderCalendar()">
+    <option value="">All types</option>
+    <option value="trade show">Trade Shows</option>
+    <option value="conference">Conferences</option>
+  </select>
+  <select class="ctrl" id="calCat"     onchange="renderCalendar()"></select>
+  <select class="ctrl" id="calCountry" onchange="renderCalendar()"></select>
+</div>
+<div class="count" id="calCount"></div>
+<div id="calBody"><div class="loading">Loading events&hellip;</div></div>
+
+<!-- Detail modal -->
+<div class="modal-backdrop" id="detailModalBackdrop" onclick="if(event.target===this)closeDetailModal()">
+  <div class="modal" id="detailModal"></div>
+</div>
+
+<script>
+// ── Config ──────────────────────────────────────────────────────────────────
+const GITHUB_RAW = "https://raw.githubusercontent.com/THOMOPS/mfg-events/main/";
+
+// ── State ────────────────────────────────────────────────────────────────────
+let EVENTS = [], VENUES = [], ADS = [];
+
+// ── Constants ────────────────────────────────────────────────────────────────
+const MO      = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MO_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const TYPE_COLORS = { "trade show": "#2563eb", "conference": "#7c3aed" };
+
+function typeColor(t){ return TYPE_COLORS[t] || "#374151"; }
+function esc(s){ return s ? String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;") : ""; }
+function safeUrl(u){ const s = String(u||"").trim(); return /^https?:\/\//i.test(s) ? esc(s) : ""; }
+function getVenue(id){ return VENUES.find(v => v.ven_id === id) || null; }
+
+// ── Data loading ─────────────────────────────────────────────────────────────
+async function fetchJson(file){
+  const res = await fetch(GITHUB_RAW + file + "?t=" + Date.now());
+  if(!res.ok) throw new Error("Failed to load " + file);
+  return res.json();
+}
+
+async function loadData(){
+  try {
+    const [eventsData, venuesData, adsData] = await Promise.all([
+      fetchJson("mfg_events.json"),
+      fetchJson("mfg_venues.json"),
+      fetchJson("mfg_ads.json").catch(() => ({ ads: [] }))
+    ]);
+    EVENTS = eventsData.events  || [];
+    VENUES = venuesData.venues  || [];
+    ADS    = adsData.ads        || [];
+    initFilters();
+    renderCalendar();
+  } catch(err){
+    document.getElementById("calBody").innerHTML =
+      `<div class="error-banner">Unable to load events. Please try refreshing the page.</div>`;
+    console.error(err);
+  }
+}
+
+// ── Filters ──────────────────────────────────────────────────────────────────
+function initFilters(){
+  const cats = [...new Set(EVENTS.map(e => e.category).filter(Boolean))].sort();
+  document.getElementById("calCat").innerHTML =
+    '<option value="">All categories</option>' +
+    cats.map(c => `<option value="${c}">${c.charAt(0).toUpperCase()+c.slice(1)}</option>`).join("");
+
+  const venueMap = Object.fromEntries(VENUES.map(v => [v.ven_id, v]));
+  const countries = [...new Set(EVENTS.map(e => e.venue_id ? (venueMap[e.venue_id]||{}).country : null).filter(Boolean))].sort();
+  document.getElementById("calCountry").innerHTML =
+    '<option value="">All countries</option>' +
+    countries.map(c => `<option value="${c}">${c}</option>`).join("");
+}
+
+// ── Calendar rendering ────────────────────────────────────────────────────────
+function renderCalendar(){
+  const q       = document.getElementById("calQ").value.toLowerCase();
+  const type    = document.getElementById("calType").value;
+  const cat     = document.getElementById("calCat").value;
+  const country = document.getElementById("calCountry").value;
+
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  let evs = EVENTS.filter(e => {
+    if(e.status === "cancelled" || e.status === "inactive") return false;
+    if(new Date(e.end_date + "T00:00:00") < today) return false;
+    if(type    && e.type     !== type)    return false;
+    if(cat     && e.category !== cat)     return false;
+    if(country){ const v=getVenue(e.venue_id); if(!v || v.country !== country) return false; }
+    if(q){
+      const v = getVenue(e.venue_id);
+      const hay = [e.name, e.description, v&&v.city, v&&v.state, v&&v.country, ...(e.tags||[])].filter(Boolean).join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  }).sort((a,b) => a.start_date.localeCompare(b.start_date));
+
+  document.getElementById("calCount").textContent =
+    `Showing ${evs.length} event${evs.length!==1?"s":""}`;
+
+  if(!evs.length){
+    document.getElementById("calBody").innerHTML =
+      '<div class="empty">No events match your filters.</div>';
+    return;
+  }
+
+  const byMonth = {};
+  evs.forEach(e => { const k = e.start_date.slice(0,7); (byMonth[k]=byMonth[k]||[]).push(e); });
+
+  let html = "";
+  for(const [k, grp] of Object.entries(byMonth)){
+    const [yr, mo] = k.split("-");
+    html += `<div class="month-header">${MO_FULL[+mo-1]} ${yr}</div><div class="grid">`;
+    grp.forEach(e => { html += calCard(e); });
+    html += "</div>";
+    html += renderAdSlots(getActiveAdsForMonth(k));
+  }
+  document.getElementById("calBody").innerHTML = html;
+}
+
+function calCard(e){
+  const color = typeColor(e.type);
+  const venue = getVenue(e.venue_id);
+  const s  = new Date(e.start_date+"T00:00:00");
+  const en = new Date(e.end_date+"T00:00:00");
+  const sd=s.getDate(), sm=s.getMonth(), ed=en.getDate(), em=en.getMonth();
+  const range = (sm===em&&sd!==ed)
+    ? `${MO[sm]} ${sd}&ndash;${ed}, ${s.getFullYear()}`
+    : `${MO[sm]} ${sd} &ndash; ${MO[em]} ${ed}, ${en.getFullYear()}`;
+  const cc   = venue ? (venue.country==="USA"?"US":venue.country==="Canada"?"CA":venue.country?(venue.country.slice(0,2).toUpperCase()):"") : "";
+  const flag = cc ? `<span class="loc-country">${cc}</span>` : "";
+  const loc  = venue ? `${esc(venue.city)}, ${esc(venue.state)}` : "";
+  const tbd  = e.status==="date-tbd" ? ' <span class="status-badge sb-date-tbd">Date TBD</span>' : "";
+  const sponsoredClass  = e.sponsored ? " sponsored" : "";
+  const sponsoredBanner = e.sponsored
+    ? `<div class="sponsored-banner"><span>Event Highlight</span></div>` : "";
+  return `<div class="card${sponsoredClass}" style="--cc:${color}" onclick="openDetailModal('${esc(e.evt_id)}')">
+    ${sponsoredBanner}
+    <div class="date-row">
+      <div class="date-box"><div class="date-mo">${MO[sm]}</div><div class="date-dy">${sd}</div></div>
+      <div class="date-range">${range}${tbd}</div>
+    </div>
+    <div class="c-name">${esc(e.name)}</div>
+    ${loc ? `<div class="c-loc">${flag} ${loc}</div>` : ""}
+    ${e.description ? `<div class="c-desc">${esc(e.description)}</div>` : ""}
+    <div class="c-footer">
+      <span class="type-badge">${esc(e.type)}</span>
+      <button class="c-more-btn" onclick="event.stopPropagation();openDetailModal('${esc(e.evt_id)}')">See more</button>
+    </div>
+  </div>`;
+}
+
+// ── Ad slots ──────────────────────────────────────────────────────────────────
+function getActiveAdsForMonth(monthKey){
+  const today = new Date().toISOString().slice(0,10);
+  return ADS.filter(a =>
+    a.status === "active" &&
+    (a.after_months||[]).includes(monthKey) &&
+    a.start_date <= today &&
+    a.end_date   >= today
+  );
+}
+
+function renderAdSlots(ads){
+  if(!ads.length) return "";
+  const full = ads.filter(a => a.width !== "half");
+  const half = ads.filter(a => a.width === "half");
+  let html = '<div class="ad-zone">';
+  full.forEach(a => { html += adCardHtml(a, "full"); });
+  for(let i = 0; i < half.length; i += 2){
+    html += '<div class="ad-row-half">';
+    html += adCardHtml(half[i], "half");
+    if(half[i+1]) html += adCardHtml(half[i+1], "half");
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function adCardHtml(a, width){
+  const cls  = width === "half" ? "ad-card ad-card-half" : "ad-card ad-card-full";
+  const imgEl = a.image_url
+    ? `<img class="ad-card-img" src="${esc(a.image_url)}" alt="${esc(a.headline||"")}"/>`
+    : "";
+  return `<a class="${cls}" href="${safeUrl(a.link_url)}" target="_blank" rel="noopener sponsored">
+    <div class="ad-card-label">${esc(a.label||"Advertisement")} &mdash; ${esc(a.advertiser)}</div>
+    <div class="ad-card-body">
+      ${imgEl}
+      <div class="ad-card-text">
+        <div class="ad-card-headline">${esc(a.headline||a.name)}</div>
+        ${a.cta_text ? `<span class="ad-card-cta">${esc(a.cta_text)}</span>` : ""}
+      </div>
+    </div>
+  </a>`;
+}
+
+// ── Detail modal ──────────────────────────────────────────────────────────────
+function openDetailModal(evtId){
+  const e = EVENTS.find(x => x.evt_id === evtId);
+  if(!e) return;
+  const color   = typeColor(e.type);
+  const venue   = getVenue(e.venue_id);
+  const s  = new Date(e.start_date+"T00:00:00");
+  const en = new Date(e.end_date+"T00:00:00");
+  const sd=s.getDate(), sm=s.getMonth(), ed=en.getDate(), em=en.getMonth();
+  const range = (sm===em&&sd!==ed)
+    ? `${MO[sm]} ${sd}&ndash;${ed}, ${s.getFullYear()}`
+    : `${MO[sm]} ${sd} &ndash; ${MO[em]} ${ed}, ${en.getFullYear()}`;
+  const days  = Math.round((en-s)/(1000*60*60*24))+1;
+  const cc    = venue ? (venue.country==="USA"?"US":venue.country==="Canada"?"CA":venue.country?(venue.country.slice(0,2).toUpperCase()):"") : "";
+  const flag  = cc ? `<span class="loc-country">${cc}</span>` : "";
+  const tbd   = e.status==="date-tbd";
+  const bannerBg   = e.sponsored ? "#1e3a8a" : color;
+  const bannerText = e.sponsored ? "Event Highlight" : e.type;
+  const airports   = (venue&&venue.airports||[]).map(a=>`<span class="det-airport">${esc(a.code)}</span>`).join("");
+  const tags       = (e.tags||[]).map(t=>`<span class="det-tag">${esc(t)}</span>`).join("");
+  const cat        = e.category ? e.category.charAt(0).toUpperCase()+e.category.slice(1) : "";
+
+  document.getElementById("detailModal").innerHTML = `
+    <div class="det-header">
+      <div class="det-banner" style="background:${bannerBg};border-radius:14px 0 0 0"><span>${esc(bannerText)}</span></div>
+      <div class="det-header-content">
+        <div class="det-badges">
+          <span class="type-badge" style="background:${color}">${esc(e.type)}</span>
+          ${cat?`<span class="det-cat-badge">${esc(cat)}</span>`:""}
+        </div>
+        <div class="det-title-row">
+          <div class="det-title">${esc(e.name)}</div>
+          <button class="det-close" onclick="closeDetailModal()" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </div>
+    <div class="det-body">
+      <div class="det-col">
+        <div class="det-section">
+          <div class="det-label">Dates</div>
+          <div class="date-row" style="margin-top:6px">
+            <div class="date-box"><div class="date-mo">${MO[sm]}</div><div class="date-dy">${sd}</div></div>
+            <div>
+              <div class="date-range">${range}${tbd?'<span class="status-badge sb-date-tbd" style="margin-left:4px">Date TBD</span>':""}</div>
+              <div style="font-size:.7rem;color:#9ca3af;margin-top:2px">${days} day${days!==1?"s":""}</div>
+            </div>
+          </div>
+        </div>
+        <div class="det-section">
+          <div class="det-label">Location</div>
+          ${venue?`<div style="font-size:.82rem;font-weight:600;color:#111827;margin-top:4px">${flag} ${esc(venue.city)}, ${esc(venue.state)} &middot; ${esc(venue.country||"")}</div><div style="font-size:.75rem;color:#6b7280;margin-top:2px">${esc(venue.name)}</div>`:`<div style="font-size:.82rem;color:#9ca3af;margin-top:4px">Venue TBD</div>`}
+        </div>
+        ${airports?`<div class="det-section"><div class="det-label">Nearby airports</div><div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:4px">${airports}</div></div>`:""}
+        ${tags?`<div class="det-section"><div class="det-label">Tags</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:4px">${tags}</div></div>`:""}
+      </div>
+      <div class="det-col">
+        ${e.description?`<div class="det-section"><div class="det-label">About</div><div style="font-size:.82rem;color:#374151;line-height:1.6;margin-top:4px">${esc(e.description)}</div></div>`:""}
+        ${safeUrl(e.url)?`<a class="det-cta" href="${safeUrl(e.url)}" target="_blank" rel="noopener">Visit event website &#8599;</a>`:""}
+      </div>
+    </div>`;
+
+  document.getElementById("detailModalBackdrop").classList.add("open");
+}
+
+function closeDetailModal(){
+  document.getElementById("detailModalBackdrop").classList.remove("open");
+}
+
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeDetailModal(); });
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+// If loaded inside the admin preview iframe, accept data via postMessage
+// instead of fetching from GitHub.
+if (window.parent !== window) {
+  document.getElementById("calBody").innerHTML = '<div class="loading">Waiting for preview data&hellip;</div>';
+  window.addEventListener("message", function handler(event) {
+    if (event.data && event.data.type === "MFG_PREVIEW_DATA") {
+      EVENTS = event.data.events || [];
+      VENUES = event.data.venues || [];
+      ADS    = event.data.ads    || [];
+      initFilters();
+      renderCalendar();
+      window.removeEventListener("message", handler);
+    }
+  });
+} else {
+  loadData();
+}
+</script>
+</body>
+</html>
