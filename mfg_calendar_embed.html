@@ -365,6 +365,12 @@ function closeDetailModal(){
 
 document.addEventListener("keydown", e => { if(e.key==="Escape") closeDetailModal(); });
 
+// ── Auto-resize (reports height to parent for iframe embed) ───────────────────
+function reportHeight(){
+  window.parent.postMessage({ type: "MFG_RESIZE", height: document.body.scrollHeight }, "*");
+}
+new ResizeObserver(reportHeight).observe(document.body);
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 loadData();
 </script>
