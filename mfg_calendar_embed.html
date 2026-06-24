@@ -329,13 +329,16 @@ function getActiveAdsForMonth(monthKey){
 }
 
 function adCardHtml(a){
-  const cls  = a.width === "tile" ? "ad-card" : "ad-card ad-card-full";
-  const imgs = a.image_url
-    ? `<img class="ad-bg" src="${esc(a.image_url)}" alt=""/>
-       <img class="ad-fg" src="${esc(a.image_url)}" alt=""/>`
-    : "";
+  const cls = a.width === "tile" ? "ad-card" : "ad-card ad-card-full";
+  let media = "";
+  if(a.media_type === "video" && a.video_url){
+    media = `<video class="ad-fg" src="${esc(a.video_url)}" autoplay muted loop playsinline></video>`;
+  } else if(a.image_url){
+    media = `<img class="ad-bg" src="${esc(a.image_url)}" alt=""/>
+             <img class="ad-fg" src="${esc(a.image_url)}" alt=""/>`;
+  }
   return `<a class="${cls}" href="${safeUrl(a.link_url)}" target="_blank" rel="noopener sponsored">
-    ${imgs}
+    ${media}
     <span class="ad-card-label">Paid Ad</span>
   </a>`;
 }
@@ -347,6 +350,17 @@ window.addEventListener("message", function(e){
     EVENTS = e.data.events || [];
     VENUES = e.data.venues || [];
     ADS    = e.data.ads    || [];
+    // Resolve transferred video ArrayBuffers into local blob URLs.
+    // Parent-frame blob URLs can't cross file:// origins, so video data is sent as ArrayBuffers.
+    const transfers = e.data.videoTransfers || {};
+    for(const [adId, buf] of Object.entries(transfers)){
+      if(!buf || !buf.byteLength) continue;
+      const ad = ADS.find(a => a.ad_id === adId);
+      if(!ad) continue;
+      const ext      = (ad.video_url || "").split(".").pop().toLowerCase();
+      const mimeType = ext === "webm" ? "video/webm" : "video/mp4";
+      ad.video_url   = URL.createObjectURL(new Blob([buf], { type: mimeType }));
+    }
     initFilters();
     renderCalendar();
   }

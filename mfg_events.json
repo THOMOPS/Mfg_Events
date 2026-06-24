@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-11",
+    "last_updated": "2026-06-23",
     "total": 65
   },
   "events": [
@@ -124,7 +124,8 @@
         "3D printing",
         "additive manufacturing",
         "prototyping"
-      ]
+      ],
+      "sponsored": true
     },
     {
       "evt_id": "EVT0008",
@@ -230,7 +231,8 @@
         "robotics",
         "additive manufacturing",
         "CNC"
-      ]
+      ],
+      "sponsored": true
     },
     {
       "evt_id": "EVT0014",
@@ -265,7 +267,8 @@
         "stamping",
         "finishing",
         "metal"
-      ]
+      ],
+      "sponsored": true
     },
     {
       "evt_id": "EVT0016",
@@ -334,7 +337,8 @@
         "packaging",
         "processing",
         "Latin America"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0020",
@@ -351,7 +355,8 @@
         "packaging",
         "processing",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0021",
@@ -368,7 +373,8 @@
         "packaging",
         "processing",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0022",
@@ -385,7 +391,8 @@
         "packaging",
         "processing",
         "Latin America"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0023",
@@ -402,7 +409,8 @@
         "packaging",
         "processing",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0024",
@@ -419,7 +427,8 @@
         "packaging",
         "processing",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0025",
@@ -436,7 +445,8 @@
         "semiconductors",
         "microelectronics",
         "electronics manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0026",
@@ -453,7 +463,8 @@
         "space",
         "aerospace",
         "defense"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0027",
@@ -470,7 +481,8 @@
         "forecasting",
         "economics",
         "manufacturing technology"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0028",
@@ -488,7 +500,8 @@
         "robotics",
         "industrial technology",
         "AI"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0029",
@@ -506,7 +519,8 @@
         "Industry 4.0",
         "AI",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0030",
@@ -523,7 +537,8 @@
         "precision machining",
         "CNC",
         "manufacturing technology"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0031",
@@ -541,7 +556,8 @@
         "Industry 4.0",
         "automation",
         "smart manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0032",
@@ -559,7 +575,8 @@
         "Industry 4.0",
         "automation",
         "smart manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0033",
@@ -577,7 +594,8 @@
         "Industry 4.0",
         "automation",
         "smart manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0034",
@@ -595,7 +613,8 @@
         "Industry 4.0",
         "automation",
         "smart manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0035",
@@ -613,7 +632,8 @@
         "bulk solids",
         "processing",
         "material handling"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0037",
@@ -631,7 +651,8 @@
         "plastics",
         "film",
         "sheet"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0038",
@@ -649,7 +670,8 @@
         "life sciences",
         "pharma",
         "AI"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0039",
@@ -668,7 +690,8 @@
         "chip design",
         "AI",
         "electronics"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0040",
@@ -686,7 +709,8 @@
         "metalworking",
         "Industry 4.0",
         "MRO"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0041",
@@ -704,7 +728,8 @@
         "benchmarking",
         "best practices",
         "manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0042",
@@ -722,7 +747,8 @@
         "EV",
         "electronics",
         "electrification"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0043",
@@ -740,7 +766,8 @@
         "automation",
         "robotics",
         "precision machining"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0044",
@@ -758,7 +785,8 @@
         "automation",
         "robotics",
         "precision machining"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0045",
@@ -776,7 +804,8 @@
         "automation",
         "robotics",
         "precision machining"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0046",
@@ -794,7 +823,8 @@
         "automation",
         "robotics",
         "precision machining"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0047",
@@ -812,7 +842,8 @@
         "rubber",
         "processing",
         "materials"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0048",
@@ -829,7 +860,8 @@
         "assembly",
         "automation",
         "production"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0049",
@@ -847,7 +879,8 @@
         "benchmarking",
         "finishing",
         "manufacturing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0050",
@@ -865,7 +898,8 @@
         "3D design",
         "product development",
         "CAD"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0051",
@@ -883,7 +917,8 @@
         "industrial fluids",
         "manufacturing",
         "maintenance"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0052",
@@ -901,7 +936,8 @@
         "recycling",
         "sustainability",
         "circular economy"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0053",
@@ -919,7 +955,8 @@
         "injection molding",
         "moldmaking",
         "3D printing"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0055",
@@ -937,7 +974,8 @@
         "FMCG",
         "sustainability",
         "innovation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0056",
@@ -955,7 +993,8 @@
         "logistics",
         "material handling",
         "automation"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0057",
@@ -973,7 +1012,8 @@
         "manufacturing",
         "packaging",
         "sustainability"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0058",
@@ -982,6 +1022,9 @@
       "category": "general manufacturing",
       "start_date": "2026-11-12",
       "end_date": "2026-11-13",
+      "city": "Flower Mound",
+      "state": "TX",
+      "country": "USA",
       "venue_id": "VEN0039",
       "status": "confirmed",
       "url": "https://boombastic.titansofcnc.com/boom26",
@@ -991,7 +1034,8 @@
         "machining",
         "open house",
         "networking"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0059",
@@ -1000,6 +1044,9 @@
       "category": "general manufacturing",
       "start_date": "2026-12-02",
       "end_date": "2026-12-03",
+      "city": "Schwertberg",
+      "state": "",
+      "country": "Austria",
       "venue_id": "VEN0040",
       "status": "confirmed",
       "url": "https://www.engelglobal.com/en/fairs-events",
@@ -1009,7 +1056,8 @@
         "foam molding",
         "open house",
         "plastics"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0060",
@@ -1018,6 +1066,9 @@
       "category": "general manufacturing",
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
+      "city": "Fremont",
+      "state": "CA",
+      "country": "USA",
       "venue_id": "VEN0041",
       "status": "confirmed",
       "url": "https://www.mazak.com/us-en/news-media/upcoming-events/DISCOVER-MORE-WITH-MAZAK-Fremont-Open-House-2026/",
@@ -1027,7 +1078,8 @@
         "machining",
         "open house",
         "mazak"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0061",
@@ -1036,6 +1088,9 @@
       "category": "general manufacturing",
       "start_date": "2026-09-10",
       "end_date": "2026-09-12",
+      "city": "Auburn Hills",
+      "state": "MI",
+      "country": "USA",
       "venue_id": "VEN0042",
       "status": "confirmed",
       "url": "https://www.makino.com/en-us/newsroom/events/makino-technology-expo",
@@ -1046,7 +1101,8 @@
         "edm",
         "open house",
         "makino"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0062",
@@ -1055,6 +1111,9 @@
       "category": "general manufacturing",
       "start_date": "2026-06-17",
       "end_date": "2026-06-17",
+      "city": "Indianapolis",
+      "state": "IN",
+      "country": "USA",
       "venue_id": "VEN0043",
       "status": "confirmed",
       "url": "https://www.okuma.com/events",
@@ -1065,7 +1124,8 @@
         "okuma",
         "open house",
         "dealer"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0063",
@@ -1074,6 +1134,9 @@
       "category": "general manufacturing",
       "start_date": "2026-06-16",
       "end_date": "2026-06-17",
+      "city": "Detroit",
+      "state": "MI",
+      "country": "USA",
       "venue_id": "VEN0044",
       "status": "confirmed",
       "url": "https://reindustrialize.com",
@@ -1084,7 +1147,8 @@
         "manufacturing",
         "founders",
         "investors"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0064",
@@ -1093,6 +1157,9 @@
       "category": "automation & robotics",
       "start_date": "2026-07-22",
       "end_date": "2026-07-24",
+      "city": "Houston",
+      "state": "TX",
+      "country": "USA",
       "venue_id": "VEN0045",
       "status": "confirmed",
       "url": "https://www.otscada.com",
@@ -1103,7 +1170,8 @@
         "industrial automation",
         "ics",
         "iiot"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0065",
@@ -1112,6 +1180,9 @@
       "category": "general manufacturing",
       "start_date": "2026-06-24",
       "end_date": "2026-06-24",
+      "city": "",
+      "state": "",
+      "country": "",
       "venue_id": "VEN0046",
       "status": "confirmed",
       "url": "https://proshoperp.com/webinar/cutting-edge/",
@@ -1122,7 +1193,8 @@
         "mes",
         "precision manufacturing",
         "digitization"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0066",
@@ -1131,6 +1203,9 @@
       "category": "general manufacturing",
       "start_date": "2027-04-19",
       "end_date": "2027-04-22",
+      "city": "Mammoth Lakes",
+      "state": "CA",
+      "country": "USA",
       "venue_id": "VEN0047",
       "status": "confirmed",
       "url": "https://summit.g28.io",
@@ -1141,7 +1216,8 @@
         "networking",
         "conference",
         "g28"
-      ]
+      ],
+      "sponsored": false
     },
     {
       "evt_id": "EVT0067",
@@ -1150,6 +1226,9 @@
       "category": "general manufacturing",
       "start_date": "2026-06-21",
       "end_date": "2026-06-24",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "USA",
       "venue_id": "VEN0048",
       "status": "confirmed",
       "url": "https://manufacturingleadershipcouncil.com/events/rethink-2026/",
@@ -1160,7 +1239,8 @@
         "ai",
         "cybersecurity",
         "conference"
-      ]
+      ],
+      "sponsored": false
     }
   ]
 }

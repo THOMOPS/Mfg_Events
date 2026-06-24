@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-04",
-    "total": 1
+    "last_updated": "2026-06-23",
+    "total": 2
   },
   "ads": [
     {
@@ -12,17 +12,32 @@
       "width": "tile",
       "after_months": [
         "2026-06",
-        "2026-07",
-        "2026-08",
         "2026-09"
       ],
+      "media_type": "image",
       "image_url": "https://thomops.github.io/Mfg_Events/images/mfg---square.png",
+      "video_url": "",
       "link_url": "Thehomeofmfg.com",
       "headline": "Your Source For Events in MFG",
       "cta_text": "Learn More",
       "label": "Advertisement",
       "start_date": "2026-05-01",
       "end_date": "2026-09-30",
+      "status": "active"
+    },
+    {
+      "ad_id": "ADV0002",
+      "advertiser": "THOM Automation",
+      "width": "tile",
+      "after_months": [
+        "2026-08"
+      ],
+      "media_type": "video",
+      "image_url": "",
+      "video_url": "https://thomops.github.io/Mfg_Events/images/the-global-hub-for-manufacturing.mp4",
+      "link_url": "thehomeofmfg.com",
+      "start_date": "2026-06-01",
+      "end_date": "2026-12-31",
       "status": "active"
     }
   ]
