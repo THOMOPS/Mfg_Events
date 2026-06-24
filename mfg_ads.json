@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-23",
+    "last_updated": "2026-06-24",
     "total": 2
   },
   "ads": [
@@ -23,7 +23,8 @@
       "label": "Advertisement",
       "start_date": "2026-05-01",
       "end_date": "2026-09-30",
-      "status": "active"
+      "status": "active",
+      "notes": ""
     },
     {
       "ad_id": "ADV0002",
@@ -38,7 +39,8 @@
       "link_url": "thehomeofmfg.com",
       "start_date": "2026-06-01",
       "end_date": "2026-12-31",
-      "status": "active"
+      "status": "active",
+      "notes": ""
     }
   ]
 }

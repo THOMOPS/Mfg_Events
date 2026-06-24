@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-23",
+    "last_updated": "2026-06-24",
     "total": 13
   },
   "podcasts": [
@@ -15,6 +15,7 @@
       "spotify_url": "https://open.spotify.com/show/3qxN382Adh3WBA3S0Mr978",
       "apple_url": "https://podcasts.apple.com/us/podcast/making-chips-podcast-for-manufacturing-leaders/id953541032",
       "youtube_url": "https://www.youtube.com/@Makingchips",
+      "feed_url": "https://rss.libsyn.com/shows/61271/destinations/237805.xml",
       "status": "active"
     },
     {
@@ -27,6 +28,7 @@
       "spotify_url": "https://open.spotify.com/show/1XjIQgWUd7B3zHREDqIjRQ",
       "apple_url": "https://podcasts.apple.com/us/podcast/automation-ladies/id1650474727",
       "youtube_url": "https://www.youtube.com/channel/UC6OX8i1muE5TzMv_LhZD3PA",
+      "feed_url": "https://rss.buzzsprout.com/2053051.rss",
       "status": "active"
     },
     {
@@ -39,18 +41,20 @@
       "spotify_url": "https://open.spotify.com/show/3dCmT5iQXMQR6O4hiicEpG",
       "apple_url": "https://podcasts.apple.com/us/podcast/buy-the-numbers/id1774286946",
       "youtube_url": "",
+      "feed_url": "https://rss.libsyn.com/shows/547647/destinations/4723887.xml",
       "status": "active"
     },
     {
       "podcast_id": "POD0004",
       "name": "Machine Shop Tech Talk",
       "host": "Arthur Field",
-      "description": "On MSTT we tackle problems that plague the manufacturing world. Our focus is machine shops, be they contract based or OEM \u2014 however the insights we share apply across much of manufacturing.",
+      "description": "On MSTT we tackle problems that plague the manufacturing world. Our focus is machine shops, be they contract based or OEM — however the insights we share apply across much of manufacturing.",
       "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/44/2d/0a/442d0a8e-9b0b-3e93-818c-f132e8346f84/mza_7686760177234622433.jpg/600x600bb.jpg",
       "website_url": "https://www.meetarthur.ca",
       "spotify_url": "https://open.spotify.com/show/0rfPfPyuuC7i5mqmWzQe3X",
       "apple_url": "https://podcasts.apple.com/us/podcast/machine-shop-tech-talk/id1774346520",
       "youtube_url": "https://www.youtube.com/@ArthurField",
+      "feed_url": "https://anchor.fm/s/fc35c9cc/podcast/rss",
       "status": "active"
     },
     {
@@ -63,6 +67,7 @@
       "spotify_url": "https://open.spotify.com/show/69MRZOSEZRkEmtMprJYFFW",
       "apple_url": "https://podcasts.apple.com/us/podcast/manufacturing-happy-hour/id1484626862",
       "youtube_url": "https://www.youtube.com/@MfgHappyHour",
+      "feed_url": "https://feeds.captivate.fm/manufacturing-happy-hour/",
       "status": "active"
     },
     {
@@ -75,6 +80,7 @@
       "spotify_url": "https://open.spotify.com/show/0QcvGrBHLZtYQsLSSaXus3",
       "apple_url": "",
       "youtube_url": "https://www.youtube.com/@MavensofManufacturing",
+      "feed_url": "",
       "status": "active"
     },
     {
@@ -87,6 +93,7 @@
       "spotify_url": "",
       "apple_url": "",
       "youtube_url": "https://www.youtube.com/@MTDCNC",
+      "feed_url": "",
       "status": "active"
     },
     {
@@ -99,6 +106,7 @@
       "spotify_url": "https://open.spotify.com/show/2mqaMhQzWsbw8d0Tb7Qo2R",
       "apple_url": "https://podcasts.apple.com/us/podcast/my-true-position/id1664277435",
       "youtube_url": "https://www.youtube.com/@mytrueposition",
+      "feed_url": "https://rss.libsyn.com/shows/453642/destinations/3814335.xml",
       "status": "active"
     },
     {
@@ -111,6 +119,7 @@
       "spotify_url": "https://open.spotify.com/show/5NlQJR3Eq4j5ChcRiJG7U3",
       "apple_url": "https://podcasts.apple.com/us/podcast/rapid-fire-manufacturing/id1789316992",
       "youtube_url": "https://www.youtube.com/@Rapid-firemanufacturing",
+      "feed_url": "https://anchor.fm/s/ffacca74/podcast/rss",
       "status": "active"
     },
     {
@@ -123,6 +132,7 @@
       "spotify_url": "https://open.spotify.com/show/70UGO17AymTqYi3AYPYiSB",
       "apple_url": "https://podcasts.apple.com/us/podcast/the-manufacturing-executive/id1520127087",
       "youtube_url": "https://www.youtube.com/@Gorilla76LLC/playlists",
+      "feed_url": "https://feeds.resonaterecordings.com/the-manufacturing-executive-podcast",
       "status": "active"
     },
     {
@@ -135,6 +145,7 @@
       "spotify_url": "https://open.spotify.com/show/1DTgEZwW9cHQ0Cwskxg98k",
       "apple_url": "https://podcasts.apple.com/us/podcast/titans-of-cnc-podcast/id1708307057",
       "youtube_url": "https://www.youtube.com/@TITANSofCNC",
+      "feed_url": "https://feed.podbean.com/TitansofCNC/feed.xml",
       "status": "active"
     },
     {
@@ -147,6 +158,7 @@
       "spotify_url": "https://open.spotify.com/show/4lmefSKf0iutMRT8jq8YGD",
       "apple_url": "https://podcasts.apple.com/us/podcast/workforce-4-0/id1691782410",
       "youtube_url": "",
+      "feed_url": "https://media.rss.com/workforce4-0/feed.xml",
       "status": "active"
     },
     {
@@ -159,6 +171,7 @@
       "spotify_url": "https://open.spotify.com/show/54WiyLbuY0P3YRBeqrIH1K",
       "apple_url": "https://podcasts.apple.com/us/podcast/manufacturing-culture-podcast/id1663578705",
       "youtube_url": "https://www.youtube.com/@manufacturingculturepodcast",
+      "feed_url": "https://api.riverside.fm/hosting/fPm05zIr.rss",
       "status": "active"
     }
   ]
