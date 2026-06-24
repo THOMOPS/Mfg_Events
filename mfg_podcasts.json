@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "version": "3.0",
+    "last_updated": "2026-06-19",
+    "total": 13
+  },
+  "podcasts": [
+    {
+      "podcast_id": "POD0001",
+      "name": "Making Chips",
+      "host": "Nick Goellner, Mike Payne, Paul Van Metre",
+      "description": "Equipping and inspiring manufacturing leaders. Hosted by industry veterans with expertise in metalworking, business operations, and manufacturing technology.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/3d/14/ae/3d14aee2-cf0c-2ac9-24b5-798e78820153/mza_1466453196835194745.jpg/600x600bb.jpg",
+      "website_url": "https://makingchips.com",
+      "spotify_url": "https://open.spotify.com/show/3qxN382Adh3WBA3S0Mr978",
+      "apple_url": "https://podcasts.apple.com/us/podcast/making-chips-podcast-for-manufacturing-leaders/id953541032",
+      "youtube_url": "https://www.youtube.com/@Makingchips",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0002",
+      "name": "Automation Ladies",
+      "host": "Ali G, Nikki Gonzales, Courtney Fernandez",
+      "description": "Join Nikki Gonzales, Ali G, and Courtney Fernandez as they chat with people from all walks of life and all corners of the industrial automation industry.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/df/dd/ee/dfddee5d-5729-454a-f297-f73fbf515071/mza_7957187072186210074.jpg/600x600bb.jpg",
+      "website_url": "https://www.automationladies.io",
+      "spotify_url": "https://open.spotify.com/show/1XjIQgWUd7B3zHREDqIjRQ",
+      "apple_url": "https://podcasts.apple.com/us/podcast/automation-ladies/id1650474727",
+      "youtube_url": "https://www.youtube.com/channel/UC6OX8i1muE5TzMv_LhZD3PA",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0003",
+      "name": "Buy the Numbers",
+      "host": "Mike Payne",
+      "description": "The podcast that dives into the intersection of money and manufacturing.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/72/bb/fa/72bbfaca-9043-8875-4c3e-a2aef8f26316/mza_15477138494067179999.png/600x600bb.jpg",
+      "website_url": "https://makingchips.com/show/buy-the-numbers/",
+      "spotify_url": "https://open.spotify.com/show/3dCmT5iQXMQR6O4hiicEpG",
+      "apple_url": "https://podcasts.apple.com/us/podcast/buy-the-numbers/id1774286946",
+      "youtube_url": "",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0004",
+      "name": "Machine Shop Tech Talk",
+      "host": "Arthur Field",
+      "description": "On MSTT we tackle problems that plague the manufacturing world. Our focus is machine shops, be they contract based or OEM \u2014 however the insights we share apply across much of manufacturing.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/44/2d/0a/442d0a8e-9b0b-3e93-818c-f132e8346f84/mza_7686760177234622433.jpg/600x600bb.jpg",
+      "website_url": "https://www.meetarthur.ca",
+      "spotify_url": "https://open.spotify.com/show/0rfPfPyuuC7i5mqmWzQe3X",
+      "apple_url": "https://podcasts.apple.com/us/podcast/machine-shop-tech-talk/id1774346520",
+      "youtube_url": "https://www.youtube.com/@ArthurField",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0005",
+      "name": "Manufacturing Happy Hour",
+      "host": "Chris Luecke",
+      "description": "Welcome to Manufacturing Happy Hour, the podcast where we get real about the latest trends and technologies impacting modern manufacturers. Hosted by industry veteran Chris Luecke, each week we interview the builders, operators, and innovators shaping the future of manufacturing.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/26/5e/d1/265ed161-6d2c-e1ce-7f15-828ae18412f4/mza_97281560204468614.jpg/600x600bb.jpg",
+      "website_url": "https://manufacturinghappyhour.com",
+      "spotify_url": "https://open.spotify.com/show/69MRZOSEZRkEmtMprJYFFW",
+      "apple_url": "https://podcasts.apple.com/us/podcast/manufacturing-happy-hour/id1484626862",
+      "youtube_url": "https://www.youtube.com/@MfgHappyHour",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0006",
+      "name": "Mavens of Manufacturing",
+      "host": "Meaghan Ziemba",
+      "description": "Mavens of Manufacturing is a series of stories from the women who are setting new standards in U.S. manufacturing. Mavens aims to inspire and empower younger generations of women to change the world through manufacturing.",
+      "photo_url": "https://i.scdn.co/image/ab6765630000ba8a791c5ef8dfe5ed3e54d94ce7",
+      "website_url": "https://mavensofmanufacturing.com",
+      "spotify_url": "https://open.spotify.com/show/0QcvGrBHLZtYQsLSSaXus3",
+      "apple_url": "",
+      "youtube_url": "https://www.youtube.com/@MavensofManufacturing",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0007",
+      "name": "MTD CNC",
+      "host": "Arthur Field, Eddie Saunders, Fer Ana, Meaghan Ziemba, Tony Gunn",
+      "description": "The home of global manufacturing media. A team of 30+ trained engineers, presenters, and content creators traveling the world to capture the latest in CNC machining, tooling, automation, and factory innovation through video storytelling.",
+      "photo_url": "https://mtdcnc.cdn.cloud-infra.co.uk/cnc/wp-content/uploads/2023/12/22101058/cropped-favicon-old-1-270x270.png",
+      "website_url": "https://www.mtdcnc.com",
+      "spotify_url": "",
+      "apple_url": "",
+      "youtube_url": "https://www.youtube.com/@MTDCNC",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0008",
+      "name": "my TRUE POSITION",
+      "host": "Jim Carr",
+      "description": "Manufacturing professionals receive immediate and actionable insight into high-level issues of running a small to mid-sized manufacturing company. All communicated in an easy-to-digest 20 minutes by second-generation business owner Jim Carr.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts123/v4/f2/ed/81/f2ed81b3-5909-9f68-4544-3d52c9befc85/mza_7119388862912235967.jpg/600x600bb.jpg",
+      "website_url": "https://sites.libsyn.com/453642",
+      "spotify_url": "https://open.spotify.com/show/2mqaMhQzWsbw8d0Tb7Qo2R",
+      "apple_url": "https://podcasts.apple.com/us/podcast/my-true-position/id1664277435",
+      "youtube_url": "https://www.youtube.com/@mytrueposition",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0009",
+      "name": "Rapid Fire Manufacturing",
+      "host": "David Turner",
+      "description": "The podcast that spotlights the people, processes, and innovations driving the manufacturing industry forward. Quick, engaging conversations with industry leaders, machinists, and experts covering cutting-edge technology, workforce challenges, and the stories behind the tools shaping modern production.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/41/9f/d1/419fd19f-3456-727a-4e1b-231f475b0f52/mza_5795640855984457713.jpg/600x600bb.jpg",
+      "website_url": "https://podcasters.spotify.com/pod/show/rapidfiremanufacturing",
+      "spotify_url": "https://open.spotify.com/show/5NlQJR3Eq4j5ChcRiJG7U3",
+      "apple_url": "https://podcasts.apple.com/us/podcast/rapid-fire-manufacturing/id1789316992",
+      "youtube_url": "https://www.youtube.com/@Rapid-firemanufacturing",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0010",
+      "name": "The Manufacturing Executive",
+      "host": "Joe Sullivan",
+      "description": "Exploring the strategies and experiences driving midsized manufacturers forward. Conversations with manufacturing leaders sharing successes and struggles, plus B2B sales and marketing experts covering industrial lead generation, sales strategy, technology, and sector innovation.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6a/24/a1/6a24a1d1-c439-db16-9a71-fddacae98d6c/mza_3060610655536366543.png/600x600bb.jpg",
+      "website_url": "https://www.spreaker.com/show/the-manufacturing-executive",
+      "spotify_url": "https://open.spotify.com/show/70UGO17AymTqYi3AYPYiSB",
+      "apple_url": "https://podcasts.apple.com/us/podcast/the-manufacturing-executive/id1520127087",
+      "youtube_url": "https://www.youtube.com/@Gorilla76LLC/playlists",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0011",
+      "name": "Titans of CNC",
+      "host": "Titan Gilroy",
+      "description": "The leading CNC Machining Experts, talking trade, finance, life and inside into Billion dollar industries!",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/65/14/e3/6514e3e4-7dd7-e7bf-4e8b-6e4ce71771a8/mza_12037432511247139312.jpg/600x600bb.jpg",
+      "website_url": "https://titansofcnc.com",
+      "spotify_url": "https://open.spotify.com/show/1DTgEZwW9cHQ0Cwskxg98k",
+      "apple_url": "https://podcasts.apple.com/us/podcast/titans-of-cnc-podcast/id1708307057",
+      "youtube_url": "https://www.youtube.com/@TITANSofCNC",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0012",
+      "name": "Workforce 4.0",
+      "host": "Ann Wyatt",
+      "description": "An industry centric podcast featuring Manufacturing Executives from all industries coming together to emphasize how companies are partnering with technology to give people more meaningful work.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c1/bb/d3/c1bbd3ed-7d33-ce2a-7e82-7c3043fdb726/mza_17484405870420367476.png/600x600bb.jpg",
+      "website_url": "https://rss.com/podcasts/workforce4-0/",
+      "spotify_url": "https://open.spotify.com/show/4lmefSKf0iutMRT8jq8YGD",
+      "apple_url": "https://podcasts.apple.com/us/podcast/workforce-4-0/id1691782410",
+      "youtube_url": "",
+      "status": "active"
+    },
+    {
+      "podcast_id": "POD0013",
+      "name": "Manufacturing Culture Podcast",
+      "host": "Jim Mayer",
+      "description": "Manufacturing is more than the products we make; it's the people who make the parts. Conversations with leaders, innovators, and everyday heroes to uncover the stories behind their journeys in the industry.",
+      "photo_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/f0/62/9b/f0629b53-a358-88e7-0367-a3fd761ab8df/mza_4816114815247492240.jpg/600x600bb.jpg",
+      "website_url": "https://themfgconnector.com/",
+      "spotify_url": "https://open.spotify.com/show/54WiyLbuY0P3YRBeqrIH1K",
+      "apple_url": "https://podcasts.apple.com/us/podcast/manufacturing-culture-podcast/id1663578705",
+      "youtube_url": "https://www.youtube.com/@manufacturingculturepodcast",
+      "status": "active"
+    }
+  ]
+}

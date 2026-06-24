@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing Voices</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --bg:         #f8fafc;
+  --card:       #ffffff;
+  --border:     #e5e7eb;
+  --text:       #111827;
+  --mid:        #374151;
+  --muted:      #6b7280;
+  --accent:     #2563eb;
+  --accent-dk:  #1e3a8a;
+  --radius:     12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 16px; }
+
+/* ── Controls ── */
+.controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+.search { flex: 1; min-width: 180px; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: .82rem; background: var(--card); outline: none; transition: border-color .15s; }
+.search:focus { border-color: var(--accent); }
+.count { font-size: .72rem; color: var(--muted); white-space: nowrap; }
+
+/* ── Grid ── */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 260px)); gap: 14px; }
+
+/* ── Card (default) ── */
+.card { background: var(--card); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; position: relative; cursor: pointer; aspect-ratio: 2/3; transition: box-shadow .15s, border-color .15s, transform .12s; }
+.card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); border-color: #93c5fd; transform: translateY(-2px); }
+.card.dimmed { opacity: .35; pointer-events: none; transition: opacity .2s; }
+
+/* ── Card — cover art (top 50%) ── */
+.c-cover { width: 100%; flex: 0 0 50%; object-fit: cover; display: block; }
+.c-cover-ph { flex: 0 0 50%; background: linear-gradient(135deg, #e0e7ff, #ede9fe); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; }
+
+/* ── Card — body (bottom 50%) ── */
+.c-body { padding: 8px 12px 4px 12px; display: flex; flex-direction: column; gap: 2px; flex: 1; min-height: 0; overflow: hidden; }
+.c-name { font-size: .82rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+.c-host { font-size: .68rem; color: var(--muted); }
+.c-desc { font-size: .68rem; color: var(--muted); line-height: 1.45; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ── Card — footer ── */
+.c-footer { display: flex; align-items: center; justify-content: flex-end; padding: 4px 12px 8px; flex-shrink: 0; }
+.c-platforms { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.plt { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 7px; text-decoration: none; font-size: .85rem; color: #fff; transition: opacity .15s; }
+.plt:hover { opacity: .82; }
+.plt-spotify { background: #1DB954; }
+.plt-apple   { background: #8B2BE2; }
+.plt-youtube { background: #FF0000; }
+.plt-web     { background: #6b7280; }
+.c-more { font-size: .68rem; font-weight: 600; color: var(--accent); background: none; border: none; cursor: pointer; flex-shrink: 0; padding: 0; }
+.c-more:hover { text-decoration: underline; }
+
+/* ── Card — expanded state ── */
+.card.expanded { grid-column: 1 / -1; aspect-ratio: unset; min-height: 320px; border-color: var(--accent); cursor: default; transform: none !important; }
+.card.expanded:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); transform: none; }
+.card.expanded .c-cover,
+.card.expanded .c-cover-ph,
+.card.expanded > .c-body,
+.card.expanded > .c-footer { display: none; }
+
+/* ── Expanded content ── */
+.card-exp { display: none; flex: 1; overflow: hidden; min-height: 0; }
+.card.expanded .card-exp { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+
+.exp-left { padding: 22px 20px 22px 24px; display: flex; flex-direction: column; gap: 16px; border-right: 1px solid var(--border); overflow-y: auto; }
+.exp-cover { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; display: block; }
+.exp-cover-ph { width: 100%; aspect-ratio: 1/1; background: linear-gradient(135deg, #e0e7ff, #ede9fe); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.exp-platforms { display: flex; flex-direction: column; gap: 7px; }
+.exp-plt { display: flex; align-items: center; justify-content: center; padding: 8px 12px; border-radius: 8px; font-size: .78rem; font-weight: 600; text-decoration: none; gap: 6px; transition: opacity .15s; }
+.exp-plt:hover { opacity: .85; }
+.exp-plt.spotify { background: #dcfce7; color: #166534; }
+.exp-plt.apple   { background: #f3e8ff; color: #6b21a8; }
+.exp-plt.youtube { background: #fee2e2; color: #991b1b; }
+.exp-plt.web     { background: #f3f4f6; color: var(--mid); }
+
+.exp-right { padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; position: relative; }
+.exp-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 1.4rem; color: var(--muted); cursor: pointer; line-height: 1; }
+.exp-close:hover { color: var(--mid); }
+.exp-badge { font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: #eff6ff; color: #1e40af; padding: 2px 8px; border-radius: 999px; display: inline-block; align-self: flex-start; }
+.exp-name { font-size: 1.05rem; font-weight: 800; color: var(--text); line-height: 1.3; padding-right: 28px; }
+.exp-host { font-size: .78rem; color: var(--muted); }
+.exp-divider { border: none; border-top: 1px solid var(--border); margin: 2px 0; }
+.exp-label { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 5px; }
+.exp-desc { font-size: .82rem; color: var(--mid); line-height: 1.65; }
+.exp-cta { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; background: var(--accent-dk); color: #fff; border-radius: 8px; font-size: .8rem; font-weight: 600; text-decoration: none; margin-top: auto; }
+.exp-cta:hover { opacity: .88; }
+
+/* ── Episodes ── */
+.exp-ep-loading { font-size: .72rem; color: var(--muted); padding: 4px 0; }
+.ep-list { list-style: none; display: flex; flex-direction: column; }
+.ep-item { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.ep-item:last-child { border-bottom: none; }
+.ep-title { font-size: .78rem; font-weight: 600; color: var(--text); line-height: 1.3; text-decoration: none; display: block; margin-bottom: 3px; }
+.ep-title:hover { color: var(--accent); }
+.ep-meta { font-size: .65rem; color: var(--muted); }
+
+.empty { text-align: center; padding: 60px 20px; color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <input class="search" id="searchQ" type="search" placeholder="Search shows or hosts..." oninput="render()">
+  <span class="count" id="countEl"></span>
+</div>
+<div class="grid" id="grid"></div>
+
+<script>
+// ── Config ──────────────────────────────────────────
+const GITHUB_RAW = "https://raw.githubusercontent.com/THOMOPS/Mfg_Events/main/";
+let DEV_MODE   = false;
+let PODCASTS   = [];
+let expandedId = null;
+
+// ── Dev data via postMessage ─────────────────────────
+window.addEventListener("message", e => {
+  if(e.data && e.data.type === "MFG_VOICES_DEV_DATA"){
+    DEV_MODE  = true;
+    PODCASTS  = (e.data.podcasts || []).filter(p => p.status === "active");
+    render();
+  }
+});
+
+// ── Helpers ──────────────────────────────────────────
+function esc(s){ return s ? String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;") : ""; }
+function safeUrl(u){ const s = String(u||"").trim(); return /^https?:\/\//i.test(s) ? esc(s) : ""; }
+
+function sendResize(){
+  window.parent.postMessage({ type: "MFG_RESIZE", height: document.body.scrollHeight }, "*");
+}
+
+function fmtDate(str){
+  try { return new Date(str).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+  catch(e){ return str || ""; }
+}
+
+function fmtMs(ms){
+  const s = Math.floor(ms/1000), h = Math.floor(s/3600), m = Math.floor((s%3600)/60);
+  return h ? `${h}h ${m}m` : `${m}m`;
+}
+
+// ── Episode fetch (iTunes API — no CORS issues) ──────
+async function fetchEpisodes(pod){
+  // Primary: iTunes API
+  if(pod.apple_url){
+    const match = pod.apple_url.match(/id(\d+)/);
+    if(match){
+      const r = await fetch(`https://itunes.apple.com/lookup?id=${match[1]}&entity=podcastEpisode&limit=11`);
+      const d = await r.json();
+      const eps = (d.results||[]).filter(e => e.wrapperType === "podcastEpisode").slice(0,10);
+      if(eps.length) return eps.map(e => ({
+        title: e.trackName || "Untitled",
+        date:  e.releaseDate || "",
+        dur:   e.trackTimeMillis ? fmtMs(e.trackTimeMillis) : "",
+        link:  e.trackViewUrl || "",
+        audio: e.episodeUrl || ""
+      }));
+    }
+  }
+  return [];
+}
+
+async function loadEpisodes(podId){
+  const el = document.getElementById("ep-" + podId);
+  if(!el) return;
+  const pod = PODCASTS.find(p => p.podcast_id === podId);
+  if(!pod) return;
+  try {
+    const eps = await fetchEpisodes(pod);
+    if(!eps.length){ el.innerHTML = '<p class="exp-ep-loading">No episodes found.</p>'; return; }
+    el.innerHTML = `<ul class="ep-list">${eps.map(ep => `
+      <li class="ep-item">
+        ${ep.link
+          ? `<a class="ep-title" href="${esc(ep.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(ep.title)}</a>`
+          : `<span class="ep-title">${esc(ep.title)}</span>`}
+        <span class="ep-meta">${[fmtDate(ep.date), ep.dur].filter(Boolean).join(" · ")}</span>
+        ${ep.audio ? `<audio controls preload="none" style="width:100%;height:32px;margin-top:4px" onclick="event.stopPropagation()"><source src="${esc(ep.audio)}" type="audio/mpeg"></audio>` : ""}
+      </li>`).join("")}</ul>`;
+    setTimeout(sendResize, 100);
+  } catch(e){
+    el.innerHTML = '<p class="exp-ep-loading">Could not load episodes.</p>';
+  }
+}
+
+// ── Data load ────────────────────────────────────────
+async function loadData(){
+  if(DEV_MODE) return;
+  try {
+    const r = await fetch(GITHUB_RAW + "mfg_podcasts.json?t=" + Date.now());
+    const d = await r.json();
+    PODCASTS = (d.podcasts || []).filter(p => p.status === "active");
+    render();
+  } catch(e){ console.error("Failed to load podcasts:", e); }
+}
+
+// ── Card toggle ──────────────────────────────────────
+function toggleCard(id){
+  expandedId = (expandedId === id) ? null : id;
+  render();
+  // Auto-fetch episodes for expanded card
+  if(expandedId) loadEpisodes(expandedId);
+  setTimeout(sendResize, 60);
+}
+
+function collapseCard(){
+  expandedId = null;
+  render();
+  setTimeout(sendResize, 60);
+}
+
+// ── Render ───────────────────────────────────────────
+function render(){
+  const q    = (document.getElementById("searchQ").value || "").toLowerCase();
+  const pods = q
+    ? PODCASTS.filter(p => [p.name, p.host, p.description].join(" ").toLowerCase().includes(q))
+    : [...PODCASTS];
+
+  const countEl = document.getElementById("countEl");
+  if(countEl) countEl.textContent = pods.length + " show" + (pods.length !== 1 ? "s" : "");
+
+  const grid = document.getElementById("grid");
+  if(!pods.length){
+    grid.innerHTML = '<div class="empty">No shows found.</div>';
+    setTimeout(sendResize, 60);
+    return;
+  }
+
+  grid.innerHTML = pods.map(p => {
+    const isExp = expandedId === p.podcast_id;
+    const isDim = expandedId && expandedId !== p.podcast_id;
+    const cls   = ["card", isExp ? "expanded" : "", isDim ? "dimmed" : ""].filter(Boolean).join(" ");
+    const id    = esc(p.podcast_id);
+
+    // Cover art
+    const cover    = p.photo_url
+      ? `<img class="c-cover" src="${esc(p.photo_url)}" alt="${esc(p.name)}" loading="lazy">`
+      : `<div class="c-cover-ph">🎙</div>`;
+    const expCover = p.photo_url
+      ? `<img class="exp-cover" src="${esc(p.photo_url)}" alt="${esc(p.name)}">`
+      : `<div class="exp-cover-ph">🎙</div>`;
+
+    // Platform pills (card body — brand icons)
+    const pills = [
+      p.spotify_url ? `<a class="plt plt-spotify" href="${safeUrl(p.spotify_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Spotify"><i class="fa-brands fa-spotify"></i></a>`             : "",
+      p.apple_url   ? `<a class="plt plt-apple"   href="${safeUrl(p.apple_url)}"   target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Apple Podcasts"><i class="fa-brands fa-apple"></i></a>`        : "",
+      p.youtube_url ? `<a class="plt plt-youtube" href="${safeUrl(p.youtube_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="YouTube"><i class="fa-brands fa-youtube"></i></a>`              : "",
+      p.website_url ? `<a class="plt plt-web"     href="${safeUrl(p.website_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Website"><i class="fa-solid fa-globe"></i></a>`                : ""
+    ].filter(Boolean).join("");
+
+    // Episodes placeholder (only when expanded and apple_url exists)
+    const epSection = isExp && p.apple_url
+      ? `<hr class="exp-divider">
+         <div>
+           <div class="exp-label">Recent Episodes</div>
+           <div id="ep-${id}"><p class="exp-ep-loading">Loading episodes...</p></div>
+         </div>`
+      : "";
+
+    return `
+    <div class="${cls}" id="card-${id}" onclick="toggleCard('${id}')">
+      ${cover}
+      <div class="c-body">
+        <div class="c-name">${esc(p.name)}</div>
+        ${p.host ? `<div class="c-host">Hosted by ${esc(p.host)}</div>` : ""}
+        ${pills ? `<div class="c-platforms">${pills}</div>` : ""}
+      </div>
+      <div class="c-footer">
+        ${!isExp ? `<button class="c-more" onclick="event.stopPropagation();toggleCard('${id}')">See more</button>` : ""}
+      </div>
+      <div class="card-exp">
+        <button class="exp-close" onclick="event.stopPropagation();collapseCard()" aria-label="Close">&times;</button>
+        <div class="exp-left">
+          ${expCover}
+        </div>
+        <div class="exp-right">
+          <span class="exp-badge">Podcast</span>
+          <div class="exp-name">${esc(p.name)}</div>
+          ${p.host ? `<div class="exp-host">Hosted by ${esc(p.host)}</div>` : ""}
+          ${pills ? `<div class="c-platforms" style="margin-top:10px">${pills}</div>` : ""}
+          <hr class="exp-divider">
+          ${p.description ? `<div><div class="exp-label">About</div><div class="exp-desc">${esc(p.description)}</div></div>` : ""}
+          ${epSection}
+          ${safeUrl(p.website_url) ? `<a class="exp-cta" href="${safeUrl(p.website_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Visit show website &#8599;</a>` : ""}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  setTimeout(sendResize, 100);
+}
+
+loadData();
+</script>
+</body>
+</html>
