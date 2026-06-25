@@ -90,6 +90,16 @@
   .ad-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .ad-card-label { position: absolute; top: 8px; right: 10px; font-size: .58rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #6b7280; background: rgba(255,255,255,.88); padding: 2px 7px; border-radius: 6px; }
 
+  /* ── Waitlist promo card ── */
+  .wl-card { background: transparent; border: 2px dashed rgba(18,56,91,.3); border-radius: 12px; text-decoration: none; display: flex; flex-direction: column; height: 100%; opacity: 0.25; transition: opacity .25s; }
+  .wl-card:hover { opacity: 1; }
+  .wl-body { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 22px 18px; text-align: center; gap: 14px; }
+  .wl-headline { color: #12385B; font-size: .9rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; text-align: center; width: 100%; }
+  .wl-cta { font-size: .9rem; font-weight: 700; color: #12385B; line-height: 1.3; border: 1px dashed rgba(18,56,91,.4); border-radius: 6px; padding: 5px 10px; opacity: .75; text-align: center; }
+  .wl-brand { border-top: 1px dashed rgba(18,56,91,.15); padding: 10px 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .wl-brand img { width: 26px; height: 26px; border-radius: 5px; }
+  .wl-brand-name { font-size: .6rem; font-weight: 700; color: rgba(18,56,91,.4); text-transform: uppercase; letter-spacing: .1em; }
+
   @media (max-width: 560px) {
     .card.expanded .card-detail { grid-template-columns: 1fr; max-height: 55vh; }
   }
@@ -116,7 +126,7 @@
 const GITHUB_RAW = "https://raw.githubusercontent.com/THOMOPS/Mfg_Events/main/";
 
 // ── State ────────────────────────────────────────────────────────────────────
-let EVENTS = [], VENUES = [], ADS = [];
+let EVENTS = [], VENUES = [], ADS = [], WAITLIST = null;
 let DEV_MODE = false;
 let expandedId = null;
 
@@ -150,9 +160,10 @@ async function loadData(){
       fetchJson("mfg_ads.json").catch(() => ({ ads: [] }))
     ]);
     if(DEV_MODE) return;
-    EVENTS = eventsData.events  || [];
-    VENUES = venuesData.venues  || [];
-    ADS    = adsData.ads        || [];
+    EVENTS   = eventsData.events    || [];
+    VENUES   = venuesData.venues    || [];
+    ADS      = adsData.ads          || [];
+    WAITLIST = adsData.waitlist     || null;
     initFilters();
     renderCalendar();
   } catch(err){
@@ -217,8 +228,21 @@ function renderCalendar(){
   for(const [k, grp] of Object.entries(byMonth)){
     const [yr, mo] = k.split("-");
     html += `<div class="month-header">${MO_FULL[+mo-1]} ${yr}</div><div class="grid">`;
-    grp.forEach(e => { html += calCard(e); });
-    getActiveAdsForMonth(k).forEach(a => { html += adCardHtml(a); });
+    const adSlots   = getActiveAdsForMonth(k);
+    const tileSlots = adSlots.filter(s => s.ad.width === "tile");
+    const fullSlots = adSlots.filter(s => s.ad.width !== "tile");
+    const wlSlot    = WAITLIST && WAITLIST.enabled
+      ? (WAITLIST.slots || []).find(s => s.slice(0,7) === k) : null;
+    const items = [
+      ...grp.map(e => ({ sort: e.start_date + "|0|", render: () => calCard(e) })),
+      ...tileSlots.map(s => ({ sort: s.position_date + "|1|" + s.ad.start_date + "|" + s.ad.ad_id, render: () => adCardHtml(s.ad) })),
+      ...(wlSlot ? [{ sort: wlSlot + "|2|", render: () => waitlistCardHtml() }] : [])
+    ];
+    items.sort((a, b) => a.sort.localeCompare(b.sort));
+    items.forEach(item => { html += item.render(); });
+    fullSlots
+      .sort((a, b) => a.ad.start_date.localeCompare(b.ad.start_date) || a.ad.ad_id.localeCompare(b.ad.ad_id))
+      .forEach(s => { html += adCardHtml(s.ad); });
     html += "</div>";
   }
   document.getElementById("calBody").innerHTML = html;
@@ -330,12 +354,14 @@ function collapseCard(evtId){
 // ── Ad tiles ──────────────────────────────────────────────────────────────────
 function getActiveAdsForMonth(monthKey){
   const today = new Date().toISOString().slice(0,10);
-  return ADS.filter(a =>
-    a.status === "active" &&
-    (a.after_months||[]).includes(monthKey) &&
-    a.start_date <= today &&
-    a.end_date   >= today
-  );
+  const result = [];
+  ADS.forEach(a => {
+    if(a.status !== "active") return;
+    if(a.start_date > today || a.end_date < today) return;
+    const slot = (a.slots||[]).find(s => s.slice(0,7) === monthKey);
+    if(slot) result.push({ ad: a, position_date: slot });
+  });
+  return result;
 }
 
 function adCardHtml(a){
@@ -353,13 +379,30 @@ function adCardHtml(a){
   </a>`;
 }
 
+function waitlistCardHtml(){
+  if(!WAITLIST) return "";
+  const href = WAITLIST.link ? ` href="${esc(WAITLIST.link)}" target="_blank" rel="noopener"` : "";
+  const tag  = WAITLIST.link ? "a" : "div";
+  return `<${tag} class="wl-card"${href}>
+    <div class="wl-body">
+      <div class="wl-headline">${esc(WAITLIST.headline).replace(/\n/g,"<br>")}</div>
+      <div class="wl-cta">${esc(WAITLIST.cta).replace(/\n/g,"<br>")}</div>
+    </div>
+    <div class="wl-brand">
+      <img src="https://thomops.github.io/Mfg_Events/images/mfg---square.png" alt="The Home of MFG"/>
+      <span class="wl-brand-name">The Home of MFG</span>
+    </div>
+  </${tag}>`;
+}
+
 // ── Accept local data override from admin Dev tab ─────────────────────────────
 window.addEventListener("message", function(e){
   if(e.data && e.data.type === "MFG_DEV_DATA"){
     DEV_MODE = true;
-    EVENTS = e.data.events || [];
-    VENUES = e.data.venues || [];
-    ADS    = e.data.ads    || [];
+    EVENTS   = e.data.events    || [];
+    VENUES   = e.data.venues    || [];
+    ADS      = e.data.ads       || [];
+    WAITLIST = e.data.waitlist  || null;
     // Resolve transferred video ArrayBuffers into local blob URLs.
     // Parent-frame blob URLs can't cross file:// origins, so video data is sent as ArrayBuffers.
     const transfers = e.data.videoTransfers || {};

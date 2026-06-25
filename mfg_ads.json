@@ -1,31 +1,20 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-24",
-    "total": 2
+    "last_updated": "2026-06-25",
+    "total": 1
+  },
+  "waitlist": {
+    "enabled": true,
+    "headline": "The best don't get chosen.\nThey get discovered.",
+    "cta": "Advertise Here → \nJoin The Waitlist",
+    "link": "https://www.thehomeofmfg.com/thom-ad-inquiry",
+    "slots": [
+      "2026-08-31",
+      "2026-10-31"
+    ]
   },
   "ads": [
-    {
-      "ad_id": "ADV0001",
-      "name": "THE HOME OF MFG",
-      "advertiser": "THOM",
-      "width": "tile",
-      "after_months": [
-        "2026-06",
-        "2026-09"
-      ],
-      "media_type": "image",
-      "image_url": "https://thomops.github.io/Mfg_Events/images/mfg---square.png",
-      "video_url": "",
-      "link_url": "Thehomeofmfg.com",
-      "headline": "Your Source For Events in MFG",
-      "cta_text": "Learn More",
-      "label": "Advertisement",
-      "start_date": "2026-05-01",
-      "end_date": "2026-09-30",
-      "status": "active",
-      "notes": ""
-    },
     {
       "ad_id": "ADV0002",
       "advertiser": "THOM Automation",
@@ -40,7 +29,10 @@
       "start_date": "2026-06-01",
       "end_date": "2026-12-31",
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "slots": [
+        "2026-07-25"
+      ]
     }
   ]
 }
