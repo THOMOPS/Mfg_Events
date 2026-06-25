@@ -329,4 +329,5 @@ function adTab(btn,id){
   btn.classList.add('active');
   document.getElementById(id).classList.add('active');
 }
+window.parent.postMessage({ type: "MFG_RESIZE", height: document.body.scrollHeight }, "*");
 </script>
