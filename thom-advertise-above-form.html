@@ -328,6 +328,10 @@ function adTab(btn,id){
   wrap.querySelectorAll('.ad-panel').forEach(function(p){p.classList.remove('active');});
   btn.classList.add('active');
   document.getElementById(id).classList.add('active');
+  sendHeight();
 }
-window.parent.postMessage({ type: "MFG_RESIZE", height: document.body.scrollHeight }, "*");
+function sendHeight(){
+  window.parent.postMessage({ type: "MFG_RESIZE", height: document.body.scrollHeight }, "*");
+}
+window.addEventListener('load', sendHeight);
 </script>
