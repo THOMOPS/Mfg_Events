@@ -1,0 +1,332 @@
+<style>
+.adblock *{box-sizing:border-box;margin:0;padding:0;}
+.adblock{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:#f9fafb;
+  color:#111827;
+  padding:40px 20px 48px;
+}
+.adblock-inner{max-width:760px;margin:0 auto;}
+
+/* Hero */
+.ad-hero{margin-bottom:32px;}
+.ad-hero h1{font-size:1.5rem;font-weight:800;color:#111827;line-height:1.2;margin-bottom:10px;}
+.ad-hero h1 span{color:#2563eb;}
+.ad-hero p{font-size:.9rem;color:#6b7280;line-height:1.7;}
+
+/* Tabs */
+.ad-tab-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.ad-tab-btn{
+  padding:7px 16px;
+  border:1.5px solid #d1d5db;
+  border-radius:8px;
+  font-size:.82rem;
+  font-weight:500;
+  background:#fff;
+  color:#6b7280;
+  cursor:pointer;
+  transition:border-color .15s,color .15s;
+}
+.ad-tab-btn:hover{border-color:#2563eb;color:#2563eb;}
+.ad-tab-btn.active{border-color:#2563eb;color:#2563eb;background:#eff6ff;}
+.ad-panel{display:none;}
+.ad-panel.active{display:block;}
+
+/* Format cards */
+.ad-formats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+@media(max-width:480px){.ad-formats{grid-template-columns:1fr;}}
+.ad-format{
+  background:#fff;
+  border:1.5px solid #e5e7eb;
+  border-radius:12px;
+  padding:18px 20px;
+}
+.ad-format-name{font-size:.95rem;font-weight:700;color:#111827;margin-bottom:6px;}
+.ad-format-desc{font-size:.8rem;color:#6b7280;line-height:1.65;}
+.ad-format-badge{
+  display:inline-block;
+  font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  color:#fff;background:#2563eb;
+  padding:2px 8px;border-radius:999px;
+  margin-bottom:8px;
+}
+
+/* Zone grid */
+.ad-zones{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
+@media(max-width:480px){.ad-zones{grid-template-columns:1fr;}}
+.ad-zone{
+  background:#fff;
+  border:1.5px solid #e5e7eb;
+  border-radius:12px;
+  padding:16px 18px;
+}
+.ad-zone-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.ad-zone-window{font-size:.73rem;color:#6b7280;margin-bottom:12px;}
+.ad-zone-price{font-size:.82rem;font-weight:700;line-height:1.7;}
+.ad-zone-note{font-size:.65rem;margin-top:6px;font-weight:600;}
+
+.ad-zone.z3{border-top:3px solid #2563eb;}
+.ad-zone.z3 .ad-zone-label{color:#2563eb;}
+.ad-zone.z3 .ad-zone-price{color:#1e3a8a;}
+.ad-zone.z3 .ad-zone-note{color:#2563eb;}
+
+.ad-zone.z2{border-top:3px solid #7c3aed;}
+.ad-zone.z2 .ad-zone-label{color:#7c3aed;}
+.ad-zone.z2 .ad-zone-price{color:#5b21b6;}
+
+.ad-zone.z1{border-top:3px solid #dc2626;}
+.ad-zone.z1 .ad-zone-label{color:#dc2626;}
+.ad-zone.z1 .ad-zone-price{color:#991b1b;}
+
+/* Info note */
+.ad-note{
+  background:#fff;
+  border:1.5px solid #e5e7eb;
+  border-left:4px solid #2563eb;
+  border-radius:0 8px 8px 0;
+  padding:12px 16px;
+  font-size:.8rem;
+  color:#6b7280;
+  line-height:1.65;
+  margin-bottom:20px;
+}
+.ad-note strong{color:#111827;}
+
+/* Bottom nudge */
+.ad-nudge{
+  background:#fff;
+  border:1.5px solid #e5e7eb;
+  border-radius:12px;
+  padding:18px 20px;
+  font-size:.82rem;
+  color:#6b7280;
+  line-height:1.65;
+  text-align:center;
+}
+.ad-nudge strong{color:#111827;}
+
+/* Divider */
+.ad-divider{border:none;border-top:1.5px solid #e5e7eb;margin:32px 0;}
+
+/* Zone section */
+.ad-zone-section{margin-top:32px;}
+.ad-zone-heading{font-size:1rem;font-weight:700;color:#111827;margin-bottom:4px;}
+.ad-zone-subhead{font-size:.82rem;color:#6b7280;line-height:1.6;margin-bottom:20px;}
+
+/* Zone examples */
+.ad-examples{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
+@media(max-width:520px){.ad-examples{grid-template-columns:1fr;}}
+.ad-example{background:#fff;border:1.5px solid #e5e7eb;border-radius:12px;padding:20px;}
+.ad-example-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;}
+.ad-example.ex-z3 .ad-example-label{color:#2563eb;}
+.ad-example.ex-z1 .ad-example-label{color:#dc2626;}
+
+/* Timeline - proportional track */
+.ad-tl-outer{margin-bottom:16px;}
+.ad-tl-track{height:6px;background:#e5e7eb;border-radius:3px;position:relative;margin:8px 0 4px;}
+.ad-tl-fill{position:absolute;left:0;top:0;height:6px;border-radius:3px;}
+.ex-z3 .ad-tl-fill{background:#2563eb;}
+.ex-z1 .ad-tl-fill{background:#dc2626;}
+.ad-tl-dot{width:10px;height:10px;border-radius:50%;position:absolute;top:50%;transform:translateY(-50%);}
+.ex-z3 .ad-tl-dot{background:#2563eb;}
+.ex-z1 .ad-tl-dot{background:#dc2626;}
+.ad-tl-label-row{position:relative;height:16px;font-size:.65rem;color:#6b7280;}
+.ad-tl-span{font-size:.7rem;font-weight:600;text-align:center;margin-bottom:16px;}
+.ex-z3 .ad-tl-span{color:#2563eb;}
+.ex-z1 .ad-tl-span{color:#dc2626;}
+
+/* Math row */
+.ad-math{background:#f9fafb;border-radius:8px;padding:12px 14px;}
+.ad-math-row{display:flex;align-items:center;gap:8px;font-size:.78rem;flex-wrap:wrap;}
+.ad-math-zone{font-weight:700;color:#111827;}
+.ad-math-op{color:#9ca3af;}
+.ad-math-result{font-weight:700;padding:3px 10px;border-radius:6px;font-size:.78rem;}
+.ex-z3 .ad-math-result{background:#eff6ff;color:#1e3a8a;}
+.ex-z1 .ad-math-result{background:#fef2f2;color:#991b1b;}
+.ad-math-desc{font-size:.72rem;color:#6b7280;margin-top:6px;}
+
+/* Free pill */
+.ad-free{
+  display:inline-block;
+  font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  color:#059669;background:#d1fae5;
+  padding:2px 8px;border-radius:999px;
+  margin-left:6px;vertical-align:middle;
+}
+</style>
+
+<div class="adblock">
+<div class="adblock-inner">
+
+  <!-- Hero -->
+  <div class="ad-hero">
+    <h1>Put Your Brand <span>Where Manufacturers Look.</span></h1>
+    <p>The THOM calendar is where trade show organizers, equipment buyers, suppliers, and plant managers plan. Everyone here is actively sourcing or deciding &mdash; not scrolling for entertainment.</p>
+  </div>
+
+  <!-- Tab nav -->
+  <div class="ad-tab-nav">
+    <button class="ad-tab-btn active" onclick="adTab(this,'ad-company')">Company Ad</button>
+    <button class="ad-tab-btn" onclick="adTab(this,'ad-webinar')">Webinar Listing</button>
+    <button class="ad-tab-btn" onclick="adTab(this,'ad-feature')">Event Feature</button>
+  </div>
+
+  <!-- ── Tab 1: Company Ad ── -->
+  <div id="ad-company" class="ad-panel active">
+
+    <div class="ad-formats">
+      <div class="ad-format">
+        <div class="ad-format-badge">Tile</div>
+        <div class="ad-format-name">Native Calendar Ad</div>
+        <div class="ad-format-desc">Same size and shape as an event card. Sits inside the grid &mdash; your brand appears as part of the calendar, not an interruption.</div>
+      </div>
+      <div class="ad-format">
+        <div class="ad-format-badge">Banner</div>
+        <div class="ad-format-name">Full-Width Row Ad</div>
+        <div class="ad-format-desc">Takes an entire row across the calendar. Cannot be missed. Slots are limited by design &mdash; every Banner placement stands out.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Tab 2: Webinar Listing ── -->
+  <div id="ad-webinar" class="ad-panel">
+
+    <div class="ad-formats">
+      <div class="ad-format">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <div class="ad-format-badge" style="margin-bottom:0;">Tile</div>
+          <div class="ad-format-badge" style="margin-bottom:0;background:#059669;">Flat Rate</div>
+        </div>
+        <div class="ad-format-name">Webinar Listing</div>
+        <div class="ad-format-desc">Webinars appear in their own filterable category on the THOM calendar &mdash; separate from in-person events. Pay once per listing. Your webinar sits as a Tile card alongside trade shows and conferences.</div>
+      </div>
+      <div class="ad-format">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <div class="ad-format-badge" style="margin-bottom:0;">Banner</div>
+          <div class="ad-format-badge" style="margin-bottom:0;background:#059669;">Flat Rate</div>
+        </div>
+        <div class="ad-format-name">Featured Webinar</div>
+        <div class="ad-format-desc">Upgrade to a full-width Featured Banner. Your webinar takes an entire calendar row and stands above every other listing on the page &mdash; maximum visibility for a topic your audience is already searching for.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Tab 3: Event Feature ── -->
+  <div id="ad-feature" class="ad-panel">
+
+    <div class="ad-formats">
+      <div class="ad-format">
+        <div class="ad-format-badge" style="background:#059669;">Free</div>
+        <div class="ad-format-name">Standard Listing <span class="ad-free">Trade Shows &amp; Conferences</span></div>
+        <div class="ad-format-desc">Trade shows and conferences are listed free as standard Tile cards. Submit below and your event goes live. No catch &mdash; a complete calendar is what makes it valuable for everyone.</div>
+      </div>
+      <div class="ad-format">
+        <div class="ad-format-badge">Featured</div>
+        <div class="ad-format-name">Banner Upgrade &mdash; Any Event</div>
+        <div class="ad-format-desc">Upgrade any listing to a full-width Banner. Your event takes an entire calendar row and stands above every other listing on the page.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Zone pricing (shared, below all tabs) ── -->
+  <hr class="ad-divider">
+
+  <div class="ad-zone-section">
+    <div class="ad-zone-heading">When you book determines your rate.</div>
+    <div class="ad-zone-subhead">The further out your placement date is from today, the better the rate &mdash; like booking an airline seat early. Your rate locks on the day you purchase and stays fixed for your entire run.</div>
+
+    <div class="ad-zones">
+      <div class="ad-zone z3">
+        <div class="ad-zone-label">Zone 3</div>
+        <div class="ad-zone-window">121+ days out</div>
+        <div class="ad-zone-price">Best Rate</div>
+        <div class="ad-zone-note">Lowest available &mdash; book early, lock it in</div>
+      </div>
+      <div class="ad-zone z2">
+        <div class="ad-zone-label">Zone 2</div>
+        <div class="ad-zone-window">61&ndash;120 days out</div>
+        <div class="ad-zone-price">Standard Rate</div>
+        <div class="ad-zone-note" style="color:#7c3aed;">Planning 2&ndash;4 months ahead</div>
+      </div>
+      <div class="ad-zone z1">
+        <div class="ad-zone-label">Zone 1</div>
+        <div class="ad-zone-window">0&ndash;60 days out</div>
+        <div class="ad-zone-price">Premium Rate</div>
+        <div class="ad-zone-note" style="color:#dc2626;">Closest to the event &mdash; highest demand</div>
+      </div>
+    </div>
+
+    <div class="ad-examples">
+
+      <!-- Example 1: 6 months out = Zone 3 -->
+      <div class="ad-example ex-z3">
+        <div class="ad-example-label">Example &mdash; 6 months out</div>
+        <div class="ad-tl-outer">
+          <div class="ad-tl-track">
+            <div class="ad-tl-fill" style="width:100%;"></div>
+            <div class="ad-tl-dot" style="left:-5px;"></div>
+            <div class="ad-tl-dot" style="right:-5px;left:auto;"></div>
+          </div>
+          <div class="ad-tl-label-row">
+            <span style="position:absolute;left:0;">Today</span>
+            <span style="position:absolute;right:0;">Event date</span>
+          </div>
+        </div>
+        <div class="ad-tl-span">~180 days &rarr; Zone 3 &middot; Best Rate</div>
+        <div class="ad-math">
+          <div class="ad-math-row">
+            <span class="ad-math-zone">Best Rate</span>
+            <span class="ad-math-op">&times;</span>
+            <span>6 months</span>
+            <span class="ad-math-op">=</span>
+            <span class="ad-math-result">Total due at posting</span>
+          </div>
+          <div class="ad-math-desc">Rate locks today. Does not change as the event gets closer.</div>
+        </div>
+      </div>
+
+      <!-- Example 2: 2 months out = Zone 1 -->
+      <div class="ad-example ex-z1">
+        <div class="ad-example-label">Example &mdash; 2 months out</div>
+        <div class="ad-tl-outer">
+          <div class="ad-tl-track">
+            <div class="ad-tl-fill" style="width:33%;"></div>
+            <div class="ad-tl-dot" style="left:-5px;"></div>
+            <div class="ad-tl-dot" style="left:calc(33% - 5px);"></div>
+          </div>
+          <div class="ad-tl-label-row">
+            <span style="position:absolute;left:0;">Today</span>
+            <span style="position:absolute;left:33%;transform:translateX(-50%);">Event date</span>
+          </div>
+        </div>
+        <div class="ad-tl-span">~60 days &rarr; Zone 1 &middot; Premium Rate</div>
+        <div class="ad-math">
+          <div class="ad-math-row">
+            <span class="ad-math-zone">Premium Rate</span>
+            <span class="ad-math-op">&times;</span>
+            <span>2 months</span>
+            <span class="ad-math-op">=</span>
+            <span class="ad-math-result">Total due at posting</span>
+          </div>
+          <div class="ad-math-desc">Closest to the event &mdash; highest demand, premium rate applies.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function adTab(btn,id){
+  var wrap=btn.closest('.adblock-inner');
+  wrap.querySelectorAll('.ad-tab-btn').forEach(function(b){b.classList.remove('active');});
+  wrap.querySelectorAll('.ad-panel').forEach(function(p){p.classList.remove('active');});
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
