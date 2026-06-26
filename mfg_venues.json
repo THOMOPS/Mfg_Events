@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-25",
-    "total": 48
+    "last_updated": "2026-06-26",
+    "total": 65
   },
   "venues": [
     {
@@ -261,7 +261,7 @@
       "airports": [
         {
           "code": "MEX",
-          "name": "Benito Juárez International Airport"
+          "name": "Benito Ju\u00e1rez International Airport"
         }
       ]
     },
@@ -324,7 +324,7 @@
     {
       "ven_id": "VEN0019",
       "name": "Hannover Fairground",
-      "address": "Messegelände",
+      "address": "Messegel\u00e4nde",
       "city": "Hannover",
       "state": "",
       "zip": "30521",
@@ -555,9 +555,9 @@
     },
     {
       "ven_id": "VEN0033",
-      "name": "Messe Düsseldorf",
+      "name": "Messe D\u00fcsseldorf",
       "address": "Stockumer Kirchstr. 61",
-      "city": "Düsseldorf",
+      "city": "D\u00fcsseldorf",
       "state": "",
       "zip": "40474",
       "country": "Germany",
@@ -565,7 +565,7 @@
       "airports": [
         {
           "code": "DUS",
-          "name": "Düsseldorf Airport"
+          "name": "D\u00fcsseldorf Airport"
         },
         {
           "code": "CGN",
@@ -684,7 +684,7 @@
     {
       "ven_id": "VEN0040",
       "name": "ENGEL Austria GmbH Headquarters",
-      "address": "Ludwig-Engel-Straße 1",
+      "address": "Ludwig-Engel-Stra\u00dfe 1",
       "city": "Schwertberg",
       "state": "",
       "zip": "4311",
@@ -838,6 +838,239 @@
           "code": "PHX",
           "name": "Phoenix Sky Harbor International Airport"
         }
+      ]
+    },
+    {
+      "ven_id": "VEN0049",
+      "name": "DMG MORI Solution Center Chicago",
+      "address": "2400 Huntington Blvd",
+      "city": "Hoffman Estates",
+      "state": "IL",
+      "zip": "60169",
+      "country": "USA",
+      "website": "https://us.dmgmori.com",
+      "airports": [
+        "ORD",
+        "MDW"
+      ]
+    },
+    {
+      "ven_id": "VEN0050",
+      "name": "DMG MORI Technology Center Cleveland",
+      "address": "",
+      "city": "Cleveland",
+      "state": "OH",
+      "zip": "",
+      "country": "USA",
+      "website": "https://us.dmgmori.com",
+      "airports": [
+        "CLE"
+      ]
+    },
+    {
+      "ven_id": "VEN0051",
+      "name": "Farnborough International Exhibition & Conference Centre",
+      "address": "Aerospace Blvd",
+      "city": "Farnborough",
+      "state": "Hampshire",
+      "zip": "GU14 6TQ",
+      "country": "UK",
+      "website": "https://www.farnboroughinternational.com",
+      "airports": [
+        "LHR",
+        "LGW"
+      ]
+    },
+    {
+      "ven_id": "VEN0052",
+      "name": "HITEX Exhibition Centre",
+      "address": "Hitex Rd, Madhapur",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zip": "500084",
+      "country": "India",
+      "website": "https://www.hitex.co.in",
+      "airports": [
+        "HYD"
+      ]
+    },
+    {
+      "ven_id": "VEN0053",
+      "name": "NCMT Technology Centre Coventry",
+      "address": "Kingfield Road",
+      "city": "Coventry",
+      "state": "West Midlands",
+      "zip": "CV6 5PL",
+      "country": "UK",
+      "website": "https://www.ncmt.co.uk",
+      "airports": [
+        "BHX",
+        "LHR"
+      ]
+    },
+    {
+      "ven_id": "VEN0054",
+      "name": "Messe Stuttgart",
+      "address": "Messepiazza 1",
+      "city": "Stuttgart",
+      "state": "Baden-W\u00fcrttemberg",
+      "zip": "70629",
+      "country": "Germany",
+      "website": "https://www.messe-stuttgart.de",
+      "airports": [
+        "STR"
+      ]
+    },
+    {
+      "ven_id": "VEN0055",
+      "name": "Istanbul Expo Center (IFM)",
+      "address": "Ye\u015filk\u00f6y Mah. Atat\u00fcrk Cd. No:4",
+      "city": "Istanbul",
+      "state": "",
+      "zip": "34149",
+      "country": "Turkey",
+      "website": "https://www.ifm.com.tr",
+      "airports": [
+        "IST",
+        "SAW"
+      ]
+    },
+    {
+      "ven_id": "VEN0056",
+      "name": "Parc des Expositions de Besan\u00e7on",
+      "address": "16 Av. de Chardonnet",
+      "city": "Besan\u00e7on",
+      "state": "Bourgogne-Franche-Comt\u00e9",
+      "zip": "25000",
+      "country": "France",
+      "website": "https://www.micronora.com",
+      "airports": [
+        "BSL",
+        "DLE"
+      ]
+    },
+    {
+      "ven_id": "VEN0057",
+      "name": "Brno Exhibition Centre",
+      "address": "V\u00fdstavi\u0161t\u011b 405/1",
+      "city": "Brno",
+      "state": "South Moravian Region",
+      "zip": "603 00",
+      "country": "Czech Republic",
+      "website": "https://www.bvv.cz",
+      "airports": [
+        "BRQ",
+        "VIE"
+      ]
+    },
+    {
+      "ven_id": "VEN0058",
+      "name": "Messe Friedrichshafen",
+      "address": "Neue Messe 1",
+      "city": "Friedrichshafen",
+      "state": "Baden-W\u00fcrttemberg",
+      "zip": "88046",
+      "country": "Germany",
+      "website": "https://www.messe-friedrichshafen.de",
+      "airports": [
+        "FDH",
+        "ZRH",
+        "STR"
+      ]
+    },
+    {
+      "ven_id": "VEN0059",
+      "name": "MEETT Toulouse",
+      "address": "Avenue Marcel Dassault",
+      "city": "Blagnac",
+      "state": "Occitanie",
+      "zip": "31700",
+      "country": "France",
+      "website": "https://www.meett.com",
+      "airports": [
+        "TLS"
+      ]
+    },
+    {
+      "ven_id": "VEN0060",
+      "name": "Fiera Milano (fieramilano Rho)",
+      "address": "SS Sempione 28",
+      "city": "Rho",
+      "state": "Lombardy",
+      "zip": "20017",
+      "country": "Italy",
+      "website": "https://www.fieramilano.it",
+      "airports": [
+        "MXP",
+        "LIN"
+      ]
+    },
+    {
+      "ven_id": "VEN0061",
+      "name": "Silverstone Wing",
+      "address": "Silverstone Circuit",
+      "city": "Silverstone",
+      "state": "Northamptonshire",
+      "zip": "NN12 8TN",
+      "country": "UK",
+      "website": "https://www.silverstone.co.uk",
+      "airports": [
+        "BHX",
+        "LTN"
+      ]
+    },
+    {
+      "ven_id": "VEN0062",
+      "name": "Messe Hannover",
+      "address": "Messegel\u00e4nde",
+      "city": "Hannover",
+      "state": "Lower Saxony",
+      "zip": "30521",
+      "country": "Germany",
+      "website": "https://www.messe.de",
+      "airports": [
+        "HAJ"
+      ]
+    },
+    {
+      "ven_id": "VEN0063",
+      "name": "Tokyo Big Sight",
+      "address": "3-11-1 Ariake, Koto-ku",
+      "city": "Tokyo",
+      "state": "",
+      "zip": "135-0063",
+      "country": "Japan",
+      "website": "https://www.bigsight.jp",
+      "airports": [
+        "NRT",
+        "HND"
+      ]
+    },
+    {
+      "ven_id": "VEN0064",
+      "name": "National Exhibition and Convention Center (NECC)",
+      "address": "333 Songze Ave, Qingpu District",
+      "city": "Shanghai",
+      "state": "",
+      "zip": "201702",
+      "country": "China",
+      "website": "https://www.neccsh.com",
+      "airports": [
+        "PVG",
+        "SHA"
+      ]
+    },
+    {
+      "ven_id": "VEN0065",
+      "name": "Messe Frankfurt",
+      "address": "Ludwig-Erhard-Anlage 1",
+      "city": "Frankfurt am Main",
+      "state": "Hesse",
+      "zip": "60327",
+      "country": "Germany",
+      "website": "https://www.messefrankfurt.com",
+      "airports": [
+        "FRA"
       ]
     }
   ]
