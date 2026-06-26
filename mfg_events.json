@@ -973,7 +973,7 @@
       "venue_id": "VEN0033",
       "status": "confirmed",
       "url": "https://www.k-online.com",
-      "description": "The world's leading trade fair for plastics and rubber, held every 3 years in D\u00fcsseldorf with thousands of international exhibitors.",
+      "description": "The world's leading trade fair for plastics and rubber, held every 3 years in Düsseldorf with thousands of international exhibitors.",
       "tags": [
         "plastics",
         "rubber",
@@ -1038,7 +1038,7 @@
       "venue_id": "VEN0008",
       "status": "confirmed",
       "url": "https://www.3dexperienceworld.com",
-      "description": "Annual SOLIDWORKS and Dassault Syst\u00e8mes user conference covering 3D product design, development, AI, and innovation.",
+      "description": "Annual SOLIDWORKS and Dassault Systèmes user conference covering 3D product design, development, AI, and innovation.",
       "tags": [
         "SOLIDWORKS",
         "3D design",
@@ -1185,7 +1185,7 @@
       "id": "boombastic-2026",
       "brand_id": "BRD0044",
       "name": "BOOMBASTIC 2026",
-      "type": "",
+      "type": "open house",
       "category": "general manufacturing",
       "start_date": "2026-11-12",
       "end_date": "2026-11-13",
@@ -1234,7 +1234,7 @@
       "evt_id": "EVT0060",
       "id": "discover-more-mazak-fremont-2026",
       "brand_id": "BRD0047",
-      "name": "Discover More With Mazak \u2014 Fremont 2026",
+      "name": "Discover More With Mazak — Fremont 2026",
       "type": "open house",
       "category": "general manufacturing",
       "start_date": "2026-10-21",
@@ -1592,7 +1592,7 @@
       ],
       "video_url": "",
       "city": "Stuttgart",
-      "state": "Baden-W\u00fcrttemberg",
+      "state": "Baden-Württemberg",
       "country": "Germany",
       "sponsored": false
     },
@@ -1634,7 +1634,7 @@
       "venue_id": "VEN0056",
       "status": "confirmed",
       "url": "https://www.micronora.com",
-      "description": "The world's leading trade fair for microtechnology, nanotechnology, and high-precision engineering. Held biennially in Besan\u00e7on, France.",
+      "description": "The world's leading trade fair for microtechnology, nanotechnology, and high-precision engineering. Held biennially in Besançon, France.",
       "tags": [
         "microtechnology",
         "nanotechnology",
@@ -1642,8 +1642,8 @@
         "measurement"
       ],
       "video_url": "",
-      "city": "Besan\u00e7on",
-      "state": "Bourgogne-Franche-Comt\u00e9",
+      "city": "Besançon",
+      "state": "Bourgogne-Franche-Comté",
       "country": "France",
       "sponsored": false
     },
@@ -1659,7 +1659,7 @@
       "venue_id": "VEN0057",
       "status": "confirmed",
       "url": "https://www.bvv.cz/en/msv",
-      "description": "The International Industrial Fair in Brno \u2014 the most important industrial fair in Central Europe. Focuses on engineering, machine tools, electrical engineering, and automation.",
+      "description": "The International Industrial Fair in Brno — the most important industrial fair in Central Europe. Focuses on engineering, machine tools, electrical engineering, and automation.",
       "tags": [
         "machine tools",
         "engineering",
@@ -1695,7 +1695,7 @@
       ],
       "video_url": "",
       "city": "Friedrichshafen",
-      "state": "Baden-W\u00fcrttemberg",
+      "state": "Baden-Württemberg",
       "country": "Germany",
       "sponsored": false
     },
@@ -1737,7 +1737,7 @@
       "venue_id": "VEN0060",
       "status": "confirmed",
       "url": "https://www.bimu.it",
-      "description": "The 35th edition of Italy's premier exhibition for machine tools, robots, automation, digital and additive manufacturing at fieramilano Rho \u2014 celebrating 70 years of the show.",
+      "description": "The 35th edition of Italy's premier exhibition for machine tools, robots, automation, digital and additive manufacturing at fieramilano Rho — celebrating 70 years of the show.",
       "tags": [
         "machine tools",
         "CNC",
@@ -1843,7 +1843,7 @@
       "venue_id": "VEN0064",
       "status": "confirmed",
       "url": "https://www.ciie.org",
-      "description": "China International Import Expo \u2014 a major platform supporting global trade liberalization and connecting international manufacturers with the Chinese market at NECC Shanghai.",
+      "description": "China International Import Expo — a major platform supporting global trade liberalization and connecting international manufacturers with the Chinese market at NECC Shanghai.",
       "tags": [
         "trade",
         "manufacturing",

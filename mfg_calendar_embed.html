@@ -37,7 +37,7 @@
   .c-loc  { font-size: .75rem; color: #4b5563; }
   .c-desc { font-size: .75rem; color: #6b7280; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; padding-bottom: 8px; }
   .c-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; border-top: 1px solid #f3f4f6; }
-  .type-badge { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--cc, #2563eb); padding: 2px 7px; border-radius: 999px; }
+  .type-badge { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #fff; background: var(--cc, #2563eb); padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
   .c-more-btn { font-size: .72rem; font-weight: 600; color: #2563eb; background: none; border: none; cursor: pointer; padding: 0; }
   .c-more-btn:hover { text-decoration: underline; }
   .loc-country { display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .04em; background: #e5e7eb; color: #374151; padding: 1px 5px; border-radius: 4px; vertical-align: middle; margin-right: 3px; }
@@ -306,7 +306,7 @@ function calCard(e){
       <div class="date-range">${range}${tbd}</div>
     </div>
     <div class="card-exp-header">
-      <span class="exp-type-badge">${esc(e.type)}</span>
+      ${e.type ? `<span class="exp-type-badge">${esc(e.type)}</span>` : ""}
       ${cat ? `<span class="exp-cat-badge">${esc(cat)}</span>` : ""}
     </div>
     <div class="c-name">${esc(e.name)}</div>
@@ -314,7 +314,7 @@ function calCard(e){
     ${loc ? `<div class="c-loc">${flag} ${loc}</div>` : ""}
     ${e.description ? `<div class="c-desc">${esc(e.description)}</div>` : ""}
     <div class="c-footer">
-      <span class="type-badge">${esc(e.type)}</span>
+      ${e.type ? `<span class="type-badge">${esc(e.type)}</span>` : ""}
       <button class="c-more-btn" onclick="event.stopPropagation();toggleCard('${esc(e.evt_id)}')">See more</button>
     </div>
     <div class="card-detail">
