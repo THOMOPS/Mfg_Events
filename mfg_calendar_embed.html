@@ -85,7 +85,7 @@
 
   /* ── Ad tiles (live in the grid) ── */
   .ad-card { position: relative; border-radius: 12px; overflow: hidden; text-decoration: none; display: block; background: #1a1a2e; height: 100%; }
-  .ad-card-full { grid-column: 1 / -1; height: 300px; }
+  .ad-card-full { grid-column: 1 / -1; }
   .ad-bg { position: absolute; inset: -20px; width: calc(100% + 40px); height: calc(100% + 40px); object-fit: cover; filter: blur(14px); transform: scale(1.05); opacity: .85; }
   .ad-fg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .ad-card-label { position: absolute; top: 8px; right: 10px; font-size: .58rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #6b7280; background: rgba(255,255,255,.88); padding: 2px 7px; border-radius: 6px; }
@@ -365,15 +365,21 @@ function getActiveAdsForMonth(monthKey){
 }
 
 function adCardHtml(a){
-  const cls = a.width === "tile" ? "ad-card" : "ad-card ad-card-full";
+  const isFull = a.width !== "tile";
+  const cls    = isFull ? "ad-card ad-card-full" : "ad-card";
   let media = "";
   if(a.media_type === "video" && a.video_url){
+    // Video needs explicit height — the element is absolute-positioned and has no natural flow height
     media = `<video class="ad-fg" src="${esc(a.video_url)}" autoplay muted loop playsinline></video>`;
+  } else if(isFull && a.image_url){
+    // Full-width image: natural proportions, no cropping
+    media = `<img src="${esc(a.image_url)}" alt="" style="width:100%;height:auto;display:block;">`;
   } else if(a.image_url){
     media = `<img class="ad-bg" src="${esc(a.image_url)}" alt=""/>
              <img class="ad-fg" src="${esc(a.image_url)}" alt=""/>`;
   }
-  return `<a class="${cls}" href="${safeUrl(a.link_url)}" target="_blank" rel="noopener sponsored">
+  const heightAttr = (isFull && a.media_type === "video") ? ' style="height:300px;"' : '';
+  return `<a class="${cls}" href="${safeUrl(a.link_url)}" target="_blank" rel="noopener sponsored"${heightAttr}>
     ${media}
     <span class="ad-card-label">Paid Ad</span>
   </a>`;
@@ -403,16 +409,25 @@ window.addEventListener("message", function(e){
     VENUES   = e.data.venues    || [];
     ADS      = e.data.ads       || [];
     WAITLIST = e.data.waitlist  || null;
-    // Resolve transferred video ArrayBuffers into local blob URLs.
-    // Parent-frame blob URLs can't cross file:// origins, so video data is sent as ArrayBuffers.
-    const transfers = e.data.videoTransfers || {};
-    for(const [adId, buf] of Object.entries(transfers)){
+    // Resolve transferred video/image ArrayBuffers into local blob URLs.
+    // Parent-frame blob URLs can't cross file:// origins, so media is sent as ArrayBuffers.
+    const videoTransfers = e.data.videoTransfers || {};
+    for(const [adId, buf] of Object.entries(videoTransfers)){
       if(!buf || !buf.byteLength) continue;
       const ad = ADS.find(a => a.ad_id === adId);
       if(!ad) continue;
       const ext      = (ad.video_url || "").split(".").pop().toLowerCase();
       const mimeType = ext === "webm" ? "video/webm" : "video/mp4";
       ad.video_url   = URL.createObjectURL(new Blob([buf], { type: mimeType }));
+    }
+    const imageTransfers = e.data.imageTransfers || {};
+    for(const [adId, buf] of Object.entries(imageTransfers)){
+      if(!buf || !buf.byteLength) continue;
+      const ad = ADS.find(a => a.ad_id === adId);
+      if(!ad) continue;
+      const ext      = (ad.image_url || "").split("/").pop().split(".").pop().toLowerCase();
+      const mimeType = ext === "png" ? "image/png" : ext === "webp" ? "image/webp" : ext === "gif" ? "image/gif" : "image/jpeg";
+      ad.image_url   = URL.createObjectURL(new Blob([buf], { type: mimeType }));
     }
     initFilters();
     renderCalendar();

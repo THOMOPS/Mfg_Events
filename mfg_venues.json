@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-26",
-    "total": 65
+    "last_updated": "2026-06-28",
+    "total": 66
   },
   "venues": [
     {
@@ -1071,6 +1071,22 @@
       "website": "https://www.messefrankfurt.com",
       "airports": [
         "FRA"
+      ]
+    },
+    {
+      "ven_id": "VEN0066",
+      "name": "Venetian Expo + Caesars Forum",
+      "address": "3355 S Las Vegas Blvd",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89109",
+      "country": "USA",
+      "website": "https://www.venetianexpo.com",
+      "airports": [
+        {
+          "code": "LAS",
+          "name": "Harry Reid International Airport"
+        }
       ]
     }
   ]

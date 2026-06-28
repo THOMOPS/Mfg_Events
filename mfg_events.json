@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-26",
-    "total": 83
+    "last_updated": "2026-06-28",
+    "total": 84
   },
   "events": [
     {
@@ -23,7 +23,8 @@
         "engineering",
         "research"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0002",
@@ -43,7 +44,8 @@
         "defense",
         "3D printing"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0003",
@@ -63,7 +65,8 @@
         "welding",
         "tooling"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0004",
@@ -83,7 +86,8 @@
         "processing",
         "automation"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0005",
@@ -104,7 +108,8 @@
         "innovation",
         "workforce"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0006",
@@ -125,7 +130,8 @@
         "automation",
         "warehousing"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0007",
@@ -146,7 +152,8 @@
         "prototyping"
       ],
       "sponsored": true,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0008",
@@ -166,7 +173,8 @@
         "operations",
         "excellence"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0009",
@@ -186,7 +194,8 @@
         "medtech",
         "automation"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0010",
@@ -207,7 +216,8 @@
         "education",
         "talent"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0011",
@@ -228,7 +238,8 @@
         "finishing",
         "Canada"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0012",
@@ -249,7 +260,8 @@
         "AI",
         "machine vision"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0013",
@@ -271,7 +283,8 @@
         "CNC"
       ],
       "sponsored": true,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0014",
@@ -290,7 +303,8 @@
         "advanced manufacturing",
         "technology"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0015",
@@ -313,7 +327,8 @@
         "metal"
       ],
       "sponsored": true,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0016",
@@ -334,7 +349,8 @@
         "surface mount",
         "assembly"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0017",
@@ -354,7 +370,8 @@
         "continuous improvement",
         "kaizen"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0018",
@@ -374,7 +391,8 @@
         "automation",
         "production"
       ],
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0019",
@@ -395,7 +413,8 @@
         "Latin America"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0020",
@@ -416,7 +435,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0021",
@@ -437,7 +457,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0022",
@@ -458,7 +479,8 @@
         "Latin America"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0023",
@@ -479,7 +501,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0024",
@@ -500,7 +523,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0025",
@@ -521,7 +545,8 @@
         "electronics manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0026",
@@ -542,7 +567,8 @@
         "defense"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0027",
@@ -563,7 +589,8 @@
         "manufacturing technology"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0028",
@@ -585,7 +612,8 @@
         "AI"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0029",
@@ -607,7 +635,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0030",
@@ -628,7 +657,8 @@
         "manufacturing technology"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0031",
@@ -650,7 +680,8 @@
         "smart manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0032",
@@ -672,7 +703,8 @@
         "smart manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0033",
@@ -694,7 +726,8 @@
         "smart manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0034",
@@ -716,7 +749,8 @@
         "smart manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0035",
@@ -738,7 +772,8 @@
         "material handling"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0037",
@@ -760,7 +795,8 @@
         "sheet"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0038",
@@ -782,7 +818,8 @@
         "AI"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0039",
@@ -805,7 +842,8 @@
         "electronics"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0040",
@@ -827,7 +865,8 @@
         "MRO"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0041",
@@ -849,7 +888,8 @@
         "manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0042",
@@ -871,7 +911,8 @@
         "electrification"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0043",
@@ -893,7 +934,8 @@
         "precision machining"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0044",
@@ -915,7 +957,8 @@
         "precision machining"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0045",
@@ -937,7 +980,8 @@
         "precision machining"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0046",
@@ -959,7 +1003,8 @@
         "precision machining"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0047",
@@ -973,7 +1018,7 @@
       "venue_id": "VEN0033",
       "status": "confirmed",
       "url": "https://www.k-online.com",
-      "description": "The world's leading trade fair for plastics and rubber, held every 3 years in Düsseldorf with thousands of international exhibitors.",
+      "description": "The world's leading trade fair for plastics and rubber, held every 3 years in D\u00fcsseldorf with thousands of international exhibitors.",
       "tags": [
         "plastics",
         "rubber",
@@ -981,7 +1026,8 @@
         "materials"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0048",
@@ -1002,7 +1048,8 @@
         "production"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0049",
@@ -1024,7 +1071,8 @@
         "manufacturing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0050",
@@ -1038,7 +1086,7 @@
       "venue_id": "VEN0008",
       "status": "confirmed",
       "url": "https://www.3dexperienceworld.com",
-      "description": "Annual SOLIDWORKS and Dassault Systèmes user conference covering 3D product design, development, AI, and innovation.",
+      "description": "Annual SOLIDWORKS and Dassault Syst\u00e8mes user conference covering 3D product design, development, AI, and innovation.",
       "tags": [
         "SOLIDWORKS",
         "3D design",
@@ -1046,7 +1094,8 @@
         "CAD"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0051",
@@ -1068,7 +1117,8 @@
         "maintenance"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0052",
@@ -1090,7 +1140,8 @@
         "circular economy"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0053",
@@ -1112,7 +1163,8 @@
         "3D printing"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0055",
@@ -1134,7 +1186,8 @@
         "innovation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0056",
@@ -1156,7 +1209,8 @@
         "automation"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0057",
@@ -1178,7 +1232,8 @@
         "sustainability"
       ],
       "sponsored": false,
-      "video_url": ""
+      "video_url": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0058",
@@ -1203,7 +1258,8 @@
       "video_url": "https://youtu.be/Fsbyr6OcGTI?si=eNhmIWMsWN6wxng_",
       "city": "Flower Mound",
       "state": "TX",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0059",
@@ -1228,13 +1284,14 @@
       "video_url": "",
       "city": "Schwertberg",
       "state": "",
-      "country": "Austria"
+      "country": "Austria",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0060",
       "id": "discover-more-mazak-fremont-2026",
       "brand_id": "BRD0047",
-      "name": "Discover More With Mazak — Fremont 2026",
+      "name": "Discover More With Mazak \u2014 Fremont 2026",
       "type": "open house",
       "category": "general manufacturing",
       "start_date": "2026-10-21",
@@ -1253,7 +1310,8 @@
       "video_url": "",
       "city": "Fremont",
       "state": "CA",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0061",
@@ -1279,7 +1337,8 @@
       "video_url": "",
       "city": "Auburn Hills",
       "state": "MI",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0062",
@@ -1305,7 +1364,8 @@
       "video_url": "",
       "city": "Indianapolis",
       "state": "IN",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0063",
@@ -1331,7 +1391,8 @@
       "video_url": "",
       "city": "Detroit",
       "state": "MI",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0064",
@@ -1357,7 +1418,8 @@
       "video_url": "",
       "city": "Houston",
       "state": "TX",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0065",
@@ -1383,7 +1445,8 @@
       "video_url": "",
       "city": "",
       "state": "",
-      "country": ""
+      "country": "",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0066",
@@ -1409,7 +1472,8 @@
       "video_url": "https://youtu.be/Da8foUqPTYA",
       "city": "Mammoth Lakes",
       "state": "CA",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0067",
@@ -1435,7 +1499,8 @@
       "video_url": "",
       "city": "Scottsdale",
       "state": "AZ",
-      "country": "USA"
+      "country": "USA",
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0068",
@@ -1461,7 +1526,8 @@
       "city": "Cleveland",
       "state": "OH",
       "country": "USA",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0069",
@@ -1489,7 +1555,8 @@
       "city": "Hoffman Estates",
       "state": "IL",
       "country": "USA",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0070",
@@ -1514,7 +1581,8 @@
       "city": "Farnborough",
       "state": "Hampshire",
       "country": "UK",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0071",
@@ -1540,7 +1608,8 @@
       "city": "Hyderabad",
       "state": "Telangana",
       "country": "India",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0072",
@@ -1567,7 +1636,8 @@
       "city": "Coventry",
       "state": "West Midlands",
       "country": "UK",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0073",
@@ -1592,9 +1662,10 @@
       ],
       "video_url": "",
       "city": "Stuttgart",
-      "state": "Baden-Württemberg",
+      "state": "Baden-W\u00fcrttemberg",
       "country": "Germany",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0074",
@@ -1620,7 +1691,8 @@
       "city": "Istanbul",
       "state": "",
       "country": "Turkey",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0075",
@@ -1634,7 +1706,7 @@
       "venue_id": "VEN0056",
       "status": "confirmed",
       "url": "https://www.micronora.com",
-      "description": "The world's leading trade fair for microtechnology, nanotechnology, and high-precision engineering. Held biennially in Besançon, France.",
+      "description": "The world's leading trade fair for microtechnology, nanotechnology, and high-precision engineering. Held biennially in Besan\u00e7on, France.",
       "tags": [
         "microtechnology",
         "nanotechnology",
@@ -1642,10 +1714,11 @@
         "measurement"
       ],
       "video_url": "",
-      "city": "Besançon",
-      "state": "Bourgogne-Franche-Comté",
+      "city": "Besan\u00e7on",
+      "state": "Bourgogne-Franche-Comt\u00e9",
       "country": "France",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0076",
@@ -1659,7 +1732,7 @@
       "venue_id": "VEN0057",
       "status": "confirmed",
       "url": "https://www.bvv.cz/en/msv",
-      "description": "The International Industrial Fair in Brno — the most important industrial fair in Central Europe. Focuses on engineering, machine tools, electrical engineering, and automation.",
+      "description": "The International Industrial Fair in Brno \u2014 the most important industrial fair in Central Europe. Focuses on engineering, machine tools, electrical engineering, and automation.",
       "tags": [
         "machine tools",
         "engineering",
@@ -1671,7 +1744,8 @@
       "city": "Brno",
       "state": "South Moravian Region",
       "country": "Czech Republic",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0077",
@@ -1695,9 +1769,10 @@
       ],
       "video_url": "",
       "city": "Friedrichshafen",
-      "state": "Baden-Württemberg",
+      "state": "Baden-W\u00fcrttemberg",
       "country": "Germany",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0078",
@@ -1723,7 +1798,8 @@
       "city": "Blagnac",
       "state": "Occitanie",
       "country": "France",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0079",
@@ -1737,7 +1813,7 @@
       "venue_id": "VEN0060",
       "status": "confirmed",
       "url": "https://www.bimu.it",
-      "description": "The 35th edition of Italy's premier exhibition for machine tools, robots, automation, digital and additive manufacturing at fieramilano Rho — celebrating 70 years of the show.",
+      "description": "The 35th edition of Italy's premier exhibition for machine tools, robots, automation, digital and additive manufacturing at fieramilano Rho \u2014 celebrating 70 years of the show.",
       "tags": [
         "machine tools",
         "CNC",
@@ -1750,7 +1826,8 @@
       "city": "Rho",
       "state": "Lombardy",
       "country": "Italy",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0080",
@@ -1775,7 +1852,8 @@
       "city": "Silverstone",
       "state": "Northamptonshire",
       "country": "UK",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0081",
@@ -1802,7 +1880,8 @@
       "city": "Hannover",
       "state": "Lower Saxony",
       "country": "Germany",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0082",
@@ -1829,7 +1908,8 @@
       "city": "Tokyo",
       "state": "",
       "country": "Japan",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0083",
@@ -1843,7 +1923,7 @@
       "venue_id": "VEN0064",
       "status": "confirmed",
       "url": "https://www.ciie.org",
-      "description": "China International Import Expo — a major platform supporting global trade liberalization and connecting international manufacturers with the Chinese market at NECC Shanghai.",
+      "description": "China International Import Expo \u2014 a major platform supporting global trade liberalization and connecting international manufacturers with the Chinese market at NECC Shanghai.",
       "tags": [
         "trade",
         "manufacturing",
@@ -1855,7 +1935,8 @@
       "city": "Shanghai",
       "state": "",
       "country": "China",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0084",
@@ -1882,7 +1963,8 @@
       "city": "Frankfurt am Main",
       "state": "Hesse",
       "country": "Germany",
-      "sponsored": false
+      "sponsored": false,
+      "logo_url": "none"
     },
     {
       "evt_id": "EVT0085",
@@ -1909,6 +1991,34 @@
       "city": "Blagnac",
       "state": "Occitanie",
       "country": "France",
+      "sponsored": false,
+      "logo_url": "none"
+    },
+    {
+      "evt_id": "EVT0086",
+      "id": "shot-show-2027",
+      "brand_id": "BRD0072",
+      "name": "SHOT Show 2027",
+      "type": "trade show",
+      "category": "firearms & outdoor",
+      "start_date": "2027-01-19",
+      "end_date": "2027-01-22",
+      "venue_id": "VEN0066",
+      "status": "confirmed",
+      "url": "https://shotshow.org",
+      "description": "The Shooting, Hunting and Outdoor Trade Show \u2014 the world's largest and most comprehensive trade show for shooting sports, hunting, and outdoor products. Hosted by NSSF at the Venetian Expo and Caesars Forum in Las Vegas.",
+      "tags": [
+        "firearms",
+        "hunting",
+        "outdoor",
+        "shooting sports",
+        "defense",
+        "law enforcement"
+      ],
+      "video_url": "",
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "USA",
       "sponsored": false
     }
   ]
