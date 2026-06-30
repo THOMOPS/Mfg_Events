@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-28",
-    "total": 66
+    "last_updated": "2026-06-30",
+    "total": 67
   },
   "venues": [
     {
@@ -1086,6 +1086,30 @@
         {
           "code": "LAS",
           "name": "Harry Reid International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0067",
+      "name": "Thomas M. Menino Convention & Exhibition Center",
+      "address": "415 Summer Street",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02210",
+      "country": "USA",
+      "website": "https://www.signatureboston.com/mcec",
+      "airports": [
+        {
+          "code": "BOS",
+          "name": "Boston Logan International Airport"
+        },
+        {
+          "code": "MHT",
+          "name": "Manchester-Boston Regional Airport"
+        },
+        {
+          "code": "PVD",
+          "name": "Rhode Island T.F. Green International Airport"
         }
       ]
     }

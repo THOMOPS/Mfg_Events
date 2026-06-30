@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-28",
-    "total": 84
+    "last_updated": "2026-06-30",
+    "total": 85
   },
   "events": [
     {
@@ -2018,6 +2018,35 @@
       "video_url": "",
       "city": "Las Vegas",
       "state": "NV",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0087",
+      "id": "automation-fair-2026",
+      "brand_id": "BRD0073",
+      "name": "Automation Fair 2026",
+      "type": "conference",
+      "category": "automation & robotics",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-19",
+      "venue_id": "VEN0067",
+      "status": "confirmed",
+      "url": "https://www.rockwellautomation.com/en-us/events/automation-fair.html",
+      "description": "Rockwell Automation's premier annual industrial automation event. 14,000+ attendees explore 150+ interactive exhibits, 500+ hours of advanced training, and 250+ educational sessions covering IT/OT convergence, AI, and the future of industrial operations.",
+      "tags": [
+        "automation",
+        "industrial",
+        "PLC",
+        "robotics",
+        "AI",
+        "digital transformation",
+        "IT/OT",
+        "controls"
+      ],
+      "video_url": "",
+      "city": "Boston",
+      "state": "MA",
       "country": "USA",
       "sponsored": false
     }
