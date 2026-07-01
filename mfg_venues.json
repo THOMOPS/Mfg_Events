@@ -1112,6 +1112,154 @@
           "name": "Rhode Island T.F. Green International Airport"
         }
       ]
+    },
+    {
+      "ven_id": "VEN0068",
+      "name": "Vibe Credit Union Showplace",
+      "address": "46100 Grand River Ave",
+      "city": "Novi",
+      "state": "MI",
+      "zip": "48374",
+      "country": "USA",
+      "website": "https://www.vibeshowplace.com",
+      "airports": [
+        {
+          "code": "DTW",
+          "name": "Detroit Metropolitan Wayne County Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0069",
+      "name": "Palais des congr\u00e8s de Montr\u00e9al",
+      "address": "1001 Place Jean-Paul-Riopelle",
+      "city": "Montr\u00e9al",
+      "state": "QC",
+      "zip": "H2Z 1H5",
+      "country": "Canada",
+      "website": "https://www.congresmtl.com",
+      "airports": [
+        {
+          "code": "YUL",
+          "name": "Montr\u00e9al-Pierre Elliott Trudeau International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0070",
+      "name": "Messe Bremen",
+      "address": "Findorffstra\u00dfe 101",
+      "city": "Bremen",
+      "state": "",
+      "zip": "28215",
+      "country": "Germany",
+      "website": "https://www.messe-bremen.de",
+      "airports": [
+        {
+          "code": "BRE",
+          "name": "Bremen Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0071",
+      "name": "Santa Clara Convention Center",
+      "address": "5001 Great America Pkwy",
+      "city": "Santa Clara",
+      "state": "CA",
+      "zip": "95054",
+      "country": "USA",
+      "website": "https://www.santaclaraconventioncenter.com",
+      "airports": [
+        {
+          "code": "SJC",
+          "name": "San Jose Mineta International Airport"
+        },
+        {
+          "code": "SFO",
+          "name": "San Francisco International Airport"
+        },
+        {
+          "code": "OAK",
+          "name": "Oakland International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0072",
+      "name": "Jacob K. Javits Convention Center",
+      "address": "429 11th Ave",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001",
+      "country": "USA",
+      "website": "https://www.javitscenter.com",
+      "airports": [
+        {
+          "code": "JFK",
+          "name": "John F. Kennedy International Airport"
+        },
+        {
+          "code": "LGA",
+          "name": "LaGuardia Airport"
+        },
+        {
+          "code": "EWR",
+          "name": "Newark Liberty International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0073",
+      "name": "Dubai World Trade Centre",
+      "address": "Sheikh Zayed Road",
+      "city": "Dubai",
+      "state": "",
+      "zip": "",
+      "country": "United Arab Emirates",
+      "website": "https://www.dwtc.com",
+      "airports": [
+        {
+          "code": "DXB",
+          "name": "Dubai International Airport"
+        },
+        {
+          "code": "DWC",
+          "name": "Al Maktoum International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0074",
+      "name": "Jakarta International Expo (JIEXPO)",
+      "address": "Jl. Benyamin Sueb, Kemayoran",
+      "city": "Jakarta",
+      "state": "",
+      "zip": "10620",
+      "country": "Indonesia",
+      "website": "https://www.jiexpo.com",
+      "airports": [
+        {
+          "code": "CGK",
+          "name": "Soekarno-Hatta International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0075",
+      "name": "India Expo Mart & Centre",
+      "address": "Plot No. 25, Knowledge Park II, Greater Noida",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "zip": "201308",
+      "country": "India",
+      "website": "https://www.indiaexpocentre.com",
+      "airports": [
+        {
+          "code": "DEL",
+          "name": "Indira Gandhi International Airport"
+        }
+      ]
     }
   ]
 }

@@ -20,8 +20,7 @@
       "description": "Leading aerospace forum for engineers, researchers, and technologists.",
       "tags": [
         "aerospace",
-        "engineering",
-        "research"
+        "engineering"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -41,8 +40,7 @@
       "description": "Summit focused on additive manufacturing reshaping defense supply chains.",
       "tags": [
         "additive manufacturing",
-        "defense",
-        "3D printing"
+        "defense"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -127,8 +125,7 @@
       "tags": [
         "supply chain",
         "logistics",
-        "automation",
-        "warehousing"
+        "automation"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -147,9 +144,8 @@
       "url": "https://www.rapid3devent.com",
       "description": "North America's leading 3D printing and additive manufacturing event.",
       "tags": [
-        "3D printing",
         "additive manufacturing",
-        "prototyping"
+        "conference"
       ],
       "sponsored": true,
       "video_url": "",
@@ -170,8 +166,7 @@
       "description": "Executive-level summit focused on manufacturing excellence and operational efficiency.",
       "tags": [
         "leadership",
-        "operations",
-        "excellence"
+        "operations"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -191,7 +186,6 @@
       "description": "For engineers and executives in medtech, packaging, automation, and plastics.",
       "tags": [
         "medical devices",
-        "medtech",
         "automation"
       ],
       "video_url": "",
@@ -212,9 +206,7 @@
       "description": "SME's flagship workforce development conference focused on training strategies.",
       "tags": [
         "workforce",
-        "training",
-        "education",
-        "talent"
+        "training & education"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -235,8 +227,7 @@
       "tags": [
         "metal fabrication",
         "welding",
-        "finishing",
-        "Canada"
+        "finishing"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -293,15 +284,15 @@
       "name": "MD&M Midwest 2026",
       "type": "trade show",
       "category": "general manufacturing",
-      "start_date": "2026-10-21",
-      "end_date": "2026-10-22",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-29",
       "venue_id": "VEN0011",
       "status": "confirmed",
       "url": "https://www.advancedmanufacturingminneapolis.com",
       "description": "~5,300 attendees with over 575 exhibitors covering advanced manufacturing.",
       "tags": [
-        "advanced manufacturing",
-        "technology"
+        "medical devices",
+        "engineering"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -320,11 +311,10 @@
       "url": "https://www.fabtechexpo.com",
       "description": "North America's largest metal fabrication, welding, stamping, and finishing event.",
       "tags": [
-        "fabrication",
+        "metal fabrication",
         "welding",
         "stamping",
-        "finishing",
-        "metal"
+        "finishing"
       ],
       "sponsored": true,
       "video_url": "",
@@ -345,8 +335,7 @@
       "description": "Electronics manufacturing conference on surface mount technology and reliability.",
       "tags": [
         "electronics",
-        "PCB",
-        "surface mount",
+        "semiconductors",
         "assembly"
       ],
       "video_url": "",
@@ -366,9 +355,9 @@
       "url": "https://www.ame.org/conference",
       "description": "Premier lean manufacturing and continuous improvement conference.",
       "tags": [
-        "lean",
-        "continuous improvement",
-        "kaizen"
+        "lean manufacturing",
+        "operations",
+        "leadership"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -388,8 +377,7 @@
       "description": "Focused on assembly technology, automation, and production equipment.",
       "tags": [
         "assembly",
-        "automation",
-        "production"
+        "automation"
       ],
       "video_url": "",
       "logo_url": "none"
@@ -409,8 +397,7 @@
       "description": "Latin America's premier packaging and processing trade show connecting end-users with leading suppliers.",
       "tags": [
         "packaging",
-        "processing",
-        "Latin America"
+        "processing"
       ],
       "sponsored": false,
       "video_url": "",
@@ -475,8 +462,7 @@
       "description": "Biannual Latin American packaging and processing trade show in Guadalajara.",
       "tags": [
         "packaging",
-        "processing",
-        "Latin America"
+        "processing"
       ],
       "sponsored": false,
       "video_url": "",
@@ -541,8 +527,7 @@
       "description": "Flagship semiconductor industry trade show connecting the global microelectronics supply chain with 650+ exhibitors and 16,000+ attendees.",
       "tags": [
         "semiconductors",
-        "microelectronics",
-        "electronics manufacturing"
+        "electronics"
       ],
       "sponsored": false,
       "video_url": "",
@@ -562,7 +547,6 @@
       "url": "https://www.spacetechexpo.com",
       "description": "West Coast's premier B2B space industry trade show connecting the space supply chain with thousands of professionals.",
       "tags": [
-        "space",
         "aerospace",
         "defense"
       ],
@@ -584,9 +568,9 @@
       "url": "https://savethedate.mtforecast.org",
       "description": "Economic forecasts and manufacturing technology market insights to inform business decision-making.",
       "tags": [
-        "forecasting",
-        "economics",
-        "manufacturing technology"
+        "machine tools",
+        "conference",
+        "benchmarking"
       ],
       "sponsored": false,
       "video_url": "",
@@ -608,7 +592,6 @@
       "tags": [
         "automation",
         "robotics",
-        "industrial technology",
         "AI"
       ],
       "sponsored": false,
@@ -653,8 +636,7 @@
       "description": "Precision Machining Technology Show connecting the precision machined parts community with the latest equipment, process innovations, and technology solutions.",
       "tags": [
         "precision machining",
-        "CNC",
-        "manufacturing technology"
+        "CNC"
       ],
       "sponsored": false,
       "video_url": "",
@@ -766,8 +748,7 @@
       "url": "https://www.powderandbulkshow.com",
       "description": "North America's largest powder and bulk solids technology event for the processing community covering bulk material handling and dry processing.",
       "tags": [
-        "powder",
-        "bulk solids",
+        "powder processing",
         "processing",
         "material handling"
       ],
@@ -791,8 +772,7 @@
       "tags": [
         "extrusion",
         "plastics",
-        "film",
-        "sheet"
+        "processing"
       ],
       "sponsored": false,
       "video_url": "",
@@ -812,9 +792,7 @@
       "url": "https://www.amg-world.co.uk/future-labs-automation-technology",
       "description": "Annual summit focused on lab automation, AI/ML, robotics, and digital transformation for life sciences and pharma R&D leaders.",
       "tags": [
-        "lab automation",
         "life sciences",
-        "pharma",
         "AI"
       ],
       "sponsored": false,
@@ -836,8 +814,6 @@
       "description": "Premier event for design and design automation of electronic chips to systems, covering AI, EDA, security, and quantum.",
       "tags": [
         "semiconductors",
-        "EDA",
-        "chip design",
         "AI",
         "electronics"
       ],
@@ -884,8 +860,7 @@
       "tags": [
         "plastics",
         "benchmarking",
-        "best practices",
-        "manufacturing"
+        "operations"
       ],
       "sponsored": false,
       "video_url": "",
@@ -905,10 +880,8 @@
       "url": "https://www.thebatteryshow.com",
       "description": "North America's largest advanced battery and EV technology event with 16,000+ attendees, 1,300+ exhibitors, and 250+ speakers.",
       "tags": [
-        "battery",
-        "EV",
-        "electronics",
-        "electrification"
+        "EV & electrification",
+        "electronics"
       ],
       "sponsored": false,
       "video_url": "",
@@ -928,7 +901,6 @@
       "url": "https://east.mtseries.com",
       "description": "Northeast's largest manufacturing trade show featuring EASTEC, covering automation, robotics, precision machining, and smart manufacturing.",
       "tags": [
-        "manufacturing",
         "automation",
         "robotics",
         "precision machining"
@@ -951,7 +923,6 @@
       "url": "https://southeast.mtseries.com",
       "description": "Southeast's leading manufacturing trade show featuring SOUTHTEC, connecting decision-makers with suppliers of advanced manufacturing technology.",
       "tags": [
-        "manufacturing",
         "automation",
         "robotics",
         "precision machining"
@@ -974,7 +945,6 @@
       "url": "https://southwest.mtseries.com",
       "description": "Southwest's leading manufacturing trade show featuring HOUSTEX, covering automation, robotics, machining, and welding.",
       "tags": [
-        "manufacturing",
         "automation",
         "robotics",
         "precision machining"
@@ -997,7 +967,6 @@
       "url": "https://west.mtseries.com",
       "description": "West Coast's leading manufacturing trade show featuring WESTEC, connecting manufacturers with advanced technology suppliers.",
       "tags": [
-        "manufacturing",
         "automation",
         "robotics",
         "precision machining"
@@ -1021,9 +990,8 @@
       "description": "The world's leading trade fair for plastics and rubber, held every 3 years in D\u00fcsseldorf with thousands of international exhibitors.",
       "tags": [
         "plastics",
-        "rubber",
         "processing",
-        "materials"
+        "injection molding"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1044,8 +1012,7 @@
       "description": "Focused on assembly technology, automation, and production equipment.",
       "tags": [
         "assembly",
-        "automation",
-        "production"
+        "automation"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1065,10 +1032,9 @@
       "url": "https://www.topshopsevent.com",
       "description": "Benchmarking and business improvement conference for CNC machining and industrial finishing shops, presented by Modern Machine Shop.",
       "tags": [
-        "CNC machining",
+        "CNC",
         "benchmarking",
-        "finishing",
-        "manufacturing"
+        "finishing"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1088,10 +1054,9 @@
       "url": "https://www.3dexperienceworld.com",
       "description": "Annual SOLIDWORKS and Dassault Syst\u00e8mes user conference covering 3D product design, development, AI, and innovation.",
       "tags": [
-        "SOLIDWORKS",
-        "3D design",
-        "product development",
-        "CAD"
+        "CAD/CAM",
+        "additive manufacturing",
+        "engineering"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1111,10 +1076,8 @@
       "url": "https://lubricantexpo.com/na",
       "description": "Free-to-attend North American lubricant industry exhibition and conference covering finished lubricants, formulation ingredients, equipment, and condition monitoring.",
       "tags": [
-        "lubricants",
-        "industrial fluids",
-        "manufacturing",
-        "maintenance"
+        "MRO",
+        "operations"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1135,9 +1098,7 @@
       "description": "North America's largest plastics recycling and sustainability conference with 2,500+ attendees and 250+ exhibitors.",
       "tags": [
         "plastics",
-        "recycling",
-        "sustainability",
-        "circular economy"
+        "sustainability"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1160,7 +1121,7 @@
         "plastics",
         "injection molding",
         "moldmaking",
-        "3D printing"
+        "additive manufacturing"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1181,7 +1142,6 @@
       "description": "Invitation-only summit bringing together senior FMCG packaging, sustainability, and operations executives to discuss packaging innovation and strategy.",
       "tags": [
         "packaging",
-        "FMCG",
         "sustainability",
         "innovation"
       ],
@@ -1227,7 +1187,6 @@
       "description": "The largest plastics trade show in the Americas with 51,000+ leaders, 2,200+ exhibitors from 130+ countries covering the full plastics industry.",
       "tags": [
         "plastics",
-        "manufacturing",
         "packaging",
         "sustainability"
       ],
@@ -1249,7 +1208,7 @@
       "url": "https://boombastic.titansofcnc.com/boom26",
       "description": "Annual open house event at TITANS of CNC headquarters featuring live machining demos, industry networking, and sponsor exhibits. VIP pre-event on November 11.",
       "tags": [
-        "cnc",
+        "CNC",
         "machining",
         "open house",
         "networking"
@@ -1276,7 +1235,6 @@
       "description": "Annual open house at ENGEL headquarters focused on foam injection molding, featuring live demonstrations, technical sessions, and process expertise for foam processing applications.",
       "tags": [
         "injection molding",
-        "foam molding",
         "open house",
         "plastics"
       ],
@@ -1301,10 +1259,9 @@
       "url": "https://www.mazak.com/us-en/news-media/upcoming-events/DISCOVER-MORE-WITH-MAZAK-Fremont-Open-House-2026/",
       "description": "Annual open house at Mazak's Northern California Technology Center showcasing CNC machining solutions.",
       "tags": [
-        "cnc",
+        "CNC",
         "machining",
-        "open house",
-        "mazak"
+        "open house"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1327,11 +1284,10 @@
       "url": "https://www.makino.com/en-us/newsroom/events/makino-technology-expo",
       "description": "Recurring open house at Makino's Auburn Hills Technology Center showcasing high-precision machining, EDM, and automation solutions.",
       "tags": [
-        "cnc",
+        "CNC",
         "machining",
-        "edm",
-        "open house",
-        "makino"
+        "EDM",
+        "open house"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1354,11 +1310,9 @@
       "url": "https://www.okuma.com/events",
       "description": "Open house at Gosiger Indiana, an authorized Okuma distributor, featuring machining and automation solutions.",
       "tags": [
-        "cnc",
+        "CNC",
         "machining",
-        "okuma",
-        "open house",
-        "dealer"
+        "open house"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1382,10 +1336,8 @@
       "description": "Annual summit convening founders, operators, investors, and policymakers dedicated to rebuilding the American industrial base.",
       "tags": [
         "conference",
-        "industrial policy",
-        "manufacturing",
-        "founders",
-        "investors"
+        "operations",
+        "leadership"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1408,11 +1360,8 @@
       "url": "https://www.otscada.com",
       "description": "Community conference for industrial automation professionals covering OT, SCADA, ICS, IIoT, and related disciplines.",
       "tags": [
-        "ot",
-        "scada",
-        "industrial automation",
-        "ics",
-        "iiot"
+        "OT/ICS",
+        "IIoT"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1436,10 +1385,9 @@
       "description": "Virtual summit from ProShop ERP on shop digitization, institutional knowledge retention, and ERP-driven manufacturing excellence.",
       "tags": [
         "webinar",
-        "erp",
-        "mes",
-        "precision manufacturing",
-        "digitization"
+        "ERP/MES",
+        "precision machining",
+        "digital transformation"
       ],
       "sponsored": false,
       "video_url": "",
@@ -1462,11 +1410,10 @@
       "url": "https://summit.g28.io",
       "description": "Annual machining industry summit in Mammoth Lakes, CA. Elite shop owners, vendors, and professionals network across 3.5 days of skiing, fishing, panels, and condo conversations.",
       "tags": [
-        "cnc",
+        "CNC",
         "machining",
         "networking",
-        "conference",
-        "g28"
+        "conference"
       ],
       "sponsored": false,
       "video_url": "https://youtu.be/Da8foUqPTYA",
@@ -1489,9 +1436,9 @@
       "url": "https://manufacturingleadershipcouncil.com/events/rethink-2026/",
       "description": "World's premier event for senior manufacturing executives focused on digital transformation, AI in the factory, industrial cybersecurity, and Industry 4.0 leadership.",
       "tags": [
-        "digital manufacturing",
-        "industry 4.0",
-        "ai",
+        "digital transformation",
+        "Industry 4.0",
+        "AI",
         "cybersecurity",
         "conference"
       ],
@@ -1573,9 +1520,7 @@
       "description": "The world's premier aerospace and defence trade event. Farnborough International Airshow 2026 brings together global manufacturers, suppliers, and buyers across civil and military aviation.",
       "tags": [
         "aerospace",
-        "defence",
-        "aviation",
-        "manufacturing"
+        "defense"
       ],
       "video_url": "",
       "city": "Farnborough",
@@ -1627,10 +1572,7 @@
       "tags": [
         "grinding",
         "aerospace",
-        "turbine",
-        "precision machining",
-        "power generation",
-        "Makino"
+        "precision machining"
       ],
       "video_url": "",
       "city": "Coventry",
@@ -1657,7 +1599,7 @@
         "CNC",
         "metalworking",
         "automation",
-        "precision tools",
+        "cutting tools",
         "5-axis"
       ],
       "video_url": "",
@@ -1708,10 +1650,8 @@
       "url": "https://www.micronora.com",
       "description": "The world's leading trade fair for microtechnology, nanotechnology, and high-precision engineering. Held biennially in Besan\u00e7on, France.",
       "tags": [
-        "microtechnology",
-        "nanotechnology",
-        "precision engineering",
-        "measurement"
+        "semiconductors",
+        "precision machining"
       ],
       "video_url": "",
       "city": "Besan\u00e7on",
@@ -1737,7 +1677,6 @@
         "machine tools",
         "engineering",
         "automation",
-        "manufacturing",
         "CNC"
       ],
       "video_url": "",
@@ -1762,10 +1701,9 @@
       "description": "The global meeting place for plastics processing. Fakuma Friedrichshafen showcases injection moulding, extrusion, thermoforming, and digital manufacturing for the plastics industry.",
       "tags": [
         "plastics",
-        "injection moulding",
+        "injection molding",
         "extrusion",
-        "thermoforming",
-        "manufacturing"
+        "thermoforming"
       ],
       "video_url": "",
       "city": "Friedrichshafen",
@@ -1789,10 +1727,8 @@
       "description": "The largest industrial exhibition in southern France, spotlighting aerospace manufacturing, precision production tools, energy transition, and industrial innovation in Toulouse.",
       "tags": [
         "aerospace",
-        "manufacturing",
-        "precision",
-        "energy",
-        "Toulouse"
+        "defense",
+        "engineering"
       ],
       "video_url": "",
       "city": "Blagnac",
@@ -1817,7 +1753,7 @@
       "tags": [
         "machine tools",
         "CNC",
-        "robots",
+        "robotics",
         "automation",
         "additive manufacturing",
         "metalworking"
@@ -1844,9 +1780,7 @@
       "description": "The UK's leading Motorsport Engineering & Technology Show at Silverstone. 100+ exhibitors showcasing precision engineering, manufacturing technology, and high-performance components.",
       "tags": [
         "motorsport",
-        "precision engineering",
-        "manufacturing",
-        "high-performance"
+        "precision machining"
       ],
       "video_url": "",
       "city": "Silverstone",
@@ -1873,7 +1807,7 @@
         "stamping",
         "forming",
         "welding",
-        "fabrication",
+        "metal fabrication",
         "metalworking"
       ],
       "video_url": "",
@@ -1901,8 +1835,7 @@
         "CNC",
         "metalworking",
         "automation",
-        "5-axis",
-        "Japan"
+        "5-axis"
       ],
       "video_url": "",
       "city": "Tokyo",
@@ -1925,11 +1858,8 @@
       "url": "https://www.ciie.org",
       "description": "China International Import Expo \u2014 a major platform supporting global trade liberalization and connecting international manufacturers with the Chinese market at NECC Shanghai.",
       "tags": [
-        "trade",
-        "manufacturing",
-        "international",
-        "China",
-        "import"
+        "supply chain",
+        "logistics"
       ],
       "video_url": "",
       "city": "Shanghai",
@@ -1953,11 +1883,8 @@
       "description": "The global industry highlight for additive manufacturing and industrial 3D printing at Messe Frankfurt. Formnext showcases the full AM process chain from design through production.",
       "tags": [
         "additive manufacturing",
-        "3D printing",
-        "AM",
-        "design",
-        "production",
-        "Frankfurt"
+        "conference",
+        "engineering"
       ],
       "video_url": "",
       "city": "Frankfurt am Main",
@@ -1981,11 +1908,9 @@
       "description": "The 16th edition of the international aerospace B2B networking event in Toulouse. Focused on innovation, decarbonization, and one-to-one business connections across the global aerospace supply chain.",
       "tags": [
         "aerospace",
-        "B2B",
         "networking",
-        "decarbonization",
-        "supply chain",
-        "Toulouse"
+        "sustainability",
+        "supply chain"
       ],
       "video_url": "",
       "city": "Blagnac",
@@ -2008,12 +1933,8 @@
       "url": "https://shotshow.org",
       "description": "The Shooting, Hunting and Outdoor Trade Show \u2014 the world's largest and most comprehensive trade show for shooting sports, hunting, and outdoor products. Hosted by NSSF at the Venetian Expo and Caesars Forum in Las Vegas.",
       "tags": [
-        "firearms",
-        "hunting",
-        "outdoor",
-        "shooting sports",
-        "defense",
-        "law enforcement"
+        "firearms & outdoor",
+        "defense"
       ],
       "video_url": "",
       "city": "Las Vegas",
@@ -2036,17 +1957,385 @@
       "description": "Rockwell Automation's premier annual industrial automation event. 14,000+ attendees explore 150+ interactive exhibits, 500+ hours of advanced training, and 250+ educational sessions covering IT/OT convergence, AI, and the future of industrial operations.",
       "tags": [
         "automation",
-        "industrial",
-        "PLC",
+        "OT/ICS",
         "robotics",
         "AI",
-        "digital transformation",
-        "IT/OT",
-        "controls"
+        "digital transformation"
       ],
       "video_url": "",
       "city": "Boston",
       "state": "MA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0088",
+      "id": "mdm-west-2027",
+      "brand_id": "BRD0074",
+      "name": "MD&M West 2027",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2027-02-09",
+      "end_date": "2027-02-11",
+      "venue_id": "VEN0018",
+      "status": "confirmed",
+      "url": "https://www.mdmwest.com",
+      "description": "The world's largest medical device design and manufacturing trade show. Co-located with Design & Manufacturing West, Automation Technology West, Plastec West, and Packaging West. 1,700+ exhibitors, 13,800+ verified attendees from 43 countries.",
+      "tags": [
+        "medical devices",
+        "medtech",
+        "design & manufacturing",
+        "automation",
+        "plastics",
+        "packaging"
+      ],
+      "video_url": "",
+      "city": "Anaheim",
+      "state": "CA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0089",
+      "id": "medevice-boston-2026",
+      "brand_id": "BRD0075",
+      "name": "MEDevice Boston 2026",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-27",
+      "venue_id": "VEN0067",
+      "status": "confirmed",
+      "url": "https://www.medeviceboston.com",
+      "description": "New England's premier MedTech innovation expo connecting medical device OEMs, startups, and suppliers. Features curated networking, hands-on workshops, leadership summit, and keynotes focused on advancing the medical device industry.",
+      "tags": [
+        "medical devices",
+        "medtech"
+      ],
+      "video_url": "",
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0090",
+      "id": "foam-expo-na-2026",
+      "brand_id": "BRD0076",
+      "name": "Foam Expo North America 2026",
+      "type": "trade show",
+      "category": "advanced materials & manufacturing",
+      "start_date": "2026-06-23",
+      "end_date": "2026-06-25",
+      "venue_id": "VEN0068",
+      "status": "confirmed",
+      "url": "https://www.foam-expo.com",
+      "description": "North America's dedicated event for the foam, adhesive, and bonding industries. Co-located with Adhesives & Bonding Expo. Covers polyurethane, polyolefin, polystyrene, and technical foam manufacturing.",
+      "tags": [
+        "foam",
+        "adhesives",
+        "materials",
+        "advanced materials"
+      ],
+      "video_url": "",
+      "city": "Novi",
+      "state": "MI",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0091",
+      "id": "battery-show-europe-2026",
+      "brand_id": "BRD0033",
+      "name": "The Battery Show Europe 2026",
+      "type": "trade show",
+      "category": "battery & EV manufacturing",
+      "start_date": "2026-06-09",
+      "end_date": "2026-06-11",
+      "venue_id": "VEN0054",
+      "status": "confirmed",
+      "url": "https://www.thebatteryshow.eu",
+      "description": "Europe's premier advanced battery and EV technology expo. Co-located with Electric & Hybrid Vehicle Technology Expo Europe and Energy Storage Germany. Covers battery design, manufacturing, testing, and supply chain.",
+      "tags": [
+        "battery",
+        "EV",
+        "energy storage",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Stuttgart",
+      "state": "Baden-W\u00fcrttemberg",
+      "country": "Germany",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0092",
+      "id": "battery-show-middle-east-2026",
+      "brand_id": "BRD0033",
+      "name": "The Battery Show Middle East 2026",
+      "type": "trade show",
+      "category": "battery & EV manufacturing",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-03",
+      "venue_id": "VEN0073",
+      "status": "confirmed",
+      "url": "https://www.middleeast-energy.com",
+      "description": "Advanced battery and energy technology trade show serving the Middle East market. Co-located at Dubai World Trade Centre.",
+      "tags": [
+        "battery",
+        "EV",
+        "energy storage",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Dubai",
+      "state": "",
+      "country": "United Arab Emirates",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0093",
+      "id": "battery-show-indonesia-2026",
+      "brand_id": "BRD0033",
+      "name": "The Battery Show Indonesia 2026",
+      "type": "trade show",
+      "category": "battery & EV manufacturing",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-05",
+      "venue_id": "VEN0074",
+      "status": "confirmed",
+      "url": "https://www.thebatteryshowindonesia.com",
+      "description": "Advanced battery and EV technology trade show for Southeast Asia's rapidly growing market. Held at Jakarta International Expo.",
+      "tags": [
+        "battery",
+        "EV",
+        "energy storage",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Jakarta",
+      "state": "",
+      "country": "Indonesia",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0094",
+      "id": "battery-show-india-2026",
+      "brand_id": "BRD0033",
+      "name": "The Battery Show India 2026",
+      "type": "trade show",
+      "category": "battery & EV manufacturing",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-24",
+      "venue_id": "VEN0075",
+      "status": "confirmed",
+      "url": "https://www.thebatteryshowindia.com",
+      "description": "Advanced battery and EV technology trade show serving India's fast-growing manufacturing and EV sector. Co-located with Renewable Electricity and Energy Storage India at India Expo Mart.",
+      "tags": [
+        "battery",
+        "EV",
+        "energy storage",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0095",
+      "id": "adm-montreal-2026",
+      "brand_id": "BRD0077",
+      "name": "Advanced Design & Manufacturing Montreal 2026",
+      "type": "trade show",
+      "category": "general manufacturing",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-12",
+      "venue_id": "VEN0069",
+      "status": "confirmed",
+      "url": "https://www.admmontreal.com",
+      "description": "Canada's leading advanced design and manufacturing trade show, held in French and English. Covers design engineering, automation, plastics, packaging, and MedTech for the Quebec and broader Canadian manufacturing market.",
+      "tags": [
+        "design & manufacturing",
+        "automation",
+        "plastics",
+        "packaging"
+      ],
+      "video_url": "",
+      "city": "Montr\u00e9al",
+      "state": "QC",
+      "country": "Canada",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0096",
+      "id": "space-tech-expo-europe-2026",
+      "brand_id": "BRD0078",
+      "name": "Space Tech Expo Europe 2026",
+      "type": "trade show",
+      "category": "aerospace & defense manufacturing",
+      "start_date": "2026-11-17",
+      "end_date": "2026-11-18",
+      "venue_id": "VEN0070",
+      "status": "confirmed",
+      "url": "https://www.spacetechexpo-europe.com",
+      "description": "Europe's leading space technology and manufacturing trade show. Connects the global space supply chain \u2014 covering satellite manufacturing, launch systems, components, materials, and services.",
+      "tags": [
+        "aerospace",
+        "space",
+        "defense",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Bremen",
+      "state": "",
+      "country": "Germany",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0097",
+      "id": "medevice-silicon-valley-2026",
+      "brand_id": "BRD0079",
+      "name": "MEDevice Silicon Valley 2026",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-19",
+      "venue_id": "VEN0071",
+      "status": "confirmed",
+      "url": "https://www.biomedevicesiliconvalley.com",
+      "description": "West Coast's premier MedTech innovation expo connecting medical device OEMs, startups, and suppliers in Silicon Valley. Informa Markets event focused on medical device design and manufacturing.",
+      "tags": [
+        "medical devices",
+        "medtech"
+      ],
+      "video_url": "",
+      "city": "Santa Clara",
+      "state": "CA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0098",
+      "id": "ceramics-expo-2027",
+      "brand_id": "BRD0080",
+      "name": "Ceramics Expo 2027",
+      "type": "trade show",
+      "category": "advanced materials & manufacturing",
+      "start_date": "2027-04-20",
+      "end_date": "2027-04-21",
+      "venue_id": "VEN0020",
+      "status": "confirmed",
+      "url": "https://www.ceramicsexpousa.com",
+      "description": "North America's only dedicated trade show for the technical ceramics and thermal management industries. Co-located with Thermal Management Expo North America. Covers advanced ceramics, composites, glass, and thermal interface materials.",
+      "tags": [
+        "ceramics",
+        "advanced materials",
+        "thermal management",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Cleveland",
+      "state": "OH",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0099",
+      "id": "battery-show-south-2027",
+      "brand_id": "BRD0033",
+      "name": "The Battery Show South 2027",
+      "type": "trade show",
+      "category": "battery & EV manufacturing",
+      "start_date": "2027-04-21",
+      "end_date": "2027-04-22",
+      "venue_id": "VEN0005",
+      "status": "confirmed",
+      "url": "https://www.thebatteryshowsouth.com",
+      "description": "Southern US edition of The Battery Show. Co-located with Electric & Hybrid Vehicle Technology Expo South and Energy Storage South at Georgia World Congress Center.",
+      "tags": [
+        "battery",
+        "EV",
+        "energy storage",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Atlanta",
+      "state": "GA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0100",
+      "id": "mdm-east-2027",
+      "brand_id": "BRD0009",
+      "name": "MD&M East 2027",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2027-05-19",
+      "end_date": "2027-05-20",
+      "venue_id": "VEN0072",
+      "status": "confirmed",
+      "url": "https://www.imengineeringeast.com",
+      "description": "The East Coast's premier medical device design and manufacturing trade show, held at the Jacob K. Javits Convention Center in New York City.",
+      "tags": [
+        "medical devices",
+        "medtech",
+        "design & manufacturing"
+      ],
+      "video_url": "",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0101",
+      "id": "adm-toronto-2027",
+      "brand_id": "BRD0077",
+      "name": "Advanced Design & Manufacturing Toronto 2027",
+      "type": "trade show",
+      "category": "general manufacturing",
+      "start_date": "2027-11-09",
+      "end_date": "2027-11-11",
+      "venue_id": "VEN0009",
+      "status": "confirmed",
+      "url": "https://www.admtoronto.com",
+      "description": "Canada's largest advanced design and manufacturing trade show. Covers design engineering, automation, robotics, plastics, packaging, and MedTech for the Ontario manufacturing market.",
+      "tags": [
+        "design & manufacturing",
+        "automation",
+        "plastics",
+        "packaging"
+      ],
+      "video_url": "",
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0102",
+      "id": "mdm-south-2028",
+      "brand_id": "BRD0009",
+      "name": "MD&M South 2028",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2028-04-19",
+      "end_date": "2028-04-20",
+      "venue_id": "VEN0007",
+      "status": "confirmed",
+      "url": "https://www.mdmsouth.com",
+      "description": "The Southeast's most comprehensive advanced manufacturing event. Covers MedTech, Automation, Design & Manufacturing, Plastics, Packaging, and Powder & Bulk Solids at Charlotte Convention Center.",
+      "tags": [
+        "medical devices",
+        "medtech",
+        "design & manufacturing"
+      ],
+      "video_url": "",
+      "city": "Charlotte",
+      "state": "NC",
       "country": "USA",
       "sponsored": false
     }
