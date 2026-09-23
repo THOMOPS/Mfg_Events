@@ -1,14 +1,12 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-30",
-    "total": 85
+    "last_updated": "2026-09-23",
+    "total": 111
   },
   "events": [
     {
       "evt_id": "EVT0001",
-      "id": "aiaa-scitech-2026",
-      "brand_id": "BRD0001",
       "name": "AIAA SciTech Forum 2026",
       "type": "conference",
       "category": "aerospace",
@@ -27,8 +25,6 @@
     },
     {
       "evt_id": "EVT0002",
-      "id": "military-am-summit-2026",
-      "brand_id": "BRD0002",
       "name": "Military AM Summit 2026",
       "type": "conference",
       "category": "additive manufacturing",
@@ -47,8 +43,6 @@
     },
     {
       "evt_id": "EVT0003",
-      "id": "metalfab26",
-      "brand_id": "BRD0003",
       "name": "METALfab26",
       "type": "trade show",
       "category": "metal fabrication",
@@ -68,8 +62,6 @@
     },
     {
       "evt_id": "EVT0004",
-      "id": "pack-expo-east-2026",
-      "brand_id": "BRD0004",
       "name": "PACK EXPO East 2026",
       "type": "trade show",
       "category": "packaging",
@@ -89,8 +81,6 @@
     },
     {
       "evt_id": "EVT0005",
-      "id": "american-manufacturing-summit-2026",
-      "brand_id": "BRD0005",
       "name": "American Manufacturing Summit 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -111,8 +101,6 @@
     },
     {
       "evt_id": "EVT0006",
-      "id": "modex-2026",
-      "brand_id": "BRD0006",
       "name": "MODEX 2026",
       "type": "trade show",
       "category": "supply chain",
@@ -132,8 +120,6 @@
     },
     {
       "evt_id": "EVT0007",
-      "id": "rapid-tct-2026",
-      "brand_id": "BRD0007",
       "name": "RAPID + TCT 2026",
       "type": "trade show",
       "category": "additive manufacturing",
@@ -153,8 +139,6 @@
     },
     {
       "evt_id": "EVT0008",
-      "id": "north-american-manufacturing-excellence-summit-2026",
-      "brand_id": "BRD0008",
       "name": "North American Manufacturing Excellence Summit 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -173,8 +157,6 @@
     },
     {
       "evt_id": "EVT0009",
-      "id": "mdm-east-2026",
-      "brand_id": "BRD0009",
       "name": "MD&M East 2026",
       "type": "trade show",
       "category": "medical manufacturing",
@@ -193,8 +175,6 @@
     },
     {
       "evt_id": "EVT0010",
-      "id": "sme-fusion-2026",
-      "brand_id": "BRD0010",
       "name": "SME FUSION 2026",
       "type": "conference",
       "category": "workforce",
@@ -213,8 +193,6 @@
     },
     {
       "evt_id": "EVT0011",
-      "id": "metal-forming-toronto-2026",
-      "brand_id": "BRD0011",
       "name": "Metal Forming, Fabricating, Welding & Finishing 2026",
       "type": "trade show",
       "category": "metal fabrication",
@@ -234,8 +212,6 @@
     },
     {
       "evt_id": "EVT0012",
-      "id": "automate-2026",
-      "brand_id": "BRD0012",
       "name": "Automate Show 2026",
       "type": "trade show",
       "category": "automation & robotics",
@@ -256,8 +232,6 @@
     },
     {
       "evt_id": "EVT0013",
-      "id": "imts-2026",
-      "brand_id": "BRD0013",
       "name": "IMTS 2026 - International Manufacturing Technology Show",
       "type": "trade show",
       "category": "general manufacturing",
@@ -279,8 +253,6 @@
     },
     {
       "evt_id": "EVT0014",
-      "id": "advanced-manufacturing-minneapolis-2026",
-      "brand_id": "BRD0009",
       "name": "MD&M Midwest 2026",
       "type": "trade show",
       "category": "general manufacturing",
@@ -299,8 +271,6 @@
     },
     {
       "evt_id": "EVT0015",
-      "id": "fabtech-2026",
-      "brand_id": "BRD0015",
       "name": "FABTECH 2026",
       "type": "trade show",
       "category": "metal fabrication",
@@ -322,8 +292,6 @@
     },
     {
       "evt_id": "EVT0016",
-      "id": "smtai-2026",
-      "brand_id": "BRD0016",
       "name": "SMTAI 2026",
       "type": "conference",
       "category": "electronics manufacturing",
@@ -343,8 +311,6 @@
     },
     {
       "evt_id": "EVT0017",
-      "id": "ame-international-conference-2026",
-      "brand_id": "BRD0017",
       "name": "AME International Conference 2026",
       "type": "conference",
       "category": "lean manufacturing",
@@ -364,8 +330,6 @@
     },
     {
       "evt_id": "EVT0018",
-      "id": "assembly-show-2026",
-      "brand_id": "BRD0018",
       "name": "The Assembly Show 2026",
       "type": "trade show",
       "category": "assembly",
@@ -384,8 +348,6 @@
     },
     {
       "evt_id": "EVT0019",
-      "id": "expo-pack-mexico-2026",
-      "brand_id": "BRD0004",
       "name": "EXPO PACK Mexico 2026",
       "type": "trade show",
       "category": "packaging",
@@ -405,8 +367,6 @@
     },
     {
       "evt_id": "EVT0020",
-      "id": "pack-expo-international-2026",
-      "brand_id": "BRD0004",
       "name": "PACK EXPO International 2026",
       "type": "trade show",
       "category": "packaging",
@@ -427,8 +387,6 @@
     },
     {
       "evt_id": "EVT0021",
-      "id": "pack-expo-southeast-2027",
-      "brand_id": "BRD0004",
       "name": "PACK EXPO Southeast 2027",
       "type": "trade show",
       "category": "packaging",
@@ -449,8 +407,6 @@
     },
     {
       "evt_id": "EVT0022",
-      "id": "expo-pack-guadalajara-2027",
-      "brand_id": "BRD0004",
       "name": "EXPO PACK Guadalajara 2027",
       "type": "trade show",
       "category": "packaging",
@@ -470,8 +426,6 @@
     },
     {
       "evt_id": "EVT0023",
-      "id": "pack-expo-las-vegas-2027",
-      "brand_id": "BRD0004",
       "name": "PACK EXPO Las Vegas 2027",
       "type": "trade show",
       "category": "packaging",
@@ -492,8 +446,6 @@
     },
     {
       "evt_id": "EVT0024",
-      "id": "pack-expo-east-2028",
-      "brand_id": "BRD0004",
       "name": "PACK EXPO East 2028",
       "type": "trade show",
       "category": "packaging",
@@ -514,8 +466,6 @@
     },
     {
       "evt_id": "EVT0025",
-      "id": "semicon-west-2026",
-      "brand_id": "BRD0019",
       "name": "SEMICON West 2026",
       "type": "trade show",
       "category": "electronics manufacturing",
@@ -535,8 +485,6 @@
     },
     {
       "evt_id": "EVT0026",
-      "id": "space-tech-expo-usa-2026",
-      "brand_id": "BRD0020",
       "name": "Space Tech Expo USA 2026",
       "type": "trade show",
       "category": "aerospace",
@@ -556,8 +504,6 @@
     },
     {
       "evt_id": "EVT0027",
-      "id": "mtforecast-2026",
-      "brand_id": "BRD0021",
       "name": "MTForecast 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -578,8 +524,6 @@
     },
     {
       "evt_id": "EVT0028",
-      "id": "hannover-messe-2027",
-      "brand_id": "BRD0022",
       "name": "Hannover Messe 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -600,8 +544,6 @@
     },
     {
       "evt_id": "EVT0029",
-      "id": "smart-factories-summit-2027",
-      "brand_id": "BRD0023",
       "name": "Smart Factories Summit 2027",
       "type": "conference",
       "category": "automation & robotics",
@@ -623,8 +565,6 @@
     },
     {
       "evt_id": "EVT0030",
-      "id": "pmts-2027",
-      "brand_id": "BRD0024",
       "name": "PMTS 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -644,8 +584,6 @@
     },
     {
       "evt_id": "EVT0031",
-      "id": "mx0-midwest-2026",
-      "brand_id": "BRD0025",
       "name": "MX.0 Midwest 2026",
       "type": "conference",
       "category": "automation & robotics",
@@ -667,8 +605,6 @@
     },
     {
       "evt_id": "EVT0032",
-      "id": "mx0-uk-2026",
-      "brand_id": "BRD0025",
       "name": "MX.0 UK 2026",
       "type": "conference",
       "category": "automation & robotics",
@@ -690,8 +626,6 @@
     },
     {
       "evt_id": "EVT0033",
-      "id": "mx0-southeast-2027",
-      "brand_id": "BRD0025",
       "name": "MX.0 Southeast 2027",
       "type": "conference",
       "category": "automation & robotics",
@@ -713,8 +647,6 @@
     },
     {
       "evt_id": "EVT0034",
-      "id": "mx0-indiana-2027",
-      "brand_id": "BRD0025",
       "name": "MX.0 Indiana 2027",
       "type": "conference",
       "category": "automation & robotics",
@@ -736,8 +668,6 @@
     },
     {
       "evt_id": "EVT0035",
-      "id": "powder-show-2027",
-      "brand_id": "BRD0026",
       "name": "The Powder Show 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -758,8 +688,6 @@
     },
     {
       "evt_id": "EVT0037",
-      "id": "extrusion-conference-2026",
-      "brand_id": "BRD0028",
       "name": "Extrusion Conference 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -780,8 +708,6 @@
     },
     {
       "evt_id": "EVT0038",
-      "id": "future-labs-automation-technology-2027",
-      "brand_id": "BRD0029",
       "name": "Future Labs, Automation & Technology Summit 2027",
       "type": "conference",
       "category": "medical manufacturing",
@@ -801,8 +727,6 @@
     },
     {
       "evt_id": "EVT0039",
-      "id": "design-automation-conference-2026",
-      "brand_id": "BRD0030",
       "name": "Design Automation Conference 2026",
       "type": "conference",
       "category": "electronics manufacturing",
@@ -823,8 +747,6 @@
     },
     {
       "evt_id": "EVT0040",
-      "id": "advanced-manufacturing-expo-2026",
-      "brand_id": "BRD0031",
       "name": "Advanced Manufacturing Expo 2026",
       "type": "trade show",
       "category": "general manufacturing",
@@ -846,8 +768,6 @@
     },
     {
       "evt_id": "EVT0041",
-      "id": "mapp-benchmarking-conference-2026",
-      "brand_id": "BRD0032",
       "name": "MAPP Benchmarking & Best Practices Conference 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -868,8 +788,6 @@
     },
     {
       "evt_id": "EVT0042",
-      "id": "battery-show-north-america-2026",
-      "brand_id": "BRD0033",
       "name": "The Battery Show North America 2026",
       "type": "trade show",
       "category": "electronics manufacturing",
@@ -889,8 +807,6 @@
     },
     {
       "evt_id": "EVT0043",
-      "id": "mt-series-east-2027",
-      "brand_id": "BRD0034",
       "name": "MT Series EAST 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -911,8 +827,6 @@
     },
     {
       "evt_id": "EVT0044",
-      "id": "mt-series-southeast-2027",
-      "brand_id": "BRD0034",
       "name": "MT Series SOUTHEAST 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -933,8 +847,6 @@
     },
     {
       "evt_id": "EVT0045",
-      "id": "mt-series-southwest-2027",
-      "brand_id": "BRD0034",
       "name": "MT Series SOUTHWEST 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -955,8 +867,6 @@
     },
     {
       "evt_id": "EVT0046",
-      "id": "mt-series-west-2027",
-      "brand_id": "BRD0034",
       "name": "MT Series WEST 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -977,8 +887,6 @@
     },
     {
       "evt_id": "EVT0047",
-      "id": "k-trade-fair-2028",
-      "brand_id": "BRD0035",
       "name": "K 2028",
       "type": "trade show",
       "category": "general manufacturing",
@@ -999,8 +907,6 @@
     },
     {
       "evt_id": "EVT0048",
-      "id": "assembly-show-2027",
-      "brand_id": "BRD0018",
       "name": "The Assembly Show 2027",
       "type": "trade show",
       "category": "assembly",
@@ -1020,8 +926,6 @@
     },
     {
       "evt_id": "EVT0049",
-      "id": "top-shops-conference-2026",
-      "brand_id": "BRD0036",
       "name": "Top Shops Conference 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -1042,8 +946,6 @@
     },
     {
       "evt_id": "EVT0050",
-      "id": "3dexperience-world-2027",
-      "brand_id": "BRD0037",
       "name": "3DEXPERIENCE World 2027",
       "type": "conference",
       "category": "general manufacturing",
@@ -1064,8 +966,6 @@
     },
     {
       "evt_id": "EVT0051",
-      "id": "lubricant-expo-north-america-2027",
-      "brand_id": "BRD0038",
       "name": "Lubricant Expo North America 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -1085,8 +985,6 @@
     },
     {
       "evt_id": "EVT0052",
-      "id": "plastics-recycling-conference-2027",
-      "brand_id": "BRD0039",
       "name": "Plastics Recycling Conference 2027",
       "type": "conference",
       "category": "general manufacturing",
@@ -1106,8 +1004,6 @@
     },
     {
       "evt_id": "EVT0053",
-      "id": "ptxpo-2028",
-      "brand_id": "BRD0040",
       "name": "Plastics Technology Expo 2028",
       "type": "trade show",
       "category": "general manufacturing",
@@ -1129,8 +1025,6 @@
     },
     {
       "evt_id": "EVT0055",
-      "id": "americapack-summit-jun-2026",
-      "brand_id": "BRD0041",
       "name": "AmericaPack Summit June 2026",
       "type": "conference",
       "category": "packaging",
@@ -1151,8 +1045,6 @@
     },
     {
       "evt_id": "EVT0056",
-      "id": "promat-2027",
-      "brand_id": "BRD0042",
       "name": "ProMat 2027",
       "type": "trade show",
       "category": "supply chain",
@@ -1174,8 +1066,6 @@
     },
     {
       "evt_id": "EVT0057",
-      "id": "npe-2027",
-      "brand_id": "BRD0043",
       "name": "NPE2027: The Plastics Show",
       "type": "trade show",
       "category": "general manufacturing",
@@ -1196,8 +1086,6 @@
     },
     {
       "evt_id": "EVT0058",
-      "id": "boombastic-2026",
-      "brand_id": "BRD0044",
       "name": "BOOMBASTIC 2026",
       "type": "open house",
       "category": "general manufacturing",
@@ -1222,8 +1110,6 @@
     },
     {
       "evt_id": "EVT0059",
-      "id": "engel-foammelt-days-2026",
-      "brand_id": "BRD0046",
       "name": "ENGEL foammelt Days 2026",
       "type": "open house",
       "category": "general manufacturing",
@@ -1247,8 +1133,6 @@
     },
     {
       "evt_id": "EVT0060",
-      "id": "discover-more-mazak-fremont-2026",
-      "brand_id": "BRD0047",
       "name": "Discover More With Mazak \u2014 Fremont 2026",
       "type": "open house",
       "category": "general manufacturing",
@@ -1272,8 +1156,6 @@
     },
     {
       "evt_id": "EVT0061",
-      "id": "makino-technology-expo-2026",
-      "brand_id": "BRD0048",
       "name": "Makino Technology Expo 2026",
       "type": "open house",
       "category": "general manufacturing",
@@ -1298,8 +1180,6 @@
     },
     {
       "evt_id": "EVT0062",
-      "id": "gosiger-indiana-open-house-2026",
-      "brand_id": "BRD0049",
       "name": "Gosiger Indiana Open House 2026",
       "type": "open house",
       "category": "general manufacturing",
@@ -1323,8 +1203,6 @@
     },
     {
       "evt_id": "EVT0063",
-      "id": "reindustrialize-summit-2026",
-      "brand_id": "BRD0050",
       "name": "Reindustrialize Summit 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -1348,8 +1226,6 @@
     },
     {
       "evt_id": "EVT0064",
-      "id": "ot-scada-con-2026",
-      "brand_id": "BRD0051",
       "name": "OT SCADA CON 2026",
       "type": "conference",
       "category": "automation & robotics",
@@ -1372,8 +1248,6 @@
     },
     {
       "evt_id": "EVT0065",
-      "id": "proshop-cutting-edge-2026",
-      "brand_id": "BRD0052",
       "name": "ProShop Cutting Edge 2026",
       "type": "webinar",
       "category": "general manufacturing",
@@ -1398,8 +1272,6 @@
     },
     {
       "evt_id": "EVT0066",
-      "id": "machining-summit-2027",
-      "brand_id": "BRD0053",
       "name": "Machining Summit 2027",
       "type": "conference",
       "category": "general manufacturing",
@@ -1424,8 +1296,6 @@
     },
     {
       "evt_id": "EVT0067",
-      "id": "mlc-rethink-2026",
-      "brand_id": "BRD0054",
       "name": "MLC Rethink 2026",
       "type": "conference",
       "category": "general manufacturing",
@@ -1451,8 +1321,6 @@
     },
     {
       "evt_id": "EVT0068",
-      "id": "dmg-mori-technology-days-cleveland-2026",
-      "brand_id": "BRD0055",
       "name": "DMG MORI Technology Days Cleveland 2026",
       "type": "open house",
       "category": "metalworking",
@@ -1478,8 +1346,6 @@
     },
     {
       "evt_id": "EVT0069",
-      "id": "dmg-mori-innovation-days-chicago-2026",
-      "brand_id": "BRD0055",
       "name": "DMG MORI Innovation Days Chicago 2026",
       "type": "open house",
       "category": "metalworking",
@@ -1507,8 +1373,6 @@
     },
     {
       "evt_id": "EVT0070",
-      "id": "farnborough-airshow-2026",
-      "brand_id": "BRD0056",
       "name": "Farnborough Airshow 2026",
       "type": "trade show",
       "category": "aerospace",
@@ -1531,8 +1395,6 @@
     },
     {
       "evt_id": "EVT0071",
-      "id": "himtex-2026",
-      "brand_id": "BRD0057",
       "name": "HIMTEX 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1558,8 +1420,6 @@
     },
     {
       "evt_id": "EVT0072",
-      "id": "engineered-for-power-2026",
-      "brand_id": "BRD0058",
       "name": "Engineered For Power 2026",
       "type": "open house",
       "category": "metalworking",
@@ -1583,8 +1443,6 @@
     },
     {
       "evt_id": "EVT0073",
-      "id": "amb-2026",
-      "brand_id": "BRD0059",
       "name": "AMB 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1611,8 +1469,6 @@
     },
     {
       "evt_id": "EVT0074",
-      "id": "maktek-eurasia-2026",
-      "brand_id": "BRD0060",
       "name": "Maktek Eurasia 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1638,8 +1494,6 @@
     },
     {
       "evt_id": "EVT0075",
-      "id": "micronora-2026",
-      "brand_id": "BRD0061",
       "name": "Micronora 2026",
       "type": "trade show",
       "category": "precision engineering",
@@ -1662,8 +1516,6 @@
     },
     {
       "evt_id": "EVT0076",
-      "id": "msv-brno-2026",
-      "brand_id": "BRD0062",
       "name": "MSV Brno 2026",
       "type": "trade show",
       "category": "manufacturing",
@@ -1688,8 +1540,6 @@
     },
     {
       "evt_id": "EVT0077",
-      "id": "fakuma-2026",
-      "brand_id": "BRD0063",
       "name": "Fakuma 2026",
       "type": "trade show",
       "category": "plastics",
@@ -1714,8 +1564,6 @@
     },
     {
       "evt_id": "EVT0078",
-      "id": "siane-2026",
-      "brand_id": "BRD0064",
       "name": "SIANE 2026",
       "type": "trade show",
       "category": "aerospace",
@@ -1739,8 +1587,6 @@
     },
     {
       "evt_id": "EVT0079",
-      "id": "bi-mu-2026",
-      "brand_id": "BRD0065",
       "name": "BI-MU 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1767,8 +1613,6 @@
     },
     {
       "evt_id": "EVT0080",
-      "id": "mia-cts-2026",
-      "brand_id": "BRD0066",
       "name": "MIA CTS 2026",
       "type": "trade show",
       "category": "motorsport",
@@ -1791,8 +1635,6 @@
     },
     {
       "evt_id": "EVT0081",
-      "id": "euroblech-2026",
-      "brand_id": "BRD0067",
       "name": "EuroBLECH 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1819,8 +1661,6 @@
     },
     {
       "evt_id": "EVT0082",
-      "id": "jimtof-2026",
-      "brand_id": "BRD0068",
       "name": "JIMTOF 2026",
       "type": "trade show",
       "category": "metalworking",
@@ -1846,8 +1686,6 @@
     },
     {
       "evt_id": "EVT0083",
-      "id": "ciie-2026",
-      "brand_id": "BRD0069",
       "name": "CIIE 2026",
       "type": "trade show",
       "category": "manufacturing",
@@ -1870,8 +1708,6 @@
     },
     {
       "evt_id": "EVT0084",
-      "id": "formnext-2026",
-      "brand_id": "BRD0070",
       "name": "Formnext 2026",
       "type": "trade show",
       "category": "additive manufacturing",
@@ -1895,8 +1731,6 @@
     },
     {
       "evt_id": "EVT0085",
-      "id": "aeromart-toulouse-2026",
-      "brand_id": "BRD0071",
       "name": "Aeromart Toulouse 2026",
       "type": "conference",
       "category": "aerospace",
@@ -1921,8 +1755,6 @@
     },
     {
       "evt_id": "EVT0086",
-      "id": "shot-show-2027",
-      "brand_id": "BRD0072",
       "name": "SHOT Show 2027",
       "type": "trade show",
       "category": "firearms & outdoor",
@@ -1944,8 +1776,6 @@
     },
     {
       "evt_id": "EVT0087",
-      "id": "automation-fair-2026",
-      "brand_id": "BRD0073",
       "name": "Automation Fair 2026",
       "type": "conference",
       "category": "automation & robotics",
@@ -1970,8 +1800,6 @@
     },
     {
       "evt_id": "EVT0088",
-      "id": "mdm-west-2027",
-      "brand_id": "BRD0074",
       "name": "MD&M West 2027",
       "type": "trade show",
       "category": "medical device manufacturing",
@@ -1997,8 +1825,6 @@
     },
     {
       "evt_id": "EVT0089",
-      "id": "medevice-boston-2026",
-      "brand_id": "BRD0075",
       "name": "MEDevice Boston 2026",
       "type": "trade show",
       "category": "medical device manufacturing",
@@ -2020,8 +1846,6 @@
     },
     {
       "evt_id": "EVT0090",
-      "id": "foam-expo-na-2026",
-      "brand_id": "BRD0076",
       "name": "Foam Expo North America 2026",
       "type": "trade show",
       "category": "advanced materials & manufacturing",
@@ -2045,8 +1869,6 @@
     },
     {
       "evt_id": "EVT0091",
-      "id": "battery-show-europe-2026",
-      "brand_id": "BRD0033",
       "name": "The Battery Show Europe 2026",
       "type": "trade show",
       "category": "battery & EV manufacturing",
@@ -2070,8 +1892,6 @@
     },
     {
       "evt_id": "EVT0092",
-      "id": "battery-show-middle-east-2026",
-      "brand_id": "BRD0033",
       "name": "The Battery Show Middle East 2026",
       "type": "trade show",
       "category": "battery & EV manufacturing",
@@ -2095,8 +1915,6 @@
     },
     {
       "evt_id": "EVT0093",
-      "id": "battery-show-indonesia-2026",
-      "brand_id": "BRD0033",
       "name": "The Battery Show Indonesia 2026",
       "type": "trade show",
       "category": "battery & EV manufacturing",
@@ -2120,8 +1938,6 @@
     },
     {
       "evt_id": "EVT0094",
-      "id": "battery-show-india-2026",
-      "brand_id": "BRD0033",
       "name": "The Battery Show India 2026",
       "type": "trade show",
       "category": "battery & EV manufacturing",
@@ -2145,8 +1961,6 @@
     },
     {
       "evt_id": "EVT0095",
-      "id": "adm-montreal-2026",
-      "brand_id": "BRD0077",
       "name": "Advanced Design & Manufacturing Montreal 2026",
       "type": "trade show",
       "category": "general manufacturing",
@@ -2170,8 +1984,6 @@
     },
     {
       "evt_id": "EVT0096",
-      "id": "space-tech-expo-europe-2026",
-      "brand_id": "BRD0078",
       "name": "Space Tech Expo Europe 2026",
       "type": "trade show",
       "category": "aerospace & defense manufacturing",
@@ -2195,8 +2007,6 @@
     },
     {
       "evt_id": "EVT0097",
-      "id": "medevice-silicon-valley-2026",
-      "brand_id": "BRD0079",
       "name": "MEDevice Silicon Valley 2026",
       "type": "trade show",
       "category": "medical device manufacturing",
@@ -2218,8 +2028,6 @@
     },
     {
       "evt_id": "EVT0098",
-      "id": "ceramics-expo-2027",
-      "brand_id": "BRD0080",
       "name": "Ceramics Expo 2027",
       "type": "trade show",
       "category": "advanced materials & manufacturing",
@@ -2243,8 +2051,6 @@
     },
     {
       "evt_id": "EVT0099",
-      "id": "battery-show-south-2027",
-      "brand_id": "BRD0033",
       "name": "The Battery Show South 2027",
       "type": "trade show",
       "category": "battery & EV manufacturing",
@@ -2268,8 +2074,6 @@
     },
     {
       "evt_id": "EVT0100",
-      "id": "mdm-east-2027",
-      "brand_id": "BRD0009",
       "name": "MD&M East 2027",
       "type": "trade show",
       "category": "medical device manufacturing",
@@ -2292,8 +2096,6 @@
     },
     {
       "evt_id": "EVT0101",
-      "id": "adm-toronto-2027",
-      "brand_id": "BRD0077",
       "name": "Advanced Design & Manufacturing Toronto 2027",
       "type": "trade show",
       "category": "general manufacturing",
@@ -2317,8 +2119,6 @@
     },
     {
       "evt_id": "EVT0102",
-      "id": "mdm-south-2028",
-      "brand_id": "BRD0009",
       "name": "MD&M South 2028",
       "type": "trade show",
       "category": "medical device manufacturing",
@@ -2338,6 +2138,228 @@
       "state": "NC",
       "country": "USA",
       "sponsored": false
+    },
+    {
+      "evt_id": "EVT0103",
+      "name": "OMTEC 2027",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2027-06-08",
+      "end_date": "2027-06-10",
+      "venue_id": "VEN0013",
+      "status": "confirmed",
+      "url": "https://omtecexpo.com",
+      "description": "The world's most comprehensive orthopedic design and manufacturing event. Connects orthopedic OEM executives, engineers, and buyers with 215+ suppliers across machining, materials, coatings, packaging, automation, and 3D printing.",
+      "tags": [
+        "medical devices",
+        "orthopedic",
+        "medtech",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Rosemont",
+      "state": "IL",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0104",
+      "name": "Automate Show 2027",
+      "type": "trade show",
+      "category": "automation & robotics",
+      "start_date": "2027-05-10",
+      "end_date": "2027-05-13",
+      "venue_id": "VEN0012",
+      "status": "confirmed",
+      "url": "https://www.automateshow.com",
+      "description": "The largest automation and robotics trade show and conference in North America. Covers robotics, AI, machine vision, motion control, and industrial automation across manufacturing, logistics, healthcare, and energy sectors.",
+      "tags": [
+        "robotics",
+        "automation",
+        "AI",
+        "machine vision"
+      ],
+      "video_url": "",
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0105",
+      "name": "AIAA SciTech Forum 2027",
+      "type": "conference",
+      "category": "aerospace",
+      "start_date": "2027-01-11",
+      "end_date": "2027-01-15",
+      "venue_id": "VEN0076",
+      "status": "confirmed",
+      "url": "https://www.aiaa.org/SciTech",
+      "description": "The premier aerospace R&D forum exploring science, technologies, and capabilities transforming aerospace. ~6,000 attendees from 46 countries, 2,900+ technical presentations, 635+ sessions.",
+      "tags": [
+        "aerospace",
+        "engineering",
+        "R&D"
+      ],
+      "video_url": "",
+      "city": "Orlando",
+      "state": "FL",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0106",
+      "name": "RAPID + TCT 2027",
+      "type": "trade show",
+      "category": "additive manufacturing",
+      "start_date": "2027-04-12",
+      "end_date": "2027-04-15",
+      "venue_id": "VEN0029",
+      "status": "confirmed",
+      "url": "https://www.rapid3devent.com",
+      "description": "North America's largest additive manufacturing and industrial 3D printing trade show and conference. 450+ technology innovators, 200+ expert speakers, 160+ conference presentations.",
+      "tags": [
+        "additive manufacturing",
+        "3D printing",
+        "advanced manufacturing"
+      ],
+      "video_url": "",
+      "city": "Detroit",
+      "state": "MI",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0107",
+      "name": "Space Tech Expo USA 2027",
+      "type": "trade show",
+      "category": "aerospace & defense manufacturing",
+      "start_date": "2027-06-30",
+      "end_date": "2027-07-01",
+      "venue_id": "VEN0018",
+      "status": "confirmed",
+      "url": "https://www.spacetechexpo.com",
+      "description": "North America's leading space supply chain trade show connecting 350+ companies in electronics, materials, testing, components, and more. Includes two free conferences and B2B matchmaking.",
+      "tags": [
+        "aerospace",
+        "space",
+        "defense",
+        "manufacturing"
+      ],
+      "video_url": "",
+      "city": "Anaheim",
+      "state": "CA",
+      "country": "USA",
+      "sponsored": false
+    },
+    {
+      "evt_id": "EVT0108",
+      "name": "MODEX 2028",
+      "type": "trade show",
+      "category": "supply chain",
+      "start_date": "2028-04-03",
+      "end_date": "2028-04-05",
+      "venue_id": "VEN0005",
+      "status": "confirmed",
+      "url": "https://www.modexshow.com",
+      "description": "Supply chain and logistics automation show.",
+      "tags": [
+        "supply chain",
+        "logistics",
+        "automation"
+      ],
+      "video_url": ""
+    },
+    {
+      "evt_id": "EVT0109",
+      "name": "Foam Expo North America 2027",
+      "type": "trade show",
+      "category": "advanced materials & manufacturing",
+      "start_date": "2027-05-18",
+      "end_date": "2027-05-20",
+      "venue_id": "VEN0005",
+      "status": "confirmed",
+      "url": "https://www.foam-expo.com",
+      "description": "North America's dedicated event for the foam, adhesive, and bonding industries, co-located with Adhesives & Bonding Expo.",
+      "tags": [
+        "foam",
+        "adhesives",
+        "materials",
+        "advanced materials"
+      ],
+      "video_url": ""
+    },
+    {
+      "evt_id": "EVT0110",
+      "name": "Farnborough Airshow 2028",
+      "type": "trade show",
+      "category": "aerospace",
+      "start_date": "2028-07-17",
+      "end_date": "2028-07-21",
+      "venue_id": "VEN0051",
+      "status": "confirmed",
+      "url": "https://www.farnboroughairshow.com",
+      "description": "The world's premier aerospace and defence trade event, bringing together global manufacturers, suppliers, and buyers across civil and military aviation.",
+      "tags": [
+        "aerospace",
+        "defense"
+      ],
+      "video_url": ""
+    },
+    {
+      "evt_id": "EVT0111",
+      "name": "Advanced Manufacturing Expo 2027",
+      "type": "trade show",
+      "category": "general manufacturing",
+      "start_date": "2027-08-11",
+      "end_date": "2027-08-12",
+      "venue_id": "VEN0027",
+      "status": "confirmed",
+      "url": "https://www.advancedmanufacturingexpo.com",
+      "description": "Free-to-attend manufacturing expo covering automation, metalworking, and Industry 4.0 technology with 300+ exhibitors.",
+      "tags": [
+        "automation",
+        "metalworking",
+        "Industry 4.0",
+        "MRO"
+      ],
+      "video_url": ""
+    },
+    {
+      "evt_id": "EVT0112",
+      "name": "MEDevice Boston 2027",
+      "type": "trade show",
+      "category": "medical device manufacturing",
+      "start_date": "2027-05-11",
+      "end_date": "2027-05-12",
+      "venue_id": "VEN0067",
+      "status": "confirmed",
+      "url": "https://www.medeviceboston.com",
+      "description": "New England's premier MedTech innovation expo connecting medical device OEMs, startups, and suppliers.",
+      "tags": [
+        "medical devices",
+        "medtech"
+      ],
+      "video_url": ""
+    },
+    {
+      "evt_id": "EVT0113",
+      "name": "IMTS 2028 - International Manufacturing Technology Show",
+      "type": "trade show",
+      "category": "general manufacturing",
+      "start_date": "2028-09-11",
+      "end_date": "2028-09-16",
+      "venue_id": "VEN0010",
+      "status": "confirmed",
+      "url": "https://www.imts.com",
+      "description": "The largest manufacturing trade show in the Western Hemisphere.",
+      "tags": [
+        "machine tools",
+        "robotics",
+        "additive manufacturing",
+        "CNC"
+      ],
+      "video_url": ""
     }
   ]
 }
