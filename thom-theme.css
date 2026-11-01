@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* ============================================================
+   THOM THEME  ·  The Home of Manufacturing
+   Shared design system for all THOM website sections.
+   Source of truth: Projects/Thom Webpage/Main/thom-theme.css
+   Shippable copy:  Projects/Thom Webpage/dev/thom-theme.css
+   Change a value once here and every page updates.
+   v3 (2026-11-01): banner look — constraint red, capacity blue, ink, Bebas Neue
+   display. Colors from the Canva "LinkedIn Banner" design. Lime retired.
+   ============================================================ */
+
+/* ---------- 1. DESIGN TOKENS ---------- */
+:root {
+  /* Brand */
+  --thom-primary:      #12385b;   /* THOM brand navy — buttons, links, active state */
+  --thom-primary-dark: #0d2942;   /* hover, deep accents */
+  --thom-primary-tint: #e8eef4;   /* soft navy background */
+
+  /* Constraint → capacity (from the LinkedIn banner) */
+  --thom-constraint:   #d1041c;   /* red — the problem word */
+  --thom-capacity:     #027ebb;   /* blue — the payoff word */
+  --thom-ink:          #121212;   /* headline black */
+
+  /* Neutrals */
+  --thom-bg:           #f8fafc;   /* page background */
+  --thom-surface:      #ffffff;   /* cards, panels */
+  --thom-surface-alt:  #f3f4f6;   /* subtle hover / code surface */
+  --thom-border:       #e5e7eb;   /* borders, dividers */
+
+  /* Text */
+  --thom-text:         #333333;   /* brand charcoal — primary text */
+  --thom-text-mid:     #545454;   /* brand gray — secondary text */
+  --thom-text-muted:   #6b7280;   /* captions, meta, placeholder */
+
+  /* Accent (brand lime) — RETIRED in v3. Kept so existing pages don't break; don't use in new work. */
+  --thom-accent:      #85dd14;   /* highlights, accent CTAs */
+  --thom-accent-dark: #6fbe10;   /* accent hover */
+  --thom-accent-tint: #f0fbdd;   /* soft accent background */
+
+  /* Status */
+  --thom-success: #16a34a;  --thom-success-tint: #dcfce7;
+  --thom-danger:  #dc2626;  --thom-danger-tint:  #fee2e2;
+
+  /* Typography */
+  --thom-font-body:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --thom-font-display: 'Bebas Neue', Impact, var(--thom-font-body);   /* single weight — never bold */
+
+  /* Type scale */
+  --thom-text-sm:   0.875rem;                              /* 14px */
+  --thom-text-base: 1rem;                                  /* 16px */
+  --thom-text-lg:   1.25rem;                               /* 20px */
+  --thom-text-2xl:  clamp(1.5rem, 1.2rem + 1.2vw, 1.875rem);  /* 24–30 */
+  --thom-text-3xl:  clamp(1.875rem, 1.4rem + 2vw, 2.5rem);    /* 30–40 */
+
+  /* Weights */
+  --thom-weight-normal:   400;
+  --thom-weight-semibold: 600;
+  --thom-weight-bold:     700;
+
+  /* Spacing (4pt grid) */
+  --thom-space-2: 0.5rem;    /* 8  */
+  --thom-space-3: 0.75rem;   /* 12 */
+  --thom-space-4: 1rem;      /* 16 */
+  --thom-space-5: 1.5rem;    /* 24 */
+  --thom-space-6: 2rem;      /* 32 */
+
+  /* Radius */
+  --thom-radius:      12px;
+  --thom-radius-sm:   8px;
+  --thom-radius-pill: 999px;
+
+  /* Elevation */
+  --thom-shadow-sm: 0 1px 2px rgba(17,24,39,.06), 0 1px 3px rgba(17,24,39,.10);
+  --thom-shadow-md: 0 4px 6px rgba(17,24,39,.05), 0 10px 15px rgba(17,24,39,.08);
+
+  /* Layout */
+  --thom-maxw: 1120px;
+}
+
+/* ---------- 2. BASE ---------- */
+.thom, .thom * { box-sizing: border-box; }
+
+.thom {
+  font-family: var(--thom-font-body);
+  font-size: var(--thom-text-base);
+  line-height: 1.6;
+  color: var(--thom-text);
+  background: var(--thom-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.thom h1, .thom h2, .thom h3 {
+  font-family: var(--thom-font-display);
+  line-height: 1;
+  margin: 0 0 var(--thom-space-3);
+  font-weight: var(--thom-weight-normal);
+  letter-spacing: 0.01em;
+  color: var(--thom-ink);
+}
+.thom h4 { font-family: var(--thom-font-body); line-height: 1.3; margin: 0 0 var(--thom-space-3); font-weight: var(--thom-weight-semibold); }
+.thom h1 { font-size: var(--thom-text-3xl); }
+.thom h2 { font-size: var(--thom-text-2xl); }
+.thom h3 { font-size: var(--thom-text-lg); }
+.thom h4 { font-size: var(--thom-text-base); }
+.thom p  { margin: 0 0 var(--thom-space-4); color: var(--thom-text-mid); }
+
+.thom a { color: var(--thom-primary); text-decoration: none; }
+.thom a:hover { color: var(--thom-primary-dark); text-decoration: underline; }
+
+.thom small, .thom .thom-muted { color: var(--thom-text-muted); }
+.thom .thom-constraint { color: var(--thom-constraint); }
+.thom .thom-capacity   { color: var(--thom-capacity); }
+.thom code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9em;
+  background: var(--thom-surface-alt); padding: 0.15em 0.4em; border-radius: 6px; color: var(--thom-primary-dark); }
+.thom hr { border: none; border-top: 1px solid var(--thom-border); margin: var(--thom-space-6) 0; }
+
+/* ---------- 3. LAYOUT ---------- */
+.thom-container { max-width: var(--thom-maxw); margin-inline: auto; padding-inline: var(--thom-space-5); }
+
+/* ---------- 4. COMPONENTS ---------- */
+
+/* Buttons */
+.thom-btn {
+  display: inline-flex; align-items: center; gap: var(--thom-space-2);
+  font-family: var(--thom-font-body); font-size: var(--thom-text-sm);
+  font-weight: var(--thom-weight-semibold); line-height: 1;
+  padding: var(--thom-space-3) var(--thom-space-5);
+  border-radius: var(--thom-radius-sm); border: 1px solid transparent;
+  cursor: pointer; transition: background 150ms ease, border-color 150ms ease;
+}
+.thom-btn--primary { background: var(--thom-primary); color: #fff; }
+.thom-btn--primary:hover { background: var(--thom-primary-dark); }
+.thom-btn--secondary { background: var(--thom-surface); color: var(--thom-text); border-color: var(--thom-border); }
+.thom-btn--secondary:hover { background: var(--thom-surface-alt); }
+.thom-btn--accent { background: var(--thom-accent); color: var(--thom-primary); }
+.thom-btn--accent:hover { background: var(--thom-accent-dark); }
+.thom-btn--sm { padding: var(--thom-space-2) var(--thom-space-3); font-size: var(--thom-text-sm); }
+.thom-btn:disabled, .thom-btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* Card */
+.thom-card {
+  background: var(--thom-surface); border: 1px solid var(--thom-border);
+  border-radius: var(--thom-radius); padding: var(--thom-space-5);
+  box-shadow: var(--thom-shadow-sm);
+}
+.thom-card__title { font-family: var(--thom-font-display); font-weight: var(--thom-weight-normal);
+  font-size: var(--thom-text-lg); margin: 0 0 var(--thom-space-2); }
+
+/* Badge */
+.thom-badge {
+  display: inline-flex; align-items: center;
+  font-size: var(--thom-text-sm); font-weight: var(--thom-weight-semibold);
+  padding: 3px 10px; border-radius: var(--thom-radius-pill);
+  background: var(--thom-surface-alt); color: var(--thom-text-mid);
+}
+.thom-badge--primary { background: var(--thom-primary-tint); color: var(--thom-primary-dark); }
+.thom-badge--success { background: var(--thom-success-tint); color: #166534; }
+.thom-badge--danger  { background: var(--thom-danger-tint);  color: #991b1b; }
+.thom-badge--accent  { background: var(--thom-accent-tint);  color: #3f6b04; }
+
+/* Form controls */
+.thom-input, .thom-select, .thom-textarea {
+  width: 100%; font-family: var(--thom-font-body); font-size: var(--thom-text-sm);
+  color: var(--thom-text); background: var(--thom-surface);
+  border: 1px solid var(--thom-border); border-radius: var(--thom-radius-sm);
+  padding: var(--thom-space-3) var(--thom-space-4); transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.thom-input:focus, .thom-select:focus, .thom-textarea:focus {
+  outline: none; border-color: var(--thom-primary); box-shadow: 0 0 0 3px rgba(18,56,91,.18);
+}
+.thom-input::placeholder { color: var(--thom-text-muted); }
+.thom-label { display: block; font-size: var(--thom-text-sm); font-weight: var(--thom-weight-semibold);
+  color: var(--thom-text-mid); margin-bottom: var(--thom-space-2); }

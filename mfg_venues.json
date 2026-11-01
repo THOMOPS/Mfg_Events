@@ -1,19 +1,16 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-30",
-    "total": 67
+    "last_updated": "2026-11-01",
+    "total": 76
   },
   "venues": [
     {
       "ven_id": "VEN0001",
       "name": "Orange County Convention Center",
-      "address": "9800 International Dr",
       "city": "Orlando",
       "state": "FL",
-      "zip": "32819",
       "country": "USA",
-      "website": "https://www.occc.net",
       "airports": [
         {
           "code": "MCO",
@@ -24,12 +21,9 @@
     {
       "ven_id": "VEN0002",
       "name": "Reno-Sparks Convention Center",
-      "address": "4590 S Virginia St",
       "city": "Reno",
       "state": "NV",
-      "zip": "89502",
       "country": "USA",
-      "website": "https://www.renosparksconventioncenter.com",
       "airports": [
         {
           "code": "RNO",
@@ -40,12 +34,9 @@
     {
       "ven_id": "VEN0003",
       "name": "Pennsylvania Convention Center",
-      "address": "1101 Arch St",
       "city": "Philadelphia",
       "state": "PA",
-      "zip": "19107",
       "country": "USA",
-      "website": "https://www.paconvention.com",
       "airports": [
         {
           "code": "PHL",
@@ -60,12 +51,9 @@
     {
       "ven_id": "VEN0004",
       "name": "Renaissance Schaumburg Convention Center",
-      "address": "1551 N Thoreau Dr",
       "city": "Schaumburg",
       "state": "IL",
-      "zip": "60173",
       "country": "USA",
-      "website": "https://www.marriott.com/hotels/travel/chish-renaissance-schaumburg-hotel-and-convention-center",
       "airports": [
         {
           "code": "ORD",
@@ -80,12 +68,9 @@
     {
       "ven_id": "VEN0005",
       "name": "Georgia World Congress Center",
-      "address": "285 Andrew Young International Blvd NW",
       "city": "Atlanta",
       "state": "GA",
-      "zip": "30313",
       "country": "USA",
-      "website": "https://www.gwcc.com",
       "airports": [
         {
           "code": "ATL",
@@ -96,12 +81,9 @@
     {
       "ven_id": "VEN0006",
       "name": "Boston Convention & Exhibition Center",
-      "address": "415 Summer St",
       "city": "Boston",
       "state": "MA",
-      "zip": "02210",
       "country": "USA",
-      "website": "https://www.signatureboston.com/bcec",
       "airports": [
         {
           "code": "BOS",
@@ -112,12 +94,9 @@
     {
       "ven_id": "VEN0007",
       "name": "Charlotte Convention Center",
-      "address": "501 S College St",
       "city": "Charlotte",
       "state": "NC",
-      "zip": "28202",
       "country": "USA",
-      "website": "https://www.charlotteconventionctr.com",
       "airports": [
         {
           "code": "CLT",
@@ -128,12 +107,9 @@
     {
       "ven_id": "VEN0008",
       "name": "Music City Center",
-      "address": "201 Rep. John Lewis Way S",
       "city": "Nashville",
       "state": "TN",
-      "zip": "37203",
       "country": "USA",
-      "website": "https://www.nashvillemusiccitycenter.com",
       "airports": [
         {
           "code": "BNA",
@@ -144,12 +120,9 @@
     {
       "ven_id": "VEN0009",
       "name": "Toronto Congress Centre",
-      "address": "650 Dixon Rd",
       "city": "Toronto",
       "state": "ON",
-      "zip": "M9W 1J1",
       "country": "Canada",
-      "website": "https://www.torontocongresscentre.com",
       "airports": [
         {
           "code": "YYZ",
@@ -164,12 +137,9 @@
     {
       "ven_id": "VEN0010",
       "name": "McCormick Place",
-      "address": "2301 S Indiana Ave",
       "city": "Chicago",
       "state": "IL",
-      "zip": "60616",
       "country": "USA",
-      "website": "https://www.mccormickplace.com",
       "airports": [
         {
           "code": "ORD",
@@ -184,12 +154,9 @@
     {
       "ven_id": "VEN0011",
       "name": "Minneapolis Convention Center",
-      "address": "1301 2nd Ave S",
       "city": "Minneapolis",
       "state": "MN",
-      "zip": "55403",
       "country": "USA",
-      "website": "https://www.minneapolisconventioncenter.com",
       "airports": [
         {
           "code": "MSP",
@@ -200,12 +167,9 @@
     {
       "ven_id": "VEN0012",
       "name": "Las Vegas Convention Center",
-      "address": "3150 Paradise Rd",
       "city": "Las Vegas",
       "state": "NV",
-      "zip": "89109",
       "country": "USA",
-      "website": "https://www.lvcva.com/lvcc",
       "airports": [
         {
           "code": "LAS",
@@ -216,12 +180,9 @@
     {
       "ven_id": "VEN0013",
       "name": "Donald E. Stephens Convention Center",
-      "address": "5555 N River Rd",
       "city": "Rosemont",
       "state": "IL",
-      "zip": "60018",
       "country": "USA",
-      "website": "https://www.rosemont.com/convention-center",
       "airports": [
         {
           "code": "ORD",
@@ -236,12 +197,9 @@
     {
       "ven_id": "VEN0014",
       "name": "Hyatt Regency Milwaukee",
-      "address": "333 W Kilbourn Ave",
       "city": "Milwaukee",
       "state": "WI",
-      "zip": "53203",
       "country": "USA",
-      "website": "https://www.hyatt.com/en-US/hotel/wisconsin/hyatt-regency-milwaukee/mkerm",
       "airports": [
         {
           "code": "MKE",
@@ -252,12 +210,9 @@
     {
       "ven_id": "VEN0015",
       "name": "Expo Santa Fe",
-      "address": "Av. Santa Fe 270",
       "city": "Mexico City",
       "state": "CDMX",
-      "zip": "01210",
       "country": "Mexico",
-      "website": "https://www.exposantafe.com.mx",
       "airports": [
         {
           "code": "MEX",
@@ -268,12 +223,9 @@
     {
       "ven_id": "VEN0016",
       "name": "Expo Guadalajara",
-      "address": "Av. Mariano Otero 1499",
       "city": "Guadalajara",
       "state": "Jalisco",
-      "zip": "44550",
       "country": "Mexico",
-      "website": "https://www.expoguadalajara.com.mx",
       "airports": [
         {
           "code": "GDL",
@@ -284,12 +236,9 @@
     {
       "ven_id": "VEN0017",
       "name": "Moscone Center",
-      "address": "747 Howard St",
       "city": "San Francisco",
       "state": "CA",
-      "zip": "94103",
       "country": "USA",
-      "website": "https://www.moscone.com",
       "airports": [
         {
           "code": "SFO",
@@ -304,12 +253,9 @@
     {
       "ven_id": "VEN0018",
       "name": "Anaheim Convention Center",
-      "address": "800 W Katella Ave",
       "city": "Anaheim",
       "state": "CA",
-      "zip": "92802",
       "country": "USA",
-      "website": "https://www.anaheimconventioncenter.com",
       "airports": [
         {
           "code": "SNA",
@@ -324,12 +270,9 @@
     {
       "ven_id": "VEN0019",
       "name": "Hannover Fairground",
-      "address": "Messegel\u00e4nde",
       "city": "Hannover",
       "state": "",
-      "zip": "30521",
       "country": "Germany",
-      "website": "https://www.messe-duesseldorf.com",
       "airports": [
         {
           "code": "HAJ",
@@ -340,12 +283,9 @@
     {
       "ven_id": "VEN0020",
       "name": "Huntington Convention Center of Cleveland",
-      "address": "300 Lakeside Ave E",
       "city": "Cleveland",
       "state": "OH",
-      "zip": "44114",
       "country": "USA",
-      "website": "https://www.clevelandconventions.com",
       "airports": [
         {
           "code": "CLE",
@@ -356,12 +296,9 @@
     {
       "ven_id": "VEN0021",
       "name": "Hilton Cleveland Downtown",
-      "address": "100 Lakeside Ave E",
       "city": "Cleveland",
       "state": "OH",
-      "zip": "44114",
       "country": "USA",
-      "website": "https://www.hilton.com/en/hotels/cledthh-hilton-cleveland-downtown",
       "airports": [
         {
           "code": "CLE",
@@ -372,12 +309,9 @@
     {
       "ven_id": "VEN0022",
       "name": "The Cutlers' Hall",
-      "address": "Church Street",
       "city": "Sheffield",
       "state": "",
-      "zip": "S1 1HH",
       "country": "United Kingdom",
-      "website": "https://www.cutlershall.co.uk",
       "airports": [
         {
           "code": "MAN",
@@ -388,12 +322,9 @@
     {
       "ven_id": "VEN0023",
       "name": "Hyatt Regency Greenville",
-      "address": "220 N Main St",
       "city": "Greenville",
       "state": "SC",
-      "zip": "29601",
       "country": "USA",
-      "website": "https://www.hyatt.com/en-US/hotel/south-carolina/hyatt-regency-greenville/gspgv",
       "airports": [
         {
           "code": "GSP",
@@ -404,12 +335,9 @@
     {
       "ven_id": "VEN0024",
       "name": "Hyatt Regency Indianapolis",
-      "address": "1 S Capitol Ave",
       "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
       "country": "USA",
-      "website": "https://www.hyatt.com/en-US/hotel/indiana/hyatt-regency-indianapolis/indri",
       "airports": [
         {
           "code": "IND",
@@ -420,12 +348,9 @@
     {
       "ven_id": "VEN0025",
       "name": "Marriott Austin Downtown",
-      "address": "304 E Cesar Chavez St",
       "city": "Austin",
       "state": "TX",
-      "zip": "78701",
       "country": "USA",
-      "website": "https://www.marriott.com/hotels/travel/ausdt-austin-marriott-downtown",
       "airports": [
         {
           "code": "AUS",
@@ -436,12 +361,9 @@
     {
       "ven_id": "VEN0026",
       "name": "Long Beach Convention Center",
-      "address": "300 E Ocean Blvd",
       "city": "Long Beach",
       "state": "CA",
-      "zip": "90802",
       "country": "USA",
-      "website": "https://www.longbeachcc.com",
       "airports": [
         {
           "code": "LGB",
@@ -456,12 +378,9 @@
     {
       "ven_id": "VEN0027",
       "name": "DeVos Place Convention Center",
-      "address": "303 Monroe Ave NW",
       "city": "Grand Rapids",
       "state": "MI",
-      "zip": "49503",
       "country": "USA",
-      "website": "https://www.devosplace.org",
       "airports": [
         {
           "code": "GRR",
@@ -472,12 +391,9 @@
     {
       "ven_id": "VEN0028",
       "name": "Indiana Convention Center",
-      "address": "100 S Capitol Ave",
       "city": "Indianapolis",
       "state": "IN",
-      "zip": "46225",
       "country": "USA",
-      "website": "https://www.icclos.com",
       "airports": [
         {
           "code": "IND",
@@ -488,12 +404,9 @@
     {
       "ven_id": "VEN0029",
       "name": "Huntington Place",
-      "address": "1 Washington Blvd",
       "city": "Detroit",
       "state": "MI",
-      "zip": "48226",
       "country": "USA",
-      "website": "https://www.huntingtonplacedetroit.com",
       "airports": [
         {
           "code": "DTW",
@@ -504,12 +417,9 @@
     {
       "ven_id": "VEN0030",
       "name": "Eastern States Exposition",
-      "address": "1305 Memorial Ave",
       "city": "West Springfield",
       "state": "MA",
-      "zip": "01089",
       "country": "USA",
-      "website": "https://www.thebige.com",
       "airports": [
         {
           "code": "BDL",
@@ -520,12 +430,9 @@
     {
       "ven_id": "VEN0031",
       "name": "Greenville Convention Center",
-      "address": "1 Exposition Dr",
       "city": "Greenville",
       "state": "SC",
-      "zip": "29615",
       "country": "USA",
-      "website": "https://www.greenvilleconventioncenter.com",
       "airports": [
         {
           "code": "GSP",
@@ -536,12 +443,9 @@
     {
       "ven_id": "VEN0032",
       "name": "Kay Bailey Hutchison Convention Center",
-      "address": "650 S Griffin St",
       "city": "Dallas",
       "state": "TX",
-      "zip": "75202",
       "country": "USA",
-      "website": "https://www.dallasconventioncenter.com",
       "airports": [
         {
           "code": "DAL",
@@ -556,12 +460,9 @@
     {
       "ven_id": "VEN0033",
       "name": "Messe D\u00fcsseldorf",
-      "address": "Stockumer Kirchstr. 61",
       "city": "D\u00fcsseldorf",
       "state": "",
-      "zip": "40474",
       "country": "Germany",
-      "website": "https://www.messe-duesseldorf.com",
       "airports": [
         {
           "code": "DUS",
@@ -576,12 +477,9 @@
     {
       "ven_id": "VEN0034",
       "name": "George R. Brown Convention Center",
-      "address": "1001 Avenida de las Americas",
       "city": "Houston",
       "state": "TX",
-      "zip": "77010",
       "country": "USA",
-      "website": "https://www.grbhouston.com",
       "airports": [
         {
           "code": "IAH",
@@ -596,12 +494,9 @@
     {
       "ven_id": "VEN0035",
       "name": "Gaylord National Resort & Convention Center",
-      "address": "201 Waterfront St",
       "city": "National Harbor",
       "state": "MD",
-      "zip": "20745",
       "country": "USA",
-      "website": "https://www.marriott.com/hotels/travel/wasng-gaylord-national-resort-and-convention-center",
       "airports": [
         {
           "code": "DCA",
@@ -616,12 +511,9 @@
     {
       "ven_id": "VEN0036",
       "name": "Encore Boston Harbor",
-      "address": "1 Broadway",
       "city": "Everett",
       "state": "MA",
-      "zip": "02149",
       "country": "USA",
-      "website": "https://www.encorebostonharbor.com",
       "airports": [
         {
           "code": "BOS",
@@ -632,12 +524,9 @@
     {
       "ven_id": "VEN0037",
       "name": "Tampa Convention Center",
-      "address": "333 S Franklin St",
       "city": "Tampa",
       "state": "FL",
-      "zip": "33602",
       "country": "USA",
-      "website": "https://www.tampagov.net/tcc",
       "airports": [
         {
           "code": "TPA",
@@ -648,12 +537,9 @@
     {
       "ven_id": "VEN0038",
       "name": "Hilton Americas-Houston",
-      "address": "1600 Lamar St",
       "city": "Houston",
       "state": "TX",
-      "zip": "77010",
       "country": "USA",
-      "website": "https://www.hilton.com/en/hotels/houcvhh-hilton-americas-houston",
       "airports": [
         {
           "code": "HOU",
@@ -668,12 +554,9 @@
     {
       "ven_id": "VEN0039",
       "name": "TITANS of CNC TX Headquarters",
-      "address": "201 International Pkwy",
       "city": "Flower Mound",
       "state": "TX",
-      "zip": "75022",
       "country": "USA",
-      "website": "https://titansofcnc.com",
       "airports": [
         {
           "code": "DFW",
@@ -684,12 +567,9 @@
     {
       "ven_id": "VEN0040",
       "name": "ENGEL Austria GmbH Headquarters",
-      "address": "Ludwig-Engel-Stra\u00dfe 1",
       "city": "Schwertberg",
       "state": "",
-      "zip": "4311",
       "country": "Austria",
-      "website": "https://www.engelglobal.com",
       "airports": [
         {
           "code": "LNZ",
@@ -704,12 +584,9 @@
     {
       "ven_id": "VEN0041",
       "name": "Mazak Northern California Technical Center",
-      "address": "47273 Fremont Boulevard",
       "city": "Fremont",
       "state": "CA",
-      "zip": "94538",
       "country": "USA",
-      "website": "https://www.mazak.com/us-en/about-us/support-bases/",
       "airports": [
         {
           "code": "SFO",
@@ -724,12 +601,9 @@
     {
       "ven_id": "VEN0042",
       "name": "Makino Auburn Hills Technology Center",
-      "address": "2600 Superior Court",
       "city": "Auburn Hills",
       "state": "MI",
-      "zip": "48326",
       "country": "USA",
-      "website": "https://www.makino.com/en-us/about-us/regional-tech-centers",
       "airports": [
         {
           "code": "DTW",
@@ -740,12 +614,9 @@
     {
       "ven_id": "VEN0043",
       "name": "Gosiger Indiana",
-      "address": "4627 Independence Square",
       "city": "Indianapolis",
       "state": "IN",
-      "zip": "46203",
       "country": "USA",
-      "website": "https://www.okuma.com/distributors/gosiger-indiana",
       "airports": [
         {
           "code": "IND",
@@ -756,12 +627,9 @@
     {
       "ven_id": "VEN0044",
       "name": "Hudson's Detroit",
-      "address": "1208 Woodward Avenue",
       "city": "Detroit",
       "state": "MI",
-      "zip": "48226",
       "country": "USA",
-      "website": "https://hudsonsdetroit.com",
       "airports": [
         {
           "code": "DTW",
@@ -772,12 +640,9 @@
     {
       "ven_id": "VEN0045",
       "name": "Endress+Hauser Customer Center Houston",
-      "address": "14517 Kirby Dr",
       "city": "Houston",
       "state": "TX",
-      "zip": "77047",
       "country": "USA",
-      "website": "https://www.endress.com",
       "airports": [
         {
           "code": "IAH",
@@ -792,23 +657,17 @@
     {
       "ven_id": "VEN0046",
       "name": "Online",
-      "address": "",
       "city": "",
       "state": "",
-      "zip": "",
       "country": "",
-      "website": "",
       "airports": []
     },
     {
       "ven_id": "VEN0047",
       "name": "Mammoth Mountain",
-      "address": "10001 Minaret Rd",
       "city": "Mammoth Lakes",
       "state": "CA",
-      "zip": "93546",
       "country": "USA",
-      "website": "https://www.mammothmountain.com",
       "airports": [
         {
           "code": "MMH",
@@ -827,12 +686,9 @@
     {
       "ven_id": "VEN0048",
       "name": "Fairmont Scottsdale Princess",
-      "address": "7575 E Princess Dr",
       "city": "Scottsdale",
       "state": "AZ",
-      "zip": "85255",
       "country": "USA",
-      "website": "https://www.fairmont.com/scottsdale",
       "airports": [
         {
           "code": "PHX",
@@ -843,12 +699,9 @@
     {
       "ven_id": "VEN0049",
       "name": "DMG MORI Solution Center Chicago",
-      "address": "2400 Huntington Blvd",
       "city": "Hoffman Estates",
       "state": "IL",
-      "zip": "60169",
       "country": "USA",
-      "website": "https://us.dmgmori.com",
       "airports": [
         "ORD",
         "MDW"
@@ -857,12 +710,9 @@
     {
       "ven_id": "VEN0050",
       "name": "DMG MORI Technology Center Cleveland",
-      "address": "",
       "city": "Cleveland",
       "state": "OH",
-      "zip": "",
       "country": "USA",
-      "website": "https://us.dmgmori.com",
       "airports": [
         "CLE"
       ]
@@ -870,12 +720,9 @@
     {
       "ven_id": "VEN0051",
       "name": "Farnborough International Exhibition & Conference Centre",
-      "address": "Aerospace Blvd",
       "city": "Farnborough",
       "state": "Hampshire",
-      "zip": "GU14 6TQ",
-      "country": "UK",
-      "website": "https://www.farnboroughinternational.com",
+      "country": "United Kingdom",
       "airports": [
         "LHR",
         "LGW"
@@ -884,12 +731,9 @@
     {
       "ven_id": "VEN0052",
       "name": "HITEX Exhibition Centre",
-      "address": "Hitex Rd, Madhapur",
       "city": "Hyderabad",
       "state": "Telangana",
-      "zip": "500084",
       "country": "India",
-      "website": "https://www.hitex.co.in",
       "airports": [
         "HYD"
       ]
@@ -897,12 +741,9 @@
     {
       "ven_id": "VEN0053",
       "name": "NCMT Technology Centre Coventry",
-      "address": "Kingfield Road",
       "city": "Coventry",
       "state": "West Midlands",
-      "zip": "CV6 5PL",
-      "country": "UK",
-      "website": "https://www.ncmt.co.uk",
+      "country": "United Kingdom",
       "airports": [
         "BHX",
         "LHR"
@@ -911,12 +752,9 @@
     {
       "ven_id": "VEN0054",
       "name": "Messe Stuttgart",
-      "address": "Messepiazza 1",
       "city": "Stuttgart",
       "state": "Baden-W\u00fcrttemberg",
-      "zip": "70629",
       "country": "Germany",
-      "website": "https://www.messe-stuttgart.de",
       "airports": [
         "STR"
       ]
@@ -924,12 +762,9 @@
     {
       "ven_id": "VEN0055",
       "name": "Istanbul Expo Center (IFM)",
-      "address": "Ye\u015filk\u00f6y Mah. Atat\u00fcrk Cd. No:4",
       "city": "Istanbul",
       "state": "",
-      "zip": "34149",
       "country": "Turkey",
-      "website": "https://www.ifm.com.tr",
       "airports": [
         "IST",
         "SAW"
@@ -938,12 +773,9 @@
     {
       "ven_id": "VEN0056",
       "name": "Parc des Expositions de Besan\u00e7on",
-      "address": "16 Av. de Chardonnet",
       "city": "Besan\u00e7on",
       "state": "Bourgogne-Franche-Comt\u00e9",
-      "zip": "25000",
       "country": "France",
-      "website": "https://www.micronora.com",
       "airports": [
         "BSL",
         "DLE"
@@ -952,12 +784,9 @@
     {
       "ven_id": "VEN0057",
       "name": "Brno Exhibition Centre",
-      "address": "V\u00fdstavi\u0161t\u011b 405/1",
       "city": "Brno",
       "state": "South Moravian Region",
-      "zip": "603 00",
       "country": "Czech Republic",
-      "website": "https://www.bvv.cz",
       "airports": [
         "BRQ",
         "VIE"
@@ -966,12 +795,9 @@
     {
       "ven_id": "VEN0058",
       "name": "Messe Friedrichshafen",
-      "address": "Neue Messe 1",
       "city": "Friedrichshafen",
       "state": "Baden-W\u00fcrttemberg",
-      "zip": "88046",
       "country": "Germany",
-      "website": "https://www.messe-friedrichshafen.de",
       "airports": [
         "FDH",
         "ZRH",
@@ -981,12 +807,9 @@
     {
       "ven_id": "VEN0059",
       "name": "MEETT Toulouse",
-      "address": "Avenue Marcel Dassault",
       "city": "Blagnac",
       "state": "Occitanie",
-      "zip": "31700",
       "country": "France",
-      "website": "https://www.meett.com",
       "airports": [
         "TLS"
       ]
@@ -994,12 +817,9 @@
     {
       "ven_id": "VEN0060",
       "name": "Fiera Milano (fieramilano Rho)",
-      "address": "SS Sempione 28",
       "city": "Rho",
       "state": "Lombardy",
-      "zip": "20017",
       "country": "Italy",
-      "website": "https://www.fieramilano.it",
       "airports": [
         "MXP",
         "LIN"
@@ -1008,12 +828,9 @@
     {
       "ven_id": "VEN0061",
       "name": "Silverstone Wing",
-      "address": "Silverstone Circuit",
       "city": "Silverstone",
       "state": "Northamptonshire",
-      "zip": "NN12 8TN",
-      "country": "UK",
-      "website": "https://www.silverstone.co.uk",
+      "country": "United Kingdom",
       "airports": [
         "BHX",
         "LTN"
@@ -1022,12 +839,9 @@
     {
       "ven_id": "VEN0062",
       "name": "Messe Hannover",
-      "address": "Messegel\u00e4nde",
       "city": "Hannover",
       "state": "Lower Saxony",
-      "zip": "30521",
       "country": "Germany",
-      "website": "https://www.messe.de",
       "airports": [
         "HAJ"
       ]
@@ -1035,12 +849,9 @@
     {
       "ven_id": "VEN0063",
       "name": "Tokyo Big Sight",
-      "address": "3-11-1 Ariake, Koto-ku",
       "city": "Tokyo",
       "state": "",
-      "zip": "135-0063",
       "country": "Japan",
-      "website": "https://www.bigsight.jp",
       "airports": [
         "NRT",
         "HND"
@@ -1049,12 +860,9 @@
     {
       "ven_id": "VEN0064",
       "name": "National Exhibition and Convention Center (NECC)",
-      "address": "333 Songze Ave, Qingpu District",
       "city": "Shanghai",
       "state": "",
-      "zip": "201702",
       "country": "China",
-      "website": "https://www.neccsh.com",
       "airports": [
         "PVG",
         "SHA"
@@ -1063,12 +871,9 @@
     {
       "ven_id": "VEN0065",
       "name": "Messe Frankfurt",
-      "address": "Ludwig-Erhard-Anlage 1",
       "city": "Frankfurt am Main",
       "state": "Hesse",
-      "zip": "60327",
       "country": "Germany",
-      "website": "https://www.messefrankfurt.com",
       "airports": [
         "FRA"
       ]
@@ -1076,12 +881,9 @@
     {
       "ven_id": "VEN0066",
       "name": "Venetian Expo + Caesars Forum",
-      "address": "3355 S Las Vegas Blvd",
       "city": "Las Vegas",
       "state": "NV",
-      "zip": "89109",
       "country": "USA",
-      "website": "https://www.venetianexpo.com",
       "airports": [
         {
           "code": "LAS",
@@ -1092,12 +894,9 @@
     {
       "ven_id": "VEN0067",
       "name": "Thomas M. Menino Convention & Exhibition Center",
-      "address": "415 Summer Street",
       "city": "Boston",
       "state": "MA",
-      "zip": "02210",
       "country": "USA",
-      "website": "https://www.signatureboston.com/mcec",
       "airports": [
         {
           "code": "BOS",
@@ -1116,12 +915,9 @@
     {
       "ven_id": "VEN0068",
       "name": "Vibe Credit Union Showplace",
-      "address": "46100 Grand River Ave",
       "city": "Novi",
       "state": "MI",
-      "zip": "48374",
       "country": "USA",
-      "website": "https://www.vibeshowplace.com",
       "airports": [
         {
           "code": "DTW",
@@ -1132,12 +928,9 @@
     {
       "ven_id": "VEN0069",
       "name": "Palais des congr\u00e8s de Montr\u00e9al",
-      "address": "1001 Place Jean-Paul-Riopelle",
       "city": "Montr\u00e9al",
       "state": "QC",
-      "zip": "H2Z 1H5",
       "country": "Canada",
-      "website": "https://www.congresmtl.com",
       "airports": [
         {
           "code": "YUL",
@@ -1148,12 +941,9 @@
     {
       "ven_id": "VEN0070",
       "name": "Messe Bremen",
-      "address": "Findorffstra\u00dfe 101",
       "city": "Bremen",
       "state": "",
-      "zip": "28215",
       "country": "Germany",
-      "website": "https://www.messe-bremen.de",
       "airports": [
         {
           "code": "BRE",
@@ -1164,12 +954,9 @@
     {
       "ven_id": "VEN0071",
       "name": "Santa Clara Convention Center",
-      "address": "5001 Great America Pkwy",
       "city": "Santa Clara",
       "state": "CA",
-      "zip": "95054",
       "country": "USA",
-      "website": "https://www.santaclaraconventioncenter.com",
       "airports": [
         {
           "code": "SJC",
@@ -1188,12 +975,9 @@
     {
       "ven_id": "VEN0072",
       "name": "Jacob K. Javits Convention Center",
-      "address": "429 11th Ave",
       "city": "New York",
       "state": "NY",
-      "zip": "10001",
       "country": "USA",
-      "website": "https://www.javitscenter.com",
       "airports": [
         {
           "code": "JFK",
@@ -1212,12 +996,9 @@
     {
       "ven_id": "VEN0073",
       "name": "Dubai World Trade Centre",
-      "address": "Sheikh Zayed Road",
       "city": "Dubai",
       "state": "",
-      "zip": "",
       "country": "United Arab Emirates",
-      "website": "https://www.dwtc.com",
       "airports": [
         {
           "code": "DXB",
@@ -1232,12 +1013,9 @@
     {
       "ven_id": "VEN0074",
       "name": "Jakarta International Expo (JIEXPO)",
-      "address": "Jl. Benyamin Sueb, Kemayoran",
       "city": "Jakarta",
       "state": "",
-      "zip": "10620",
       "country": "Indonesia",
-      "website": "https://www.jiexpo.com",
       "airports": [
         {
           "code": "CGK",
@@ -1248,16 +1026,26 @@
     {
       "ven_id": "VEN0075",
       "name": "India Expo Mart & Centre",
-      "address": "Plot No. 25, Knowledge Park II, Greater Noida",
       "city": "Noida",
       "state": "Uttar Pradesh",
-      "zip": "201308",
       "country": "India",
-      "website": "https://www.indiaexpocentre.com",
       "airports": [
         {
           "code": "DEL",
           "name": "Indira Gandhi International Airport"
+        }
+      ]
+    },
+    {
+      "ven_id": "VEN0076",
+      "name": "Hyatt Regency Orlando",
+      "city": "Orlando",
+      "state": "FL",
+      "country": "USA",
+      "airports": [
+        {
+          "code": "MCO",
+          "name": "Orlando International Airport"
         }
       ]
     }
