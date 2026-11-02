@@ -63,13 +63,17 @@ body { overflow-x: hidden; }
 /* 2. What we do — four business cards (statements, not links, until their pages exist) */
 #thom-home .offers-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: end; margin-bottom: 48px; }
 #thom-home .offers-head p { font-size: 18px; color: var(--mid); }
-#thom-home .offers { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
-#thom-home .offers .row2 { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-#thom-home .card { position: relative; border-radius: 20px; padding: 40px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; color: #fff; background: var(--navy); }
-#thom-home .card.big { background: var(--deep); }
-#thom-home .card.small { min-height: 230px; }
-#thom-home .card .tag { font-family: var(--display); font-size: 28px; letter-spacing: .02em; color: var(--sky); }
-#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 58px); line-height: .92; }
+#thom-home .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+#thom-home .card { position: relative; overflow: hidden; border-radius: 20px; padding: 40px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; gap: 36px; color: #fff; background: var(--navy); transition: transform .25s ease, box-shadow .25s ease; }
+#thom-home .card:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(18,56,91,.28); }
+#thom-home .card .top { display: flex; justify-content: space-between; align-items: flex-start; }
+#thom-home .card .icon { width: 88px; height: 88px; border-radius: 20px; background: rgba(79,179,232,.12); display: grid; place-items: center; }
+#thom-home .card .icon svg { width: 50px; height: 50px; stroke: var(--sky); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#thom-home .card .num { font-family: var(--display); font-size: 120px; line-height: .75; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.22); transition: -webkit-text-stroke-color .25s; }
+#thom-home .card:hover .num { -webkit-text-stroke-color: rgba(79,179,232,.6); }
+#thom-home .card .tag { font-family: var(--display); font-size: 24px; letter-spacing: .04em; color: var(--sky); margin-bottom: 10px; }
+#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 56px); line-height: .92; }
+@media (prefers-reduced-motion: reduce) { #thom-home .card { transition: none; } }
 
 /* 3. Why THOM — Chris's story (his facts only; see Profile_ChrisStevens/ClientContext.md) */
 #thom-home .why { background: #f4f6f9; }
@@ -110,7 +114,7 @@ body { overflow-x: hidden; }
     -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 55%, transparent 100%); }
   #thom-home .hero .shade { display: none; }
   #thom-home .hero .copy { padding: 330px 0 64px; }
-  #thom-home .offers, #thom-home .offers .row2, #thom-home .offers-head, #thom-home .why .grid, #thom-home .fit { grid-template-columns: 1fr; }
+  #thom-home .offers, #thom-home .offers-head, #thom-home .why .grid, #thom-home .fit { grid-template-columns: 1fr; }
   #thom-home .why .photo { position: static; aspect-ratio: 4 / 4; }
   #thom-home section { padding: 72px 0; }
 }
@@ -154,22 +158,32 @@ body { overflow-x: hidden; }
         <p>Fix the system with practical AI. Grow the people who run the floor. Tell the story. Back the builders.</p>
       </div>
       <div class="offers">
-        <div class="card big">
+        <div class="card">
+          <div class="top"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div><div class="num" aria-hidden="true">01</div></div>
+          <div>
           <div class="tag">THOM AI &amp; Software</div>
           <h3>Practical AI built around how you actually run.</h3>
+          </div>
         </div>
         <div class="card">
+          <div class="top"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 6M18 14.5c1.8.8 3 2.7 3 5"/></svg></div><div class="num" aria-hidden="true">02</div></div>
+          <div>
           <div class="tag">THOM Consulting</div>
           <h3>Grow the leaders who run the floor.</h3>
-        </div>
-        <div class="row2">
-          <div class="card small">
-            <div class="tag">THOM Media</div>
-            <h3>Get your story noticed.</h3>
           </div>
-          <div class="card small">
-            <div class="tag">THOM Ventures</div>
-            <h3>Invest. Partner. Build together.</h3>
+        </div>
+        <div class="card">
+          <div class="top"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div class="num" aria-hidden="true">03</div></div>
+          <div>
+          <div class="tag">THOM Media</div>
+          <h3>Get your story noticed.</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="top"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div><div class="num" aria-hidden="true">04</div></div>
+          <div>
+          <div class="tag">THOM Ventures</div>
+          <h3>Invest. Partner. Build together.</h3>
           </div>
         </div>
       </div>
