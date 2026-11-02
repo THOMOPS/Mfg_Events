@@ -1,0 +1,106 @@
+<!-- ============================================================
+     THOM CONTACT PAGE v1 — drop-in page fragment
+     Published to https://thomops.github.io/Mfg_Events/thom_contact.html and pulled into the
+     Squarespace /contact page by the loader snippet in Main/SQUARESPACE_SETUP.md (section 4),
+     placed in a Code Block ABOVE the page's native Squarespace form block.
+     The form stays native (submissions keep going to Chris's inbox); this file also restyles it.
+     Same look as dev/thom_home.html: THOM navy, Bebas Neue, pill buttons, numbered cards.
+     Keep it HTML + CSS only: the loader inserts it as markup, so JavaScript wouldn't run.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<style>
+/* Squarespace wraps the code block in a padded section — zero it so the navy band sits flush */
+.page-section:has(#thom-contact) { padding: 0 !important; min-height: 0 !important; }
+.page-section:has(#thom-contact) .content-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+.sqs-block:has(#thom-contact), .sqs-block:has(#thom-contact) .sqs-block-content { padding: 0 !important; }
+body { overflow-x: hidden; }
+
+#thom-contact {
+  --navy:  #12385b;   /* THOM brand navy */
+  --sky:   #4fb3e8;   /* capacity blue, lifted for contrast on navy */
+  --blue:  #027ebb;
+  --ink:   #121212;
+  --mid:   #545454;
+  --display: 'Bebas Neue', Impact, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--body); color: var(--ink); line-height: 1.6; font-size: 16px;
+}
+#thom-contact *, #thom-contact *::before, #thom-contact *::after { box-sizing: border-box; margin: 0; padding: 0; }
+#thom-contact .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+#thom-contact .band { width: 100vw; margin-left: calc(50% - 50vw); }
+#thom-contact .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+
+/* 1. Hero — navy band, same voice as the homepage */
+#thom-contact .hero { background: var(--navy); color: #fff; padding: 112px 0 96px; }
+#thom-contact .hero .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 18px; }
+#thom-contact .hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(72px, 11vw, 160px); line-height: .86; color: #fff; }
+#thom-contact .hero h1 span { color: var(--sky); }
+#thom-contact .hero p { font-size: 20px; color: rgba(255,255,255,.85); margin-top: 26px; max-width: 580px; }
+
+/* 2. Three reasons — same numbered cards as the homepage */
+#thom-contact .reasons { padding: 88px 0 24px; }
+#thom-contact .cards { display: grid; grid-template-columns: 1fr; }
+#thom-contact .card { border-radius: 20px; padding: 44px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 48px; color: #fff; background: var(--navy); transition: transform .25s ease, box-shadow .25s ease; }
+#thom-contact .card:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(18,56,91,.28); }
+#thom-contact .card .top { display: flex; align-items: center; gap: 28px; }
+#thom-contact .card .icon { width: 88px; height: 88px; border-radius: 20px; background: rgba(79,179,232,.12); display: grid; place-items: center; }
+#thom-contact .card .icon svg { width: 50px; height: 50px; stroke: var(--sky); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#thom-contact .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 3.2vw, 46px); line-height: .92; margin-bottom: 10px; }
+#thom-contact .card p { color: rgba(255,255,255,.8); font-size: 18px; max-width: 560px; }
+#thom-contact .form-head { padding: 64px 0 8px; }
+#thom-contact .form-head h2 { font-family: var(--display); font-weight: 400; font-size: clamp(48px, 6vw, 80px); line-height: .9; margin-top: 12px; }
+#thom-contact .form-head .eyebrow { color: var(--mid); }
+@media (prefers-reduced-motion: reduce) { #thom-contact .card { transition: none; } }
+
+@media (max-width: 900px) {
+  #thom-contact .hero { padding: 80px 0 64px; }
+  #thom-contact .cards { grid-template-columns: 1fr; }
+  #thom-contact .card { grid-template-columns: 1fr; gap: 28px; padding: 36px; }
+  #thom-contact .reasons { padding-top: 64px; }
+}
+
+/* 3. The native Squarespace form below this block, restyled to match (stable Squarespace class names) */
+.sqs-block-form { max-width: 760px; }
+.sqs-block-form .form-item { margin-bottom: 18px; }
+.sqs-block-form .form-item label.title { font-family: 'Bebas Neue', Impact, sans-serif !important; font-size: 24px !important; letter-spacing: .03em; color: #12385b !important; }
+.sqs-block-form .form-item .description.required { font-size: 12px; color: #8a96a3; letter-spacing: .04em; }
+.sqs-block-form .form-item input, .sqs-block-form .form-item textarea {
+  border: 2px solid #d7dee6 !important; border-radius: 14px !important; background: #f4f6f9 !important;
+  padding: 16px 18px !important; font-size: 17px !important; color: #121212 !important; transition: border-color .15s, background .15s; }
+.sqs-block-form .form-item textarea { min-height: 180px; }
+.sqs-block-form .form-item input:focus, .sqs-block-form .form-item textarea:focus { border-color: #027ebb !important; background: #fff !important; outline: none; }
+.sqs-block-form .form-submit-button { background: #027ebb !important; color: #fff !important; border: 0 !important; border-radius: 999px !important;
+  padding: 18px 40px !important; font-weight: 700 !important; font-size: 16px !important; letter-spacing: .02em; transition: transform .15s, background .15s; }
+.sqs-block-form .form-submit-button:hover { background: #016a9f !important; transform: translateY(-2px); }
+</style>
+
+<div id="thom-contact">
+
+  <!-- 1. HERO -->
+  <section class="hero band">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h1>Let's <span>talk.</span></h1>
+      <p>Bring the constraint. We'll tell you straight whether we can help, and how.</p>
+    </div>
+  </section>
+
+  <!-- 2. THREE REASONS -->
+  <section class="reasons">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <div class="top"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5l2.5 2.5L16 9.5"/><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0"/></svg></div></div>
+          <div><h3>Want to work together?</h3><p>Consulting, AI systems, media or a partnership. If you're ready to build capacity, start here.</p></div>
+        </div>
+      </div>
+      <div class="form-head">
+        <div class="eyebrow">Send a message</div>
+        <h2>Tell us what's in the way.</h2>
+      </div>
+    </div>
+  </section>
+
+</div>
