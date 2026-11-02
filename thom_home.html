@@ -1,33 +1,37 @@
 <!-- ============================================================
-     THOM HOMEPAGE v4 — drop-in page fragment
+     THOM HOMEPAGE v4.1 — drop-in page fragment
      Published to https://thomops.github.io/Mfg_Events/thom_home.html and pulled into the
      Squarespace homepage by the loader snippet in Main/SQUARESPACE_SETUP.md (section 4).
      Edit here → copy to github_publish/ → upload. Squarespace never needs touching.
-     Design source: Projects/Thom Webpage/_concepts/homepage_v4_bold.html (approved 2026-11-01)
-     Nav comes from Squarespace's header. Styles are scoped to #thom-home.
+     Design source: _concepts/homepage_v4_bold.html (approved 2026-11-01).
+     v4.2: v4.1 (Max review) fixes + Why THOM rewritten from Chris's own story (approved 2026-11-01);
+     every link goes to a live page. The guides return once their landing pages are built.
      Keep it HTML + CSS only: the loader inserts it as markup, so JavaScript wouldn't run.
-     Links to pages not built yet are marked  LINK
      ============================================================ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
 <style>
+/* Squarespace wraps the code block in padded section + block containers — zero them so the
+   navy hero sits flush under the site header (:has scopes this to the section holding #thom-home) */
+.page-section:has(#thom-home) { padding: 0 !important; min-height: 0 !important; }
+.page-section:has(#thom-home) .content-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+.sqs-block:has(#thom-home), .sqs-block:has(#thom-home) .sqs-block-content { padding: 0 !important; }
+body { overflow-x: hidden; }
+
 #thom-home {
-  --red:   #d1041c;
+  /* Two navies only: THOM navy for full-bleed bands, a deeper navy for the lead card */
+  --navy:  #12385b;   /* THOM brand navy (logo) */
+  --deep:  #0a2238;
+  --red-on-dark: #ff2a41;   /* constraint red, lifted for contrast on navy */
+  --sky:   #4fb3e8;         /* capacity blue, lifted for contrast on navy */
   --blue:  #027ebb;
-  --sky:   #4fb3e8;   /* capacity blue, lifted for dark backgrounds */
-  --navy:  #12385b;
-  --deep:  #0a2238;   /* darkest navy for the hero */
   --ink:   #121212;
-  --text:  #333333;
   --mid:   #545454;
-  --line:  #e5e7eb;
-  --alt:   #f4f6f9;
   --display: 'Bebas Neue', Impact, sans-serif;
   --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-family: var(--body); color: var(--text); line-height: 1.6; font-size: 16px;
+  font-family: var(--body); color: var(--ink); line-height: 1.6; font-size: 16px;
 }
-body { margin: 0; overflow-x: hidden; }
 #thom-home *, #thom-home *::before, #thom-home *::after { box-sizing: border-box; margin: 0; padding: 0; }
 #thom-home a { color: inherit; text-decoration: none; }
 #thom-home .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
@@ -36,83 +40,78 @@ body { margin: 0; overflow-x: hidden; }
 #thom-home .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--mid); }
 #thom-home .display { font-family: var(--display); font-weight: 400; letter-spacing: .005em; line-height: .9; color: var(--ink); }
 #thom-home h2.display { font-size: clamp(52px, 7vw, 96px); }
-#thom-home .red { color: var(--red); } #thom-home .blue { color: var(--blue); }
-#thom-home .needs { font: 600 11px var(--body); color: #92400e; background: #fef3c7; border-radius: 999px; padding: 3px 9px; letter-spacing: 0; text-transform: none; vertical-align: middle; }
+#thom-home .blue { color: var(--blue); }
+#thom-home .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Pill buttons */
-#thom-home .pill { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; padding: 16px 30px; border-radius: 999px; border: 2px solid transparent; transition: transform .15s, background .15s, color .15s; }
+#thom-home .pill { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; padding: 16px 30px; border-radius: 999px; border: 2px solid transparent; transition: transform .15s, background .15s; }
 #thom-home .pill:hover { transform: translateY(-2px); }
 #thom-home .pill-blue { background: var(--blue); color: #fff; }
 #thom-home .pill-blue:hover { background: #016a9f; }
-#thom-home .pill-line { border-color: rgba(255,255,255,.7); color: #fff; }
-#thom-home .pill-line:hover { background: #fff; color: var(--deep); }
-#thom-home .pill-dark { border-color: var(--ink); color: var(--ink); }
-#thom-home .pill-dark:hover { background: var(--ink); color: #fff; }
 
-/* 1. Hero — dark, cinematic, founder photo */
-#thom-home .hero { position: relative; color: #fff; padding: 0; min-height: 760px; overflow: hidden; display: flex; align-items: flex-end;
-  background: linear-gradient(90deg, rgba(10,34,56,.96) 0%, rgba(10,34,56,.82) 42%, rgba(10,34,56,.25) 100%),
-              url("https://thomops.github.io/Mfg_Events/thom_hero_balcony.jpg") right center / cover no-repeat var(--deep); }
-#thom-home .hero .copy { position: relative; z-index: 2; padding: 120px 0 96px; max-width: 760px; }
+/* 1. Hero — photo is a cover image on its own layer, so it fills the hero at every width */
+#thom-home .hero { position: relative; color: #fff; padding: 0; min-height: 700px; overflow: hidden; display: flex; align-items: flex-end; background: var(--navy); }
+#thom-home .hero .bg { position: absolute; top: 0; right: 0; width: 58%; max-width: 1000px; height: 100%; object-fit: cover; object-position: right center;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 55%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 55%); }
+#thom-home .hero .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18,56,91,.55) 0%, rgba(18,56,91,0) 55%); }   /* keeps the words' side calm */
+#thom-home .hero .wrap { position: relative; z-index: 2; width: 100%; }
+#thom-home .hero .copy { padding: 110px 0 96px; max-width: 760px; }
 #thom-home .hero .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 18px; }
-#thom-home .hero h1.lockup svg { display: block; width: 100%; max-width: 760px; height: auto; }   /* red #ff2a41 = constraint red lifted for contrast on navy */
-#thom-home .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-#thom-home .hero p { font-size: 20px; color: rgba(255,255,255,.82); margin: 26px 0 36px; max-width: 540px; }
-#thom-home .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+#thom-home .hero h1 svg { display: block; width: 100%; max-width: 760px; height: auto; }
+#thom-home .hero p { font-size: 20px; color: rgba(255,255,255,.85); margin: 26px 0 36px; max-width: 540px; }
 
-/* 2. Offer cards */
+/* 2. What we do — four business cards (statements, not links, until their pages exist) */
 #thom-home .offers-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: end; margin-bottom: 48px; }
 #thom-home .offers-head p { font-size: 18px; color: var(--mid); }
 #thom-home .offers { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
 #thom-home .offers .row2 { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-#thom-home .card { position: relative; border-radius: 20px; overflow: hidden; padding: 40px; min-height: 380px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; background: var(--navy); }
+#thom-home .card { position: relative; border-radius: 20px; padding: 40px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; color: #fff; background: var(--navy); }
 #thom-home .card.big { background: var(--deep); }
-#thom-home .card.small { min-height: 260px; background: #1d4a72; }
-#thom-home .card .tag { position: absolute; top: 32px; left: 40px; font-family: var(--display); font-size: 28px; letter-spacing: .02em; }
-#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 58px); line-height: .92; margin-bottom: 24px; }
-#thom-home .card p { color: rgba(255,255,255,.78); max-width: 420px; margin-bottom: 24px; }
-#thom-home .card .pill { align-self: flex-start; padding: 12px 24px; font-size: 15px; }
+#thom-home .card.small { min-height: 230px; }
+#thom-home .card .tag { font-family: var(--display); font-size: 28px; letter-spacing: .02em; color: var(--sky); }
+#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 58px); line-height: .92; }
 
-/* 3. Why THOM — personal */
-#thom-home .why { background: var(--alt); }
-#thom-home .why .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
-#thom-home .why .photo { aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; background: #dfe5ec; }
+/* 3. Why THOM — Chris's story (his facts only; see Profile_ChrisStevens/ClientContext.md) */
+#thom-home .why { background: #f4f6f9; }
+#thom-home .why .grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: start; }
+#thom-home .why .photo { position: sticky; top: 40px; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; background: #dfe5ec; }
 #thom-home .why .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 35%; display: block; }
-#thom-home .why h2 { margin: 14px 0 26px; }
-#thom-home .why p { font-size: 18px; color: var(--text); margin-bottom: 18px; }
+#thom-home .why h2 { margin: 14px 0 30px; }
+#thom-home .why h2 s { color: var(--blue); text-decoration-color: #d1041c; text-decoration-thickness: .09em; opacity: .55; }
+#thom-home .why p { font-size: 18px; color: #333; margin-bottom: 18px; max-width: 640px; }
 #thom-home .why p b { color: var(--ink); }
-#thom-home .why .sig { font-family: var(--display); font-size: 26px; letter-spacing: .03em; color: var(--navy); margin: 26px 0 6px; }
+#thom-home .why .punch { font-family: var(--display); font-size: clamp(30px, 3vw, 40px); line-height: 1; color: var(--ink); margin: 30px 0; max-width: 640px; }
+#thom-home .fit { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 34px 0 30px; }
+#thom-home .fit div { border-radius: 16px; padding: 24px 26px; background: #fff; border-top: 5px solid var(--blue); }
+#thom-home .fit div.no { border-top-color: #d1041c; }
+#thom-home .fit h4 { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: .02em; margin-bottom: 10px; }
+#thom-home .fit ul { list-style: none; }
+#thom-home .fit li { padding: 6px 0 6px 24px; position: relative; font-size: 15px; color: #333; }
+#thom-home .fit .yes li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+#thom-home .fit .no li::before { content: "✕"; position: absolute; left: 0; color: #d1041c; font-weight: 700; }
+#thom-home .why .sig { font-family: var(--display); font-size: 26px; letter-spacing: .03em; color: var(--navy); margin-bottom: 20px; }
+#thom-home .pill-dark { border-color: var(--ink); color: var(--ink); }
+#thom-home .pill-dark:hover { background: var(--ink); color: #fff; }
 
-/* 4. Guides */
-#thom-home .guides-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 44px; }
-#thom-home .guides { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-#thom-home .guide { border-radius: 20px; overflow: hidden; background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform .15s; }
-#thom-home .guide:hover { transform: translateY(-4px); }
-#thom-home .guide .cover { background: var(--navy); color: #fff; padding: 28px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
-#thom-home .guide .cover small { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--sky); }
-#thom-home .guide .cover b { font-family: var(--display); font-weight: 400; font-size: 44px; line-height: .92; }
-#thom-home .guide .body { padding: 22px 28px 28px; }
-#thom-home .guide .body p { color: var(--mid); margin-bottom: 14px; }
-#thom-home .guide .body a { font-weight: 700; color: var(--blue); }
-#thom-home .guide.next .cover { background: var(--alt); color: var(--ink); }
-#thom-home .guide.next .cover small { color: var(--mid); }
-
-/* 5. Close + footer */
-#thom-home .close { background: var(--deep); color: #fff; text-align: center; padding: 120px 0; }
+/* 4. Close + footer — one continuous navy band */
+#thom-home .close { background: var(--navy); color: #fff; text-align: center; padding: 120px 0 104px; }
 #thom-home .close h2 { color: #fff; font-size: clamp(64px, 10vw, 150px); }
-#thom-home .close p { color: rgba(255,255,255,.75); font-size: 19px; margin: 22px auto 36px; max-width: 520px; }
-#thom-home .foot { background: #061726; color: rgba(255,255,255,.6); padding: 28px 0; font-size: 14px; }
-#thom-home .foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
-#thom-home .foot nav a { color: #fff; margin-left: 22px; }
+#thom-home .close p { color: rgba(255,255,255,.78); font-size: 19px; margin: 22px auto 36px; max-width: 520px; }
+#thom-home .foot { background: var(--navy); color: rgba(255,255,255,.6); padding: 28px 0 36px; font-size: 14px; }
+#thom-home .foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 28px; }
+#thom-home .foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+#thom-home .foot nav a { color: #fff; }
+#thom-home .foot nav a:hover { text-decoration: underline; }
 
 @media (max-width: 900px) {
-  #thom-home .hero { min-height: 0; flex-direction: column; align-items: stretch; }
-  #thom-home .hero { padding-top: 280px; background:
-      linear-gradient(0deg, rgba(10,34,56,1) 0%, rgba(10,34,56,.9) 55%, rgba(10,34,56,.2) 100%),
-      url("https://thomops.github.io/Mfg_Events/thom_hero_balcony.jpg") 85% top / auto 420px no-repeat var(--deep); }
-  #thom-home .hero .copy { padding: 0 0 64px; }
-  #thom-home .offers, #thom-home .offers .row2, #thom-home .offers-head,
-  #thom-home .why .grid, #thom-home .guides { grid-template-columns: 1fr; }
+  /* Phone/tablet: photo on top, fading down into solid navy; words sit on the navy */
+  #thom-home .hero { min-height: 0; }
+  #thom-home .hero .bg { width: 100%; height: 380px; object-position: 80% 30%;
+    -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 55%, transparent 100%); }
+  #thom-home .hero .shade { display: none; }
+  #thom-home .hero .copy { padding: 330px 0 64px; }
+  #thom-home .offers, #thom-home .offers .row2, #thom-home .offers-head, #thom-home .why .grid, #thom-home .fit { grid-template-columns: 1fr; }
+  #thom-home .why .photo { position: static; aspect-ratio: 4 / 4; }
   #thom-home section { padding: 72px 0; }
 }
 </style>
@@ -121,10 +120,12 @@ body { margin: 0; overflow-x: hidden; }
 
   <!-- 1. HERO -->
   <section class="hero band">
-    <div class="wrap" style="width:100%">
+    <img class="bg" src="https://thomops.github.io/Mfg_Events/thom_hero_balcony.jpg" alt="">
+    <div class="shade"></div>
+    <div class="wrap">
       <div class="copy">
         <div class="eyebrow">The Home of Manufacturing · The MFG Coach</div>
-        <h1 class="lockup">
+        <h1>
           <span class="sr-only">Helping MFG turn constraints into capacity.</span>
           <!-- textLength pins each word's width so the arrow always lands from CONSTRAINTS to CAPACITY -->
           <svg viewBox="0 0 1120 350" aria-hidden="true" font-family="'Bebas Neue', Impact, sans-serif" font-size="118">
@@ -137,16 +138,12 @@ body { margin: 0; overflow-x: hidden; }
           </svg>
         </h1>
         <p>The capacity is already in your building. We find what's holding it back, then build the systems and the leaders to put it to work.</p>
-        <div class="cta-row">
-          <a href="/contact" class="pill pill-blue">Book a call →</a>  <!-- LINK: booking page -->
-          <a href="#guides" class="pill pill-line">Get a free AI guide</a>
-        </div>
+        <a href="/contact" class="pill pill-blue">Book a call →</a>
       </div>
     </div>
   </section>
 
-
-  <!-- 2. FOUR WAYS — offer cards -->
+  <!-- 2. WHAT WE DO -->
   <section>
     <div class="wrap">
       <div class="offers-head">
@@ -157,87 +154,83 @@ body { margin: 0; overflow-x: hidden; }
         <p>Fix the system with practical AI. Grow the people who run the floor. Tell the story. Back the builders.</p>
       </div>
       <div class="offers">
-        <a href="/ai-software" class="card big">  <!-- LINK -->
+        <div class="card big">
           <div class="tag">THOM AI &amp; Software</div>
           <h3>Practical AI built around how you actually run.</h3>
-          <span class="pill pill-blue">Explore AI &amp; Software</span>
-        </a>
-        <a href="/consulting" class="card">  <!-- LINK -->
+        </div>
+        <div class="card">
           <div class="tag">THOM Consulting</div>
           <h3>Grow the leaders who run the floor.</h3>
-          <span class="pill pill-line">Explore Consulting</span>
-        </a>
+        </div>
         <div class="row2">
-          <a href="/media" class="card small">  <!-- LINK -->
+          <div class="card small">
             <div class="tag">THOM Media</div>
             <h3>Get your story noticed.</h3>
-            <span class="pill pill-line">Explore Media</span>
-          </a>
-          <a href="/ventures" class="card small">  <!-- LINK -->
+          </div>
+          <div class="card small">
             <div class="tag">THOM Ventures</div>
             <h3>Invest. Partner. Build together.</h3>
-            <span class="pill pill-line">Explore Ventures</span>
-          </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. WHY THOM — personal -->
+  <!-- 3. WHY THOM -->
   <section class="why band">
     <div class="wrap grid">
       <div class="photo"><img src="https://thomops.github.io/Mfg_Events/thom_why_portrait.jpg" alt="Chris Stevens at his desk"></div>
       <div>
         <div class="eyebrow">Why THOM</div>
-        <h2 class="display">Manufacturing deserves better.</h2>
-        <p><b>Manufacturing doesn't get the attention, the respect, or the resources it deserves.</b> Too much of the advice out there comes from people who've never had to hit a ship date or face a crew after a hard month.</p>
-        <p>THOM exists to change that. Straight talk instead of buzzwords. Practical tools instead of theory. Resources built for everyone in the building, from the shop floor to the C-suite.</p>
-        <p>Strong opinions, loosely held. If something won't work in your business, I'll tell you. If it will, I'll help you build it.</p>
-        <p class="sig">Chris Stevens · The MFG Coach</p>
-        <a href="/contact" class="pill pill-dark" style="margin-top:10px">Book a call →</a>  <!-- LINK: booking page -->
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. FREE AI GUIDES -->
-  <section id="guides">
-    <div class="wrap">
-      <div class="guides-head">
-        <div>
-          <div class="eyebrow">Free Frameworks &amp; Resource Guides</div>
-          <h2 class="display" style="margin-top:12px">Start here.</h2>
+        <h2 class="display"><s>Cash</s> Context is king.</h2>
+        <p><b>I spent 15 years in manufacturing: med device, electronics and aerospace,</b> leading engineering and business teams and building cultures that perform. Some of the most regulated industries there are, where "that's not how we do it here" is the default answer.</p>
+        <p>I helped take a line of business from zero to multiple millions by doing the exact things everyone said were impossible. Regulation was never the real constraint. The legacy way of thinking was.</p>
+        <p>Meanwhile, the resources meant to help manufacturing were stuck in the past. Spreadsheets. PowerPoints. Anything useful locked behind expensive consultants and enterprise systems. No soul, and nothing that said this is one of the most innovative industries on earth.</p>
+        <p class="punch">Then it clicked: cash is no longer king. Context is. The companies that win capture what they know and put it to work.</p>
+        <p>THOM is different, and that's on purpose. We think forward, and our default is to do, not to wait around for the perfect agreement. We don't do soft, and we don't do long-ass PowerPoints nobody reads.</p>
+        <div class="fit">
+          <div class="yes">
+            <h4>We're a fit if you</h4>
+            <ul>
+              <li>Want to grow, and you're ready to openly challenge how it's always been done</li>
+              <li>Would rather prove why to keep going than why to stop</li>
+              <li>Want high-performing results and will put in the sweat equity</li>
+            </ul>
+          </div>
+          <div class="no">
+            <h4>We're not a fit if you</h4>
+            <ul>
+              <li>Think you can manage your way to growth</li>
+              <li>Don't see building a team that wants to win as your job</li>
+              <li>Want a report, not results</li>
+            </ul>
+          </div>
         </div>
-        <a href="/resources" class="pill pill-dark">See all the guides</a>  <!-- LINK -->
-      </div>
-      <div class="guides">
-        <a href="/guides/crit" class="guide">  <!-- LINK -->
-          <div class="cover"><small>Issue 01</small><b>CRIT: prompt like you mean it</b></div>
-          <div class="body"><p>The four-part format that turns vague prompts into usable answers.</p><span style="font-weight:700;color:var(--blue)">Get the guide →</span></div>
-        </a>
-        <a href="/guides/second-brain" class="guide">  <!-- LINK -->
-          <div class="cover"><small>Issue 05</small><b>Your first second brain</b></div>
-          <div class="body"><p>Give AI a memory of how your business works, so it stops starting from zero.</p><span style="font-weight:700;color:var(--blue)">Get the guide →</span></div>
-        </a>
-        <a href="/resources" class="guide next">  <!-- LINK: guide signup page -->
-          <div class="cover"><small>Every month</small><b>A new guide in your inbox</b></div>
-          <div class="body"><p>One practical AI skill a month, built for manufacturing.</p><span style="font-weight:700;color:var(--blue)">Sign up →</span></div>
-        </a>
+        <p class="sig">Chris Stevens · The MFG Coach</p>
+        <a href="/contact" class="pill pill-dark">If that's you, let's talk →</a>
       </div>
     </div>
   </section>
 
-  <!-- 5. CLOSE -->
+  <!-- 4. CLOSE + FOOTER -->
   <section class="close band">
     <div class="wrap">
       <h2 class="display">Own your chaos.<br><span style="color:var(--sky)">Level up.</span></h2>
       <p>Find the constraint. Build the capacity. It starts with one call.</p>
-      <a href="/contact" class="pill pill-blue">Book a call →</a>  <!-- LINK: booking page -->
+      <a href="/contact" class="pill pill-blue">Book a call →</a>
     </div>
   </section>
   <div class="foot band">
     <div class="wrap">
       <span>© 2026 The Home of MFG</span>
-      <nav><a href="/mfg-events">Events</a><a href="/mfgvoices">Voices</a><a href="/resources">Resources</a><a href="https://www.linkedin.com/company/the-home-of-mfg">LinkedIn</a><a href="https://www.youtube.com/@TheHomeofMFG">YouTube</a></nav>
+      <nav>
+        <a href="/mfg-events">Events</a>
+        <a href="/mfgvoices">Voices</a>
+        <a href="/thom-social">THOM Social</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.linkedin.com/company/the-home-of-mfg">LinkedIn</a>
+        <a href="https://www.youtube.com/@TheHomeofMFG">YouTube</a>
+      </nav>
     </div>
   </div>
 
