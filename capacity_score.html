@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Capacity Score</title>
+<!-- ============================================================
+     THE CAPACITY SCORE v1 — standalone quiz page
+     Published to https://thomops.github.io/Mfg_Events/capacity_score.html and shown on the
+     Squarespace /capacity-score page in an iframe (embed code in Main/SQUARESPACE_SETUP.md, section 5).
+     Content source: _concepts/capacity_score_content.md (approved 2026-11-02).
+     Scores 1-5-9 per answer, out of 108, scaled to 100 and rounded up (12 floor).
+     On finish it posts answers + qualifiers to the Apps Script web app (dev/capacity_score_apps_script.gs),
+     which re-scores, logs the lead to the Google Sheet and emails the full report.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<style>
+:root {
+  --navy: #12385b; --sky: #4fb3e8; --blue: #027ebb; --red: #d1041c; --red-on-dark: #ff2a41;
+  --ink: #121212; --mid: #545454; --soft: #f4f6f9; --line: #e2e8ef;
+  --display: 'Bebas Neue', Impact, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--body); color: var(--ink); background: #fff; line-height: 1.55; font-size: 16px; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--mid); }
+.display { font-family: var(--display); font-weight: 400; line-height: .9; color: var(--ink); }
+.pill { display: inline-flex; align-items: center; gap: 8px; font: 700 16px var(--body); padding: 16px 30px; border-radius: 999px; border: 0; cursor: pointer; background: var(--blue); color: #fff; text-decoration: none; transition: transform .15s, background .15s; }
+.pill:hover { transform: translateY(-2px); background: #016a9f; }
+.pill:disabled { background: #b8c4cf; cursor: not-allowed; transform: none; }
+.link { background: none; border: 0; font: 600 15px var(--body); color: var(--mid); cursor: pointer; padding: 10px 0; }
+.link:hover { color: var(--ink); }
+.screen { display: none; }
+.screen.on { display: block; }
+
+/* Landing */
+.land { background: var(--navy); color: #fff; padding: 96px 0 88px; }
+.land .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 18px; }
+.land h1 { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 11vw, 132px); line-height: .86; color: #fff; }
+.land h1 .c { color: var(--red-on-dark); }
+.land p { font-size: 20px; color: rgba(255,255,255,.85); margin: 26px 0 36px; max-width: 600px; }
+.areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+.areas span { font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 999px; background: rgba(79,179,232,.14); color: #d6ecf8; }
+
+/* Question */
+.quiz { padding: 56px 0 80px; }
+.bar { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; margin-bottom: 14px; }
+.bar i { display: block; height: 100%; background: var(--blue); width: 0; transition: width .3s; }
+.meta { display: flex; justify-content: space-between; font-size: 14px; color: var(--mid); margin-bottom: 44px; }
+.meta b { color: var(--blue); letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
+.q { font-family: var(--display); font-weight: 400; font-size: clamp(38px, 5.4vw, 60px); line-height: .98; margin-bottom: 36px; }
+.opts { display: grid; gap: 12px; }
+.opt { display: flex; align-items: center; gap: 18px; width: 100%; text-align: left; border: 2px solid var(--line); background: #fff; border-radius: 16px; padding: 20px 22px; font: 600 18px var(--body); color: var(--ink); cursor: pointer; transition: border-color .15s, background .15s, transform .15s; }
+.opt:hover { border-color: var(--blue); transform: translateX(4px); }
+.opt .dot { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #b8c4cf; }
+.opt small { display: block; font-weight: 400; font-size: 14px; color: var(--mid); margin-top: 2px; }
+.opt:focus-visible, .chips button:focus-visible, .pill:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+.opt.sel { border-color: var(--blue); background: #eef7fc; }
+.opt.sel .dot { border: 7px solid var(--blue); }
+.nav { margin-top: 28px; }
+
+/* Qualifiers */
+.form h2 { font-size: clamp(44px, 6vw, 68px); margin: 12px 0 8px; }
+.form > .wrap > p { color: var(--mid); font-size: 18px; margin-bottom: 32px; }
+.field { margin-bottom: 26px; }
+.field label.t { display: block; font-family: var(--display); font-size: 24px; letter-spacing: .03em; color: var(--navy); margin-bottom: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { border: 2px solid var(--line); background: #fff; border-radius: 999px; padding: 10px 18px; font: 600 15px var(--body); color: var(--ink); cursor: pointer; }
+.chips button.sel { border-color: var(--blue); background: var(--blue); color: #fff; }
+input, textarea { width: 100%; border: 2px solid #d7dee6; border-radius: 14px; background: var(--soft); padding: 15px 18px; font: 17px var(--body); color: var(--ink); }
+input:focus, textarea:focus { outline: none; border-color: var(--blue); background: #fff; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.fine { font-size: 13px; color: var(--mid); margin: 6px 0 22px; }
+
+/* Results */
+.res { background: var(--navy); color: #fff; padding: 80px 0 72px; }
+.res .eyebrow { color: rgba(255,255,255,.75); }
+.big { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: end; margin: 22px 0 36px; }
+.score { font-family: var(--display); font-size: clamp(120px, 20vw, 220px); line-height: .78; color: var(--sky); }
+.score small { font-size: .3em; color: rgba(255,255,255,.45); }
+.verdict .band { font-family: var(--display); font-size: 30px; letter-spacing: .03em; color: #fff; }
+.verdict p { color: rgba(255,255,255,.82); font-size: 18px; margin-top: 6px; }
+.constraint { border-top: 1px solid rgba(255,255,255,.15); padding-top: 28px; font-family: var(--display); font-size: clamp(34px, 4.6vw, 52px); line-height: 1; }
+.constraint span { color: var(--red-on-dark); }
+.bars { padding: 64px 0 24px; }
+.ab { margin-bottom: 26px; }
+.ab .top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.ab .name { font-family: var(--display); font-size: 28px; color: var(--navy); }
+.ab .name em { font-style: normal; font-family: var(--body); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-left: 10px; }
+.ab .num { font-family: var(--display); font-size: 32px; color: var(--blue); }
+.ab .track { height: 14px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.ab .track i { display: block; height: 100%; border-radius: 99px; background: var(--blue); transition: width .8s ease; }
+.ab.low .track i { background: var(--red); }
+.sent { background: var(--soft); border-radius: 18px; padding: 28px; margin: 24px 0 80px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.sent p { font-size: 17px; max-width: 460px; }
+.sent b { color: var(--navy); }
+
+@media (max-width: 700px) {
+  .land { padding: 72px 0 64px; }
+  .row3, .big { grid-template-columns: 1fr; }
+  .big { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 1. LANDING -->
+<section class="screen on" id="s-land">
+  <div class="land">
+    <div class="wrap">
+      <div class="eyebrow">The Capacity Score</div>
+      <h1>What's your <span class="c">#1 constraint?</span></h1>
+      <p>12 quick questions. 3 minutes. See where your capacity is stuck across systems, people and brand, and get a 90-day plan to free it.</p>
+      <button class="pill" onclick="start()">Find my constraint →</button>
+      <div class="areas"><span>Systems &amp; AI</span><span>People &amp; Leadership</span><span>Brand &amp; Visibility</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. QUESTIONS -->
+<section class="screen" id="s-quiz">
+  <div class="quiz"><div class="wrap">
+    <div class="bar"><i id="prog"></i></div>
+    <div class="meta"><b id="area"></b><span id="count"></span></div>
+    <h2 class="q display" id="qtext"></h2>
+    <div class="opts" id="opts"></div>
+    <div class="nav"><button class="link" onclick="back()">← Back</button></div>
+  </div></div>
+</section>
+
+<!-- 3. QUALIFIERS + EMAIL -->
+<section class="screen form" id="s-form">
+  <div class="quiz"><div class="wrap">
+    <div class="bar"><i style="width:100%"></i></div>
+    <div class="eyebrow" style="margin-top:36px">Almost there</div>
+    <h2 class="display">Where should we send your plan?</h2>
+    <p>Your score shows on the next screen. Your full results and 90-day plan go to your inbox.</p>
+    <div class="field"><label class="t">Your role</label><div class="chips" data-k="role" role="group" aria-label="Your role"><button>Owner / founder</button><button>CEO / president</button><button>Operations leader</button><button>Other leader</button></div></div>
+    <div class="field"><label class="t">Annual revenue</label><div class="chips" data-k="revenue" role="group" aria-label="Annual revenue"><button>Under $5M</button><button>$5M–$25M</button><button>$25M–$100M</button><button>$100M+</button></div></div>
+    <div class="field"><label class="t">If you could fix one first</label><div class="chips" data-k="first" role="group" aria-label="If you could fix one first"><button>Systems &amp; AI</button><button>People &amp; Leadership</button><button>Brand &amp; Visibility</button></div></div>
+    <div class="field"><label class="t">When do you want to start?</label><div class="chips" data-k="timeline" role="group" aria-label="When do you want to start?"><button>Now</button><button>Next 3 months</button><button>Just exploring</button></div></div>
+    <div class="field"><label class="t">Anything else we should know?</label><textarea id="note" rows="3" placeholder="Optional" aria-label="Anything else we should know? (optional)"></textarea></div>
+    <div class="field"><div class="row3"><input id="fn" placeholder="First name" aria-label="First name" autocomplete="given-name" maxlength="40"><input id="co" placeholder="Company" aria-label="Company" autocomplete="organization" maxlength="120"><input id="em" type="email" placeholder="Work email" aria-label="Work email" autocomplete="email" maxlength="200"></div></div>
+    <input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="fine">We'll email your full results and 90-day plan. We only use your email to send your results and follow up.</p>
+    <button class="pill" id="go" onclick="finish()" disabled>Show my score →</button>
+    <div class="nav"><button class="link" onclick="back()">← Back</button></div>
+  </div></div>
+</section>
+
+<!-- 4. RESULTS -->
+<section class="screen" id="s-res">
+  <div class="res"><div class="wrap">
+    <div class="eyebrow">Your Capacity Score</div>
+    <div class="big">
+      <div class="score"><span id="score"></span><small>/100</small></div>
+      <div class="verdict"><div class="band" id="band"></div><p id="bandline"></p></div>
+    </div>
+    <div class="constraint">Your #1 constraint: <span id="cname"></span></div>
+  </div></div>
+  <div class="bars"><div class="wrap" id="bars"></div></div>
+  <div class="wrap">
+    <div class="sent">
+      <p>Your full results and 90-day plan are on their way to <b id="sentto"></b>.</p>
+      <a class="pill" href="/contact" target="_top">Book a discovery call →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Apps Script web app URL — paste after deploying (Main/SQUARESPACE_SETUP.md, section 5)
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrIG1OL3FqzXPFoONge3Tserrct-U4qFCET1EFv30WBBVkbYAWRcSaCtnW54940wm77A/exec';
+
+const AREAS = ['Systems & AI', 'People & Leadership', 'Brand & Visibility'];
+const Q = [
+  [0, "Is your key process knowledge written down, not just in people's heads?"],
+  [0, "Can you see yesterday's output and on-time numbers without someone building a report?"],
+  [0, "Does your team use AI tools in their daily work, with clear rules?"],
+  [0, "Do you have a 12-month plan for where AI fits in your operation?"],
+  [1, "Do your supervisors get regular leadership coaching?"],
+  [1, "Could your operation run for two weeks without you?"],
+  [1, "Does every team review its numbers weekly against a target?"],
+  [1, "Is someone ready to step into your next key role?"],
+  [2, "Does your company page post weekly, showing real people?"],
+  [2, "Do you and at least one other leader post regularly?"],
+  [2, "Does someone own a content plan?"],
+  [2, "Has your content led to a sales conversation or a hire in the last 90 days?"]
+];
+const OPTS = [[1, 'Not yet'], [5, 'Partly'], [9, 'Yes, fully']];
+const BANDS = [
+  [40, 'Constrained', "There's real capacity in your building. Right now it's stuck."],
+  [70, 'Building', 'The foundation is there. A few constraints are holding you back.'],
+  [100, 'Ready to scale', "You're ahead of most. Now it's about compounding it."]
+];
+const answers = new Array(Q.length).fill(null);
+const quals = {};
+let i = 0;
+
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id === id));
+  window.scrollTo(0, 0);
+  if (window.parent !== window) window.parent.postMessage({ thomScoreTop: true }, '*');
+}
+// Inside the Squarespace iframe: report height so the frame grows and shrinks with each screen
+if (window.parent !== window) {
+  new ResizeObserver(() => window.parent.postMessage({ thomScoreHeight: document.documentElement.scrollHeight }, '*')).observe(document.body);
+}
+function start() { i = 0; renderQ(); show('s-quiz'); }
+function renderQ() {
+  const [a, text] = Q[i];
+  document.getElementById('prog').style.width = (i / Q.length * 100) + '%';
+  document.getElementById('area').textContent = AREAS[a];
+  document.getElementById('count').textContent = (i + 1) + ' of ' + Q.length;
+  document.getElementById('qtext').textContent = text;
+  const box = document.getElementById('opts'); box.innerHTML = '';
+  OPTS.forEach(([pts, label]) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[i] === pts ? ' sel' : '');
+    b.innerHTML = '<span class="dot"></span><span>' + label + '</span>';
+    b.onclick = () => { answers[i] = pts; b.classList.add('sel'); setTimeout(next, 220); };
+    box.appendChild(b);
+  });
+}
+function next() { if (i < Q.length - 1) { i++; renderQ(); } else show('s-form'); }
+function back() {
+  if (document.getElementById('s-form').classList.contains('on')) { i = Q.length - 1; renderQ(); show('s-quiz'); return; }
+  if (i > 0) { i--; renderQ(); } else show('s-land');
+}
+
+// Qualifier chips: one choice per group
+document.querySelectorAll('.chips').forEach(g => g.querySelectorAll('button').forEach(b => b.onclick = () => {
+  g.querySelectorAll('button').forEach(x => x.classList.remove('sel')); b.classList.add('sel'); quals[g.dataset.k] = b.textContent; check();
+}));
+['fn', 'co', 'em'].forEach(id => document.getElementById(id).addEventListener('input', check));
+function check() {
+  const ok = ['role', 'revenue', 'first', 'timeline'].every(k => quals[k]) &&
+    /^\p{L}[\p{L} .'-]*$/u.test(document.getElementById('fn').value.trim()) && !/\.\S/.test(document.getElementById('fn').value.trim()) && document.getElementById('co').value.trim() &&
+    /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('em').value.trim());
+  document.getElementById('go').disabled = !ok;
+}
+
+// Score: 1-5-9 per answer, scaled to 100, always rounded up
+const pct = (sum, max) => Math.ceil(sum / max * 100);
+function finish() {
+  const overall = pct(answers.reduce((s, v) => s + v, 0), Q.length * 9);
+  const area = AREAS.map((_, a) => pct(Q.reduce((s, q, k) => s + (q[0] === a ? answers[k] : 0), 0), 36));
+  // #1 constraint: lowest area; tie → the one they'd fix first; still tied → listed order
+  const low = Math.min(...area);
+  const tied = AREAS.filter((_, a) => area[a] === low);
+  const constraint = tied.includes(quals.first) ? quals.first : tied[0];
+  const band = BANDS.find(b => overall <= b[0]);
+
+  document.getElementById('score').textContent = overall;
+  document.getElementById('band').textContent = band[1];
+  document.getElementById('bandline').textContent = band[2];
+  document.getElementById('cname').textContent = constraint;
+  document.getElementById('sentto').textContent = document.getElementById('em').value.trim();
+  const bars = document.getElementById('bars'); bars.innerHTML = '';
+  AREAS.forEach((name, a) => {
+    const d = document.createElement('div');
+    d.className = 'ab' + (name === constraint ? ' low' : '');
+    d.innerHTML = '<div class="top"><span class="name">' + name + (name === constraint ? '<em>#1 constraint</em>' : '') +
+      '</span><span class="num">' + area[a] + '</span></div><div class="track"><i style="width:0"></i></div>';
+    bars.appendChild(d);
+    requestAnimationFrame(() => setTimeout(() => d.querySelector('i').style.width = area[a] + '%', 60));
+  });
+  submit();
+  show('s-res');
+}
+
+// Fire-and-forget: text/plain avoids a CORS preflight, so the opaque response is expected.
+// The script re-scores from the raw answers, so the email never trusts the browser's numbers.
+function submit() {
+  if (!SCRIPT_URL || document.getElementById('website').value) return;
+  const v = id => document.getElementById(id).value.trim();
+  fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({ answers, quals, note: v('note'), firstName: v('fn'), company: v('co'), email: v('em') }) })
+    .catch(() => {});
+}
+</script>
+</body>
+</html>
