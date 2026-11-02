@@ -38,9 +38,10 @@ body { overflow-x: hidden; }
 #thom-home .band { width: 100vw; margin-left: calc(50% - 50vw); }
 #thom-home section { padding: 104px 0; }
 #thom-home .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--mid); }
-#thom-home .display { font-family: var(--display); font-weight: 400; letter-spacing: .005em; line-height: .9; color: var(--ink); }
+#thom-home .display { font-family: var(--display); font-weight: 400; letter-spacing: .005em; line-height: .9; color: var(--ink) !important; }
+/* Squarespace colors h1–h4 directly, overriding inherited color — headings in this file always set their own */
 #thom-home h2.display { font-size: clamp(52px, 7vw, 96px); }
-#thom-home .blue { color: var(--blue); }
+#thom-home .blue { color: var(--blue) !important; }
 #thom-home .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Pill buttons */
@@ -72,7 +73,7 @@ body { overflow-x: hidden; }
 #thom-home .card .num { font-family: var(--display); font-size: 120px; line-height: .75; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.22); transition: -webkit-text-stroke-color .25s; }
 #thom-home .card:hover .num { -webkit-text-stroke-color: rgba(79,179,232,.6); }
 #thom-home .card .tag { font-family: var(--display); font-size: 24px; letter-spacing: .04em; color: var(--sky); margin-bottom: 10px; }
-#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 56px); line-height: .92; }
+#thom-home .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 56px); line-height: .92; color: #fff !important; }
 @media (prefers-reduced-motion: reduce) { #thom-home .card { transition: none; } }
 
 /* 3. Why THOM — Chris's story (his facts only; see Profile_ChrisStevens/ClientContext.md) */
@@ -110,7 +111,7 @@ body { overflow-x: hidden; }
 
 /* 4. Close + footer — one continuous navy band */
 #thom-home .close { background: var(--navy); color: #fff; text-align: center; padding: 120px 0 104px; }
-#thom-home .close h2 { color: #fff; font-size: clamp(64px, 10vw, 150px); }
+#thom-home .close h2 { color: #fff !important; font-size: clamp(64px, 10vw, 150px); }
 #thom-home .close p { color: rgba(255,255,255,.78); font-size: 19px; margin: 22px auto 36px; max-width: 520px; }
 #thom-home .foot { background: var(--navy); color: rgba(255,255,255,.6); padding: 28px 0 36px; font-size: 14px; }
 #thom-home .foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 28px; }
