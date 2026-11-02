@@ -1,0 +1,272 @@
+<!-- ============================================================
+     THOM MEDIA PAGE v1 — drop-in page fragment
+     Published to https://thomops.github.io/Mfg_Events/thom_media.html and pulled into the
+     Squarespace /thom-media page by the loader snippet in Main/SQUARESPACE_SETUP.md (section 4).
+     Design source: _concepts/media_v1_mockup.html (approved 2026-11-02).
+     THOM Media stands on its own: no AI or consulting; the footer is the only family tie.
+     Client work is under NDA — proof is the aggregate number plus THOM's own channels.
+     Keep it HTML + CSS only: the loader inserts it as markup, so JavaScript wouldn't run.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<style>
+.page-section:has(#thom-media) { padding: 0 !important; min-height: 0 !important; }
+.page-section:has(#thom-media) .content-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+.sqs-block:has(#thom-media), .sqs-block:has(#thom-media) .sqs-block-content { padding: 0 !important; }
+body { overflow-x: hidden; }
+
+#thom-media {
+  --navy: #12385b; --sky: #4fb3e8; --blue: #027ebb; --red: #d1041c; --red-on-dark: #ff2a41;
+  --ink: #121212; --mid: #545454; --soft: #f4f6f9;
+  --display: 'Bebas Neue', Impact, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--body); color: var(--ink); line-height: 1.6; font-size: 16px;
+}
+#thom-media *, #thom-media *::before, #thom-media *::after { box-sizing: border-box; margin: 0; padding: 0; }
+#thom-media a { color: inherit; text-decoration: none; }
+#thom-media .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+#thom-media .band { width: 100vw; margin-left: calc(50% - 50vw); }
+#thom-media section { padding: 104px 0; }
+#thom-media .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--mid); }
+#thom-media .display { font-family: var(--display); font-weight: 400; line-height: .9; color: var(--ink) !important; }
+#thom-media h2.display { font-size: clamp(52px, 7vw, 96px); margin-top: 12px; }
+#thom-media .blue { color: var(--blue) !important; }
+#thom-media .sky { color: var(--sky) !important; }
+#thom-media .pill { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; padding: 16px 30px; border-radius: 999px; transition: transform .15s, background .15s; }
+#thom-media .pill:hover { transform: translateY(-2px); }
+#thom-media .pill-blue { background: var(--blue); color: #fff; }
+#thom-media .pill-blue:hover { background: #016a9f; }
+
+/* 1. Hero — type-led, with the two proof numbers as the receipt */
+#thom-media .hero { background: var(--navy); color: #fff; padding: 112px 0 0; }
+#thom-media .hero .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 18px; }
+#thom-media .hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(76px, 12vw, 176px); line-height: .84; color: #fff !important; max-width: 1100px; }
+#thom-media .hero h1 span { color: var(--sky) !important; }
+#thom-media .hero .sub { font-size: 21px; color: rgba(255,255,255,.85); margin: 30px 0 38px; max-width: 620px; }
+#thom-media .proof { display: grid; grid-template-columns: 1fr 1fr; margin-top: 96px; border-top: 1px solid rgba(255,255,255,.15); }
+#thom-media .proof div { padding: 40px 0 48px; }
+#thom-media .proof div + div { padding-left: 48px; border-left: 1px solid rgba(255,255,255,.15); }
+#thom-media .proof b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(64px, 7vw, 104px); line-height: .85; color: #fff; }
+#thom-media .proof div + div b { color: var(--sky); }
+#thom-media .proof span { display: block; font-size: 17px; color: rgba(255,255,255,.8); margin-top: 12px; max-width: 380px; }
+#thom-media .nda { font-size: 14px; letter-spacing: .04em; color: rgba(255,255,255,.55); padding-bottom: 36px; }
+
+/* 2. Two brands — company + people */
+#thom-media .head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: end; margin-bottom: 48px; }
+#thom-media .head p { font-size: 18px; color: var(--mid); }
+#thom-media .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+#thom-media .card { border-radius: 20px; padding: 44px; min-height: 380px; display: flex; flex-direction: column; justify-content: flex-start; gap: 36px; color: #fff; background: var(--navy); transition: transform .25s ease, box-shadow .25s ease; }
+#thom-media .card:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(18,56,91,.28); }
+#thom-media .card .icon { width: 88px; height: 88px; border-radius: 20px; background: rgba(79,179,232,.12); display: grid; place-items: center; }
+#thom-media .card .icon svg { width: 50px; height: 50px; stroke: var(--sky); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#thom-media .card .tag { font-family: var(--display); font-size: 24px; letter-spacing: .04em; color: var(--sky); margin-bottom: 10px; }
+#thom-media .card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 4vw, 56px); line-height: .92; color: #fff !important; }
+#thom-media .card p { color: rgba(255,255,255,.8); font-size: 17px; margin-top: 14px; max-width: 460px; }
+#thom-media .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+#thom-media .chips span { font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; background: rgba(79,179,232,.14); color: #d6ecf8; }
+
+/* 3. Battle for attention — the why, in one statement */
+#thom-media .shift { background: var(--soft); }
+#thom-media .shift .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+#thom-media .shift h2 s { color: #8a96a3; text-decoration-color: var(--red); text-decoration-thickness: .08em; }
+#thom-media .shift p { font-size: 19px; color: #333; margin-bottom: 18px; }
+#thom-media .shift p b { color: var(--ink); }
+
+/* 4. How it works — fit, involvement, path */
+#thom-media .step-label { display: flex; align-items: baseline; gap: 14px; margin: 64px 0 22px; }
+#thom-media .step-label:first-of-type { margin-top: 0; }
+#thom-media .step-label i { font-style: normal; font-family: var(--display); font-size: 22px; color: var(--red); }
+#thom-media .step-label h3 { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 3.4vw, 46px); line-height: 1; color: var(--ink) !important; }
+#thom-media .step-label span { font-size: 16px; color: var(--mid); }
+#thom-media .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+#thom-media .tile { border: 2px solid #e2e8ef; border-radius: 18px; padding: 28px 28px 26px; background: #fff; display: flex; flex-direction: column; }
+#thom-media .tile .k { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); }
+#thom-media .tile h4 { font-family: var(--display); font-weight: 400; font-size: 38px; line-height: 1; margin: 8px 0 10px; color: var(--navy) !important; }
+#thom-media .tile p { font-size: 16px; color: #333; flex: 1; }
+#thom-media .tile .time { display: flex; justify-content: space-between; border-top: 1px solid #e2e8ef; margin-top: 18px; padding-top: 14px; font-size: 15px; color: var(--mid); }
+#thom-media .tile .time b { color: var(--ink); }
+#thom-media .tile.hot { border-color: var(--red); }
+#thom-media .tile.hot .k { color: var(--red); }
+#thom-media .note { font-size: 14px; color: var(--mid); margin-top: 14px; }
+#thom-media .path { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: s; }
+#thom-media .path li { border-radius: 18px; padding: 28px; background: var(--soft); }
+#thom-media .path li.go { background: var(--navy); color: #fff; }
+#thom-media .path .wk { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+#thom-media .path li.go .wk { color: var(--sky); }
+#thom-media .path b { display: block; font-family: var(--display); font-weight: 400; font-size: 32px; line-height: 1; margin: 8px 0 8px; }
+#thom-media .path p { font-size: 16px; color: #333; }
+#thom-media .path li.go p { color: rgba(255,255,255,.8); }
+
+/* 5. We build our own — live, linked proof */
+#thom-media .own { background: var(--soft); }
+#thom-media .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+#thom-media .channels a { border-radius: 20px; padding: 32px; background: #fff; border-top: 5px solid var(--blue); display: flex; flex-direction: column; gap: 6px; min-height: 230px; transition: transform .2s, box-shadow .2s; }
+#thom-media .channels a:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(18,56,91,.14); }
+#thom-media .channels .k { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); }
+#thom-media .channels h4 { font-family: var(--display); font-weight: 400; font-size: 40px; line-height: 1; color: var(--navy) !important; }
+#thom-media .channels .stat { font-family: var(--display); font-size: 30px; color: var(--blue); margin-top: auto; }
+#thom-media .channels .go { font-weight: 700; font-size: 15px; color: var(--blue); margin-top: auto; }
+#thom-media .channels .stat + .go { margin-top: 0; }
+
+/* 6. Close + footer */
+#thom-media .close { background: var(--navy); color: #fff; text-align: center; padding: 120px 0 104px; }
+#thom-media .close h2 { color: #fff !important; font-size: clamp(60px, 9vw, 136px); }
+#thom-media .close p { color: rgba(255,255,255,.78); font-size: 19px; margin: 22px auto 36px; max-width: 520px; }
+#thom-media .foot { background: var(--navy); color: rgba(255,255,255,.6); padding: 28px 0 36px; font-size: 14px; }
+#thom-media .foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 28px; }
+#thom-media .foot nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+#thom-media .foot nav a { color: #fff; }
+#thom-media .foot nav a:hover { text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { #thom-media .card, #thom-media .channels a { transition: none; } }
+
+@media (max-width: 900px) {
+  #thom-media section { padding: 72px 0; }
+  #thom-media .hero { padding-top: 80px; }
+  #thom-media .proof, #thom-media .head, #thom-media .duo, #thom-media .shift .grid,
+  #thom-media .three, #thom-media .path, #thom-media .channels { grid-template-columns: 1fr; }
+  #thom-media .proof { margin-top: 64px; }
+  #thom-media .proof div + div { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.15); }
+  #thom-media .card { min-height: 0; padding: 36px; }
+  #thom-media .shift .grid { gap: 24px; }
+}
+</style>
+
+<div id="thom-media">
+
+  <!-- 1. HERO -->
+  <section class="hero band">
+    <div class="wrap">
+      <div class="eyebrow">THOM Media</div>
+      <h1>We build brands<br>in <span>manufacturing.</span></h1>
+      <p class="sub">For the company and the people behind it. Buyers, recruits and partners decide who to trust long before the first call. We make sure it's you.</p>
+      <a href="/contact" class="pill pill-blue">Book a discovery call →</a>
+      <div class="proof">
+        <div><b>Millions</b><span>of views driven for manufacturing clients</span></div>
+        <div><b>150K+</b><span>views a month on The MFG Coach, a brand we build and run ourselves</span></div>
+      </div>
+      <p class="nda">Our clients' names stay private. The results don't.</p>
+    </div>
+  </section>
+
+  <!-- 2. TWO BRANDS -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="eyebrow">Who we build</div>
+          <h2 class="display">Two brands.<br><span class="blue">One strategy.</span></h2>
+        </div>
+        <p>People trust logos. They trust people more. The brands that win in manufacturing build both, and make them pull in the same direction.</p>
+      </div>
+      <div class="duo">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10l5 3V10l5 3V6l4-2v17"/><path d="M8 17h1M12 17h1M16 17h1"/></svg></div>
+          <div>
+            <div class="tag">Your company</div>
+            <h3>The brand they find first.</h3>
+            <p>A company page and presence that tells buyers, recruits and partners exactly who you are, and gives them a reason to call.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 6M18 14.5c1.8.8 3 2.7 3 5"/></svg></div>
+          <div>
+            <div class="tag">Your people</div>
+            <h3>The faces they follow.</h3>
+            <p>Leaders and experts made visible, building credibility the company brand can't buy on its own.</p>
+            <div class="chips"><span>Owners &amp; founders</span><span>CEOs &amp; GMs</span><span>Site leaders</span><span>Subject matter experts</span><span>Employee champions</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THE SHIFT -->
+  <section class="shift band">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">Why it matters now</div>
+        <h2 class="display"><s>Marketing.</s><br><span class="blue">A battle for attention.</span></h2>
+      </div>
+      <div>
+        <p>Manufacturing changed how it pays attention. Trade magazines are fading. Search isn't enough. Your buyers scroll, and they can smell fluff from a mile away.</p>
+        <p>They're done with stiff corporate videos about how customers are the number one priority. They want real, useful content from people who know the work.</p>
+        <p><b>Most agencies know marketing. We know manufacturing.</b> We live in it every day, so your brand sounds like the industry, not like an ad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOW IT WORKS -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="eyebrow">How it works</div>
+          <h2 class="display">Built around <span class="blue">your size</span><br>and your time.</h2>
+        </div>
+        <p>Every company page and every leader gets its own line in the plan, at the level of support that fits.</p>
+      </div>
+
+      <div class="step-label"><i>01</i><h3>Find your fit</h3></div>
+      <div class="three">
+        <div class="tile"><div class="k">Under $5M revenue</div><h4>Launch</h4><p>The owner is the brand. We build one strong voice on LinkedIn, with the company page alongside.</p></div>
+        <div class="tile"><div class="k">$5M–$25M revenue</div><h4>Build</h4><p>The CEO leads, the company page becomes the hub, and a second leader joins.</p></div>
+        <div class="tile"><div class="k">$25M–$100M revenue</div><h4>Scale</h4><p>A full program: company brand plus a leadership bench, across channels, with video.</p></div>
+      </div>
+
+      <div class="step-label"><i>02</i><h3>Choose how involved you are</h3><span>Time is your most valuable resource.</span></div>
+      <div class="three">
+        <div class="tile"><div class="k">You create · We guide</div><h4>Coach</h4><p>Strategy, frameworks, monthly 1:1 coaching and feedback on your drafts.</p><div class="time">Your time <b>3–5 hrs / week</b></div></div>
+        <div class="tile"><div class="k">You draft · We refine</div><h4>Hybrid</h4><p>You draft. We sharpen it, add visuals and schedule it for you.</p><div class="time">Your time <b>2–3 hrs / week</b></div></div>
+        <div class="tile hot"><div class="k">We run it · You approve</div><h4>Done-For-You</h4><p>Writing, design, publishing, engagement and reporting, fully managed.</p><div class="time">Your time <b>Under 1 hr / week</b></div></div>
+      </div>
+      <p class="note">Set per person, from the company page to the CEO. Adjust at every 90-day review.</p>
+
+      <div class="step-label"><i>03</i><h3>Go live in seven weeks</h3></div>
+      <ol class="path">
+        <li><div class="wk">Week 0</div><b>Discovery call</b><p>30 minutes on your goals and which people should be visible.</p></li>
+        <li><div class="wk">Weeks 1–2</div><b>Audit + plan</b><p>We benchmark you against your competitors, then walk you through an itemized proposal.</p></li>
+        <li class="go"><div class="wk">Weeks 3–7</div><b>Your 90-day plan, live</b><p>Brand foundation, a playbook for each person and a full content calendar. Launch in week 7.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. WE BUILD OUR OWN -->
+  <section class="own band">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="eyebrow">See the work</div>
+          <h2 class="display">We build <span class="blue">our own,</span> too.</h2>
+        </div>
+        <p>Client work stays under NDA. These don't. Built and run by THOM Media, live right now.</p>
+      </div>
+      <div class="channels">
+        <a href="https://www.linkedin.com/in/christhemfgcoach/" target="_blank" rel="noopener"><span class="k">Personal brand</span><h4>The MFG Coach</h4><span class="stat">150K+ views / month</span><span class="go">See it on LinkedIn →</span></a>
+        <a href="https://www.linkedin.com/company/the-home-of-mfg" target="_blank" rel="noopener"><span class="k">Company brand</span><h4>The Home of MFG</h4><span class="go">See it on LinkedIn →</span></a>
+        <a href="https://www.linkedin.com/showcase/mfg-nation" target="_blank" rel="noopener"><span class="k">Publication</span><h4>MFG Nation</h4><span class="go">See it on LinkedIn →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CLOSE + FOOTER -->
+  <section class="close band">
+    <div class="wrap">
+      <h2 class="display">Start with a<br><span class="sky">30-minute call.</span></h2>
+      <p>No commitment. Just your goals and your people.</p>
+      <a href="/contact" class="pill pill-blue">Book a discovery call →</a>
+    </div>
+  </section>
+  <div class="foot band">
+    <div class="wrap">
+      <span>THOM Media · Part of The Home of MFG</span>
+      <nav>
+        <a href="/">The Home of MFG</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.linkedin.com/company/the-home-of-mfg">LinkedIn</a>
+        <a href="https://www.youtube.com/@TheHomeofMFG">YouTube</a>
+      </nav>
+    </div>
+  </div>
+
+</div>
