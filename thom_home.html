@@ -81,7 +81,18 @@ body { overflow-x: hidden; }
 #thom-home .why .photo { position: sticky; top: 40px; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; background: #dfe5ec; }
 #thom-home .why .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 35%; display: block; }
 #thom-home .why h2 { margin: 14px 0 30px; }
-#thom-home .why h2 s { color: var(--blue); text-decoration-color: #d1041c; text-decoration-thickness: .09em; opacity: .55; }
+#thom-home .why .punch s { color: #8a96a3; text-decoration-color: #d1041c; text-decoration-thickness: .1em; }
+#thom-home .why .lead { font-size: 21px; color: var(--ink); line-height: 1.5; }
+/* The ladder: each doubt (red, struck) answered (navy) — constraints into capacity, as a life story */
+#thom-home .ladder { list-style: none; margin: 30px 0 34px; border-left: 3px solid #d7dee6; }
+#thom-home .ladder li { position: relative; padding: 0 0 26px 30px; display: grid; gap: 6px; }
+#thom-home .ladder li::before { content: ""; position: absolute; left: -9px; top: 4px; width: 15px; height: 15px; border-radius: 50%; background: #fff; border: 3px solid var(--blue); }
+#thom-home .ladder .said { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #d1041c; text-decoration: line-through; text-decoration-thickness: 2px; }
+#thom-home .ladder .did { font-family: var(--display); font-size: clamp(24px, 2.3vw, 32px); line-height: 1.05; color: var(--navy); }
+#thom-home .ladder li.now { padding-bottom: 0; }
+#thom-home .ladder li.now::before { background: var(--blue); box-shadow: 0 0 0 6px rgba(2,126,187,.18); }
+#thom-home .ladder li.now .said { text-decoration: none; }
+#thom-home .ladder li.now .did { color: var(--blue); }
 #thom-home .why p { font-size: 18px; color: #333; margin-bottom: 18px; max-width: 640px; }
 #thom-home .why p b { color: var(--ink); }
 #thom-home .why .punch { font-family: var(--display); font-size: clamp(30px, 3vw, 40px); line-height: 1; color: var(--ink); margin: 30px 0; max-width: 640px; }
@@ -196,12 +207,17 @@ body { overflow-x: hidden; }
       <div class="photo"><img src="https://thomops.github.io/Mfg_Events/thom_why_portrait.jpg" alt="Chris Stevens at his desk"></div>
       <div>
         <div class="eyebrow">Why THOM</div>
-        <h2 class="display"><s>Cash</s> Context is king.</h2>
-        <p><b>I spent 15 years in manufacturing: med device, electronics and aerospace,</b> leading engineering and business teams and building cultures that perform. Some of the most regulated industries there are, where "that's not how we do it here" is the default answer.</p>
-        <p>I helped take a line of business from zero to multiple millions by doing the exact things everyone said were impossible. Regulation was never the real constraint. The legacy way of thinking was.</p>
-        <p>Meanwhile, the resources meant to help manufacturing were stuck in the past. Spreadsheets. PowerPoints. Anything useful locked behind expensive consultants and enterprise systems. No soul, and nothing that said this is one of the most innovative industries on earth.</p>
-        <p class="punch">Then it clicked: cash is no longer king. Context is. The companies that win capture what they know and put it to work.</p>
-        <p>THOM is different, and that's on purpose. We think forward, and our default is to do, not to wait around for the perfect agreement. We don't do soft, and we don't do long-ass PowerPoints nobody reads.</p>
+        <h2 class="display">Told no.<br><span class="blue">Did it anyway.</span></h2>
+        <p class="lead">I see systems and patterns before they're obvious. That's gotten me doubted for most of my life, and proving people wrong became a habit.</p>
+        <ol class="ladder">
+          <li><span class="said">Too distracted for school</span><span class="did">Two engineering degrees and a master's in business</span></li>
+          <li><span class="said">Impossible, and no one wants it</span><span class="did">A part that met every requirement in half the time, at a fraction of their best supplier's cost. Zero to $4M+ in under two years.</span></li>
+          <li><span class="said">Settle for a small job</span><span class="did">15 years leading engineering and business teams, including at some of the largest companies in med device and rapid prototyping</span></li>
+          <li class="now"><span class="said">AI isn't for manufacturing</span><span class="did">That's what THOM is here to prove. Right now.</span></li>
+        </ol>
+        <p>Most of the industry can't see it yet. I can. AI is the biggest shift manufacturing has seen in 75 years, and the manufacturers who win will be the ones who capture what they know and put it to work.</p>
+        <p class="punch"><s>Cash</s> Context is king.</p>
+        <p>So THOM is built to be different, on purpose. We'd rather do than wait around for the perfect agreement, and we won't hand you a long-ass PowerPoint nobody reads.</p>
         <div class="fit">
           <div class="yes">
             <h4>We're a fit if you</h4>
