@@ -1,13 +1,13 @@
 {
   "meta": {
     "version": "3.0",
-    "last_updated": "2026-06-28",
+    "last_updated": "2026-09-23",
     "total": 2
   },
   "waitlist": {
     "enabled": true,
     "headline": "The best don't get chosen.\nThey get discovered.",
-    "cta": "Advertise Here → \nJoin The Waitlist",
+    "cta": "Advertise Here \u2192 \nJoin The Waitlist",
     "link": "https://www.thehomeofmfg.com/thom-ad-inquiry",
     "slots": [
       "2026-08-31",
@@ -29,7 +29,6 @@
       "start_date": "2026-06-01",
       "end_date": "2026-12-31",
       "status": "active",
-      "notes": "",
       "slots": [
         "2026-07-25"
       ]
@@ -47,8 +46,7 @@
       "link_url": "www.thehomeofmfg.com",
       "start_date": "2026-01-01",
       "end_date": "2030-12-31",
-      "status": "active",
-      "notes": ""
+      "status": "active"
     }
   ]
 }
